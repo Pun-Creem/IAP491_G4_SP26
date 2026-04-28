@@ -1,0 +1,83 @@
+2026-04-05 22:46:44 | INFO    | Log file: D:\Deep_Learning_V5\logs\predict_2026-04-05_22-46-44.log
+2026-04-05 22:46:44 | INFO    | ============================================================
+2026-04-05 22:46:44 | INFO    | MALWARE DL ACTION RECOMMENDATION - PREDICTION
+2026-04-05 22:46:44 | INFO    | ============================================================
+2026-04-05 22:46:44 | INFO    | [INFO] Device: cpu
+2026-04-05 22:46:44 | INFO    | 
+────────────────────────────────────────
+2026-04-05 22:46:44 | INFO    | STEP 1: Loading saved model
+2026-04-05 22:46:44 | INFO    | ────────────────────────────────────────
+2026-04-05 22:46:44 | INFO    | Loading saved model...
+2026-04-05 22:46:44 | INFO    | [INFO] Model loaded: 33 actions, vocab=480
+2026-04-05 22:46:44 | INFO    | Enriching action info from D3FEND API (first run or missing data)...
+2026-04-05 22:46:45 | INFO    | Enriching 41 D3FEND actions with category + description...
+2026-04-05 22:46:45 | INFO    | D3FEND enrichment complete:
+2026-04-05 22:46:45 | INFO    |   From cache: 41
+2026-04-05 22:46:45 | INFO    |   From API:   0
+2026-04-05 22:46:45 | INFO    |   Fallback:   0
+2026-04-05 22:46:45 | INFO    |   Category distribution: {'Detect': 19, 'Evict': 7, 'Isolate': 10, 'Restore': 3, 'Unknown': 1, 'Harden': 1}
+2026-04-05 22:46:45 | INFO    | 
+────────────────────────────────────────
+2026-04-05 22:46:45 | INFO    | STEP 2: Loading new data
+2026-04-05 22:46:45 | INFO    | ────────────────────────────────────────
+2026-04-05 22:46:45 | INFO    |  Loading Excel: D:\Deep_Learning_V5\new_excel\DL_1017-1217.xlsx
+2026-04-05 22:46:45 | INFO    |  Loaded 201 samples from Excel
+2026-04-05 22:47:27 | INFO    |  Extracted features from 201 reports (0 failed/missing)
+2026-04-05 22:47:27 | INFO    | 
+────────────────────────────────────────
+2026-04-05 22:47:27 | INFO    | STEP 3: Building features
+2026-04-05 22:47:27 | INFO    | ────────────────────────────────────────
+2026-04-05 22:47:27 | INFO    | [INFO] New samples: 201
+2026-04-05 22:47:27 | INFO    | 
+────────────────────────────────────────
+2026-04-05 22:47:27 | INFO    | STEP 4: Predicting actions
+2026-04-05 22:47:27 | INFO    | ────────────────────────────────────────
+2026-04-05 22:47:27 | INFO    | 
+────────────────────────────────────────
+2026-04-05 22:47:27 | INFO    | STEP 5: Exporting results
+2026-04-05 22:47:27 | INFO    | ────────────────────────────────────────
+2026-04-05 22:47:27 | INFO    | [INFO] Results exported: D:\Deep_Learning_V5\output\predictions.xlsx
+2026-04-05 22:47:27 | INFO    | 
+────────────────────────────────────────
+2026-04-05 22:47:27 | INFO    | PREVIEW (first 5 samples):
+2026-04-05 22:47:27 | INFO    | ────────────────────────────────────────
+2026-04-05 22:47:27 | INFO    | 
+  [1083_report.json]
+2026-04-05 22:47:27 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.86]
+2026-04-05 22:47:27 | INFO    |     → D3-CE - Credential Eviction (Evict) [confidence: 0.62]
+2026-04-05 22:47:27 | INFO    |     → D3-CQ - Content Quarantine (Isolate) [confidence: 0.61]
+2026-04-05 22:47:27 | INFO    |     → D3-NI - Network Isolation (Isolate) [confidence: 0.54]
+2026-04-05 22:47:27 | INFO    |     → D3-CR - Credential Revocation (Evict) [confidence: 0.54]
+2026-04-05 22:47:27 | INFO    | 
+  [1084_report.json]
+2026-04-05 22:47:27 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.95]
+2026-04-05 22:47:27 | INFO    |     → D3-RKD - Registry Key Deletion (Evict) [confidence: 0.80]
+2026-04-05 22:47:27 | INFO    |     → D3-FEV - File Eviction (Evict) [confidence: 0.63]
+2026-04-05 22:47:27 | INFO    |     → D3-SICA - System Init Config Analysis (Detect) [confidence: 0.62]
+2026-04-05 22:47:27 | INFO    | 
+  [1085_report.json]
+2026-04-05 22:47:27 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.95]
+2026-04-05 22:47:27 | INFO    |     → D3-RKD - Registry Key Deletion (Evict) [confidence: 0.69]
+2026-04-05 22:47:27 | INFO    |     → D3-SICA - System Init Config Analysis (Detect) [confidence: 0.69]
+2026-04-05 22:47:27 | INFO    |     → D3-FEV - File Eviction (Evict) [confidence: 0.51]
+2026-04-05 22:47:27 | INFO    |     → D3-OTF - Outbound Traffic Filtering (Isolate) [confidence: 0.51]
+2026-04-05 22:47:27 | INFO    | 
+  [1086_report.json]
+2026-04-05 22:47:27 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.97]
+2026-04-05 22:47:27 | INFO    |     → D3-FAPA - File Access Pattern Analysis (Detect) [confidence: 0.91]
+2026-04-05 22:47:27 | INFO    |     → D3-FEV - File Eviction (Evict) [confidence: 0.89]
+2026-04-05 22:47:27 | INFO    |     → D3-NI - Network Isolation (Isolate) [confidence: 0.87]
+2026-04-05 22:47:27 | INFO    |     → D3-RKD - Registry Key Deletion (Evict) [confidence: 0.78]
+2026-04-05 22:47:27 | INFO    | 
+  [1087_report.json]
+2026-04-05 22:47:27 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.91]
+2026-04-05 22:47:27 | INFO    |     → D3-FEV - File Eviction (Evict) [confidence: 0.67]
+2026-04-05 22:47:27 | INFO    |     → D3-CR - Credential Revocation (Evict) [confidence: 0.64]
+2026-04-05 22:47:27 | INFO    |     → D3-NI - Network Isolation (Isolate) [confidence: 0.58]
+2026-04-05 22:47:27 | INFO    | 
+============================================================
+2026-04-05 22:47:27 | INFO    | PREDICTION COMPLETE!
+2026-04-05 22:47:27 | INFO    |   Samples: 201
+2026-04-05 22:47:27 | INFO    |   Time: 43.5 seconds
+2026-04-05 22:47:27 | INFO    |   Output: D:\Deep_Learning_V5\output\predictions.xlsx
+2026-04-05 22:47:27 | INFO    | ============================================================

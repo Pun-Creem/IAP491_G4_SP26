@@ -1,0 +1,42 @@
+2026-04-07 12:01:11 | INFO    | Log file: d:\Deep_Learning_V5\logs\evaluate_transformer_2026-04-07_12-01-11.log
+2026-04-07 12:01:11 | INFO    | ============================================================
+2026-04-07 12:01:11 | INFO    | TRANSFORMER — EVALUATE PREDICTIONS VS GROUND TRUTH
+2026-04-07 12:01:11 | INFO    | ============================================================
+2026-04-07 12:01:11 | INFO    | Ground truth: d:\Deep_Learning_V5\ground_truth\ground_truth_1017-1217.xlsx
+2026-04-07 12:01:11 | INFO    |   Samples: 201
+2026-04-07 12:01:11 | INFO    |   Actions/sample: min=2, max=5, mean=4.1
+2026-04-07 12:01:12 | INFO    | Predictions: d:\Deep_Learning_V5\output\predictions.xlsx
+2026-04-07 12:01:12 | INFO    |   Samples: 201
+2026-04-07 12:01:12 | INFO    | 
+============================================================
+2026-04-07 12:01:12 | INFO    | TRANSFORMER — EVALUATION RESULTS
+2026-04-07 12:01:12 | INFO    | ============================================================
+2026-04-07 12:01:12 | INFO    |   Matched samples: 201
+2026-04-07 12:01:12 | INFO    | 
+    k   Precision@k    Recall@k      F1@k
+2026-04-07 12:01:12 | INFO    |   ----------------------------------------
+2026-04-07 12:01:12 | INFO    |     1       0.9602      0.2489    0.3886
+2026-04-07 12:01:12 | INFO    |     2       0.5622      0.2981    0.3805
+2026-04-07 12:01:12 | INFO    |     3       0.4925      0.3886    0.4240
+2026-04-07 12:01:12 | INFO    |     4       0.4328      0.4459    0.4294
+2026-04-07 12:01:12 | INFO    |     5       0.3751      0.4809    0.4125
+2026-04-07 12:01:12 | INFO    | 
+  Best F1@k: F1@4 = 0.4294
+2026-04-07 12:01:12 | INFO    | 
+  Per-sample preview (first 10, showing k=4):
+2026-04-07 12:01:12 | INFO    |     1083_report.json: predict=[D3-PT, D3-CE, D3-CQ, D3-NI, D3-CR] | truth=[D3-PCSV, D3-PT, D3-OTF, D3-SJA, D3-FEV] | P@4=0.25 R@4=0.20 F1@4=0.22
+2026-04-07 12:01:12 | INFO    |     1084_report.json: predict=[D3-PT, D3-RKD, D3-FEV, D3-SICA] | truth=[D3-PT, D3-FEV, D3-RKD] | P@4=0.75 R@4=1.00 F1@4=0.86
+2026-04-07 12:01:12 | INFO    |     1085_report.json: predict=[D3-PT, D3-RKD, D3-SICA, D3-FEV, D3-OTF] | truth=[D3-PT, D3-OTF, D3-RKD, D3-FEV] | P@4=0.75 R@4=0.75 F1@4=0.75
+2026-04-07 12:01:12 | INFO    |     1086_report.json: predict=[D3-PT, D3-FAPA, D3-FEV, D3-NI, D3-RKD] | truth=[D3-NI, D3-PT, D3-RKD, D3-FEV, D3-RF] | P@4=0.75 R@4=0.60 F1@4=0.67
+2026-04-07 12:01:12 | INFO    |     1087_report.json: predict=[D3-PT, D3-FEV, D3-CR, D3-NI] | truth=[D3-PT, D3-FEV, D3-RKD] | P@4=0.50 R@4=0.67 F1@4=0.57
+2026-04-07 12:01:12 | INFO    |     1088_report.json: predict=[D3-PT, D3-PA, D3-OTF, D3-CQ, D3-NI] | truth=[D3-PLA, D3-PT, D3-FEV] | P@4=0.25 R@4=0.33 F1@4=0.29
+2026-04-07 12:01:12 | INFO    |     1089_report.json: predict=[D3-FIM, D3-PT, D3-FEV, D3-NTA] | truth=[D3-PT, D3-FEV] | P@4=0.50 R@4=1.00 F1@4=0.67
+2026-04-07 12:01:12 | INFO    |     1090_report.json: predict=[D3-PT, D3-SICA, D3-OTF, D3-PSA] | truth=[D3-PLA, D3-PT, D3-FEV, D3-RKD, D3-OTF] | P@4=0.50 R@4=0.40 F1@4=0.44
+2026-04-07 12:01:12 | INFO    |     1091_report.json: predict=[D3-PT, D3-FAPA, D3-NI, D3-FEV] | truth=[D3-NI, D3-PT, D3-RC, D3-FEV, D3-RF] | P@4=0.75 R@4=0.60 F1@4=0.67
+2026-04-07 12:01:12 | INFO    |     1092_report.json: predict=[D3-PT, D3-NI, D3-PSA] | truth=[D3-PT, D3-OTF] | P@4=0.25 R@4=0.50 F1@4=0.33
+2026-04-07 12:01:12 | INFO    | 
+  Results exported: d:\Deep_Learning_V5\output\evaluation_transformer.xlsx
+2026-04-07 12:01:12 | INFO    | 
+============================================================
+2026-04-07 12:01:12 | INFO    | EVALUATION COMPLETE!
+2026-04-07 12:01:12 | INFO    | ============================================================

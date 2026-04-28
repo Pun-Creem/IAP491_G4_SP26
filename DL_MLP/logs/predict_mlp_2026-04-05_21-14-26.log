@@ -1,0 +1,82 @@
+2026-04-05 21:14:26 | INFO    | Log file: D:\Deep_Learning_V5\logs\predict_mlp_2026-04-05_21-14-26.log
+2026-04-05 21:14:26 | INFO    | ============================================================
+2026-04-05 21:14:26 | INFO    | MALWARE DL ACTION RECOMMENDATION - MLP PREDICTION
+2026-04-05 21:14:26 | INFO    | ============================================================
+2026-04-05 21:14:26 | INFO    | Device: cpu
+2026-04-05 21:14:26 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:14:26 | INFO    | STEP 1: Loading saved MLP model
+2026-04-05 21:14:26 | INFO    | ────────────────────────────────────────
+2026-04-05 21:14:26 | INFO    | Loading saved MLP model...
+2026-04-05 21:14:26 | INFO    | MLP loaded: 33 actions, input_dim=480
+2026-04-05 21:14:26 | INFO    | Enriching action info from D3FEND API...
+2026-04-05 21:14:26 | INFO    | Enriching 41 D3FEND actions with category + description...
+2026-04-05 21:14:26 | INFO    | D3FEND enrichment complete:
+2026-04-05 21:14:26 | INFO    |   From cache: 41
+2026-04-05 21:14:26 | INFO    |   From API:   0
+2026-04-05 21:14:26 | INFO    |   Fallback:   0
+2026-04-05 21:14:26 | INFO    |   Category distribution: {'Detect': 19, 'Evict': 7, 'Isolate': 10, 'Restore': 3, 'Unknown': 1, 'Harden': 1}
+2026-04-05 21:14:26 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:14:26 | INFO    | STEP 2: Loading new data
+2026-04-05 21:14:26 | INFO    | ────────────────────────────────────────
+2026-04-05 21:14:26 | INFO    |  Loading Excel: D:\Deep_Learning_V5\new_excel\DL_1017-1217.xlsx
+2026-04-05 21:14:27 | INFO    |  Loaded 201 samples from Excel
+2026-04-05 21:17:06 | INFO    |  Extracted features from 201 reports (0 failed/missing)
+2026-04-05 21:17:06 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:17:06 | INFO    | STEP 3: Building binary features
+2026-04-05 21:17:06 | INFO    | ────────────────────────────────────────
+2026-04-05 21:17:06 | INFO    | MLP Binary Dataset: 201 samples, vocab=480
+2026-04-05 21:17:06 | INFO    | New samples: 201
+2026-04-05 21:17:06 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:17:06 | INFO    | STEP 4: Predicting actions (MLP)
+2026-04-05 21:17:06 | INFO    | ────────────────────────────────────────
+2026-04-05 21:17:06 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:17:06 | INFO    | STEP 5: Exporting results
+2026-04-05 21:17:06 | INFO    | ────────────────────────────────────────
+2026-04-05 21:17:06 | INFO    | Results exported: D:\Deep_Learning_V5\output_mlp\predictions_mlp.xlsx
+2026-04-05 21:17:06 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:17:06 | INFO    | PREVIEW (first 5 samples):
+2026-04-05 21:17:06 | INFO    | ────────────────────────────────────────
+2026-04-05 21:17:06 | INFO    | 
+  [1083_report.json]
+2026-04-05 21:17:06 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.99]
+2026-04-05 21:17:06 | INFO    |     → D3-NI - Network Isolation (Isolate) [confidence: 0.70]
+2026-04-05 21:17:06 | INFO    |     → D3-OTF - Outbound Traffic Filtering (Isolate) [confidence: 0.64]
+2026-04-05 21:17:06 | INFO    |     → D3-CQ - Content Quarantine (Isolate) [confidence: 0.58]
+2026-04-05 21:17:06 | INFO    |     → D3-PSA - Process Spawn Analysis (Detect) [confidence: 0.49]
+2026-04-05 21:17:06 | INFO    | 
+  [1084_report.json]
+2026-04-05 21:17:06 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.98]
+2026-04-05 21:17:06 | INFO    |     → D3-NI - Network Isolation (Isolate) [confidence: 0.69]
+2026-04-05 21:17:06 | INFO    |     → D3-OTF - Outbound Traffic Filtering (Isolate) [confidence: 0.55]
+2026-04-05 21:17:06 | INFO    |     → D3-FEV - File Eviction (Evict) [confidence: 0.54]
+2026-04-05 21:17:06 | INFO    | 
+  [1085_report.json]
+2026-04-05 21:17:06 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.83]
+2026-04-05 21:17:06 | INFO    |     → D3-SICA - System Init Config Analysis (Detect) [confidence: 0.68]
+2026-04-05 21:17:06 | INFO    |     → D3-OTF - Outbound Traffic Filtering (Isolate) [confidence: 0.62]
+2026-04-05 21:17:06 | INFO    | 
+  [1086_report.json]
+2026-04-05 21:17:06 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 1.00]
+2026-04-05 21:17:06 | INFO    |     → D3-FEV - File Eviction (Evict) [confidence: 0.90]
+2026-04-05 21:17:06 | INFO    |     → D3-FAPA - File Access Pattern Analysis (Detect) [confidence: 0.86]
+2026-04-05 21:17:06 | INFO    |     → D3-NI - Network Isolation (Isolate) [confidence: 0.85]
+2026-04-05 21:17:06 | INFO    | 
+  [1087_report.json]
+2026-04-05 21:17:06 | INFO    |     → D3-PT - Process Termination (Evict) [confidence: 0.97]
+2026-04-05 21:17:06 | INFO    |     → D3-NI - Network Isolation (Isolate) [confidence: 0.61]
+2026-04-05 21:17:06 | INFO    |     → D3-OTF - Outbound Traffic Filtering (Isolate) [confidence: 0.61]
+2026-04-05 21:17:06 | INFO    |     → D3-CE - Credential Eviction (Evict) [confidence: 0.46]
+2026-04-05 21:17:06 | INFO    |     → D3-CR - Credential Revocation (Evict) [confidence: 0.38]
+2026-04-05 21:17:06 | INFO    | 
+============================================================
+2026-04-05 21:17:06 | INFO    | MLP PREDICTION COMPLETE!
+2026-04-05 21:17:06 | INFO    |   Samples: 201
+2026-04-05 21:17:06 | INFO    |   Time: 160.3 seconds
+2026-04-05 21:17:06 | INFO    |   Output: D:\Deep_Learning_V5\output_mlp\predictions_mlp.xlsx
+2026-04-05 21:17:06 | INFO    | ============================================================
