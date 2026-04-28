@@ -1,0 +1,248 @@
+{
+  "D3-DNSTA": {
+    "label": "DNS Traffic Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "api"
+  },
+  "D3-PT": {
+    "label": "Process Termination",
+    "category": "Evict",
+    "description": "",
+    "source": "api"
+  },
+  "D3-DNSDL": {
+    "label": "DNS Denylisting",
+    "category": "Isolate",
+    "description": "",
+    "source": "api"
+  },
+  "D3-NI": {
+    "label": "Network Isolation",
+    "category": "Isolate",
+    "description": "",
+    "source": "api"
+  },
+  "D3-PCSV": {
+    "label": "Process Code Segment Verification",
+    "category": "Detect",
+    "description": "",
+    "source": "api"
+  },
+  "D3-FR": {
+    "label": "File Removal",
+    "category": "Evict",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-PSA": {
+    "label": "Process Spawn Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FEV": {
+    "label": "File Eviction",
+    "category": "Evict",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-RKD": {
+    "label": "Registry Key Deletion",
+    "category": "Evict",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-CE": {
+    "label": "Credential Eviction",
+    "category": "Evict",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FAPA": {
+    "label": "File Access Pattern Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-EDL": {
+    "label": "Executable Denylisting",
+    "category": "Isolate",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-OTF": {
+    "label": "Outbound Traffic Filtering",
+    "category": "Isolate",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-RF": {
+    "label": "Restore File",
+    "category": "Restore",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-ITF": {
+    "label": "Inbound Traffic Filtering",
+    "category": "Isolate",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-RTSD": {
+    "label": "Remote Terminal Session Detection",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-PLA": {
+    "label": "Process Lineage Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FCOA": {
+    "label": "File Content Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-SCA": {
+    "label": "System Call Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-SICA": {
+    "label": "System Init Config Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-NTA": {
+    "label": "Network Traffic Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-EI": {
+    "label": "Execution Isolation",
+    "category": "Isolate",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FRDDL": {
+    "label": "Forward Resolution Domain Denylisting",
+    "category": "Isolate",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-CAA": {
+    "label": "Connection Attempt Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-SEA": {
+    "label": "Script Execution Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FRIDL": {
+    "label": "Forward Resolution IP Denylisting",
+    "category": "Isolate",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FHRA": {
+    "label": "File Hash Reputation Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FCA": {
+    "label": "File Creation Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-CCSA": {
+    "label": "Credential Compromise Scope Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-PSMD": {
+    "label": "Process Self",
+    "category": "Unknown",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-SJA": {
+    "label": "Scheduled Job Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FA": {
+    "label": "File Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-CQ": {
+    "label": "Content Quarantine",
+    "category": "Isolate",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-CR": {
+    "label": "Credential Revocation",
+    "category": "Evict",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-PA": {
+    "label": "Process Analysis",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-RC": {
+    "label": "Restore Configuration",
+    "category": "Restore",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-ST": {
+    "label": "Session Termination",
+    "category": "Evict",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-CRO": {
+    "label": "Credential Rotation",
+    "category": "Harden",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-EAL": {
+    "label": "Executable Allowlisting",
+    "category": "Isolate",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-FIM": {
+    "label": "File Integrity Monitoring",
+    "category": "Detect",
+    "description": "",
+    "source": "fallback"
+  },
+  "D3-RUAA": {
+    "label": "Restore User Account Access",
+    "category": "Restore",
+    "description": "",
+    "source": "fallback"
+  }
+}

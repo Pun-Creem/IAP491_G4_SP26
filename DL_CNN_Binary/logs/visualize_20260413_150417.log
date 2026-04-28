@@ -1,0 +1,83 @@
+[15:04:17] ============================================================
+[15:04:17]  VISUALIZE -- Malware Feature Images (Binary, no TF-IDF)
+[15:04:17] ============================================================
+[15:04:17] 
+[Step 1] Loading training data...
+[15:04:17]  Loading Excel: d:\Cnn_V2\train_excel\DL_1-953.xlsx
+[15:04:17]  Loaded 943 samples from Excel
+[15:06:14]  Extracted signatures from 943 reports (0 failed/missing)
+[15:06:14]  Feature filtering:
+[15:06:14]   Total features found: 588
+[15:06:14]   Removed (too rare, <3): 110
+[15:06:14]   Removed (too common, >95%): 0
+[15:06:14]   Kept: 478
+[15:06:14]   Breakdown: TTPs=158, MBCs=195, Signatures=125
+[15:06:14]   Total features: 478
+[15:06:14]   Image size: 22x22 = 484 (padding 6 zeros)
+[15:06:14] 
+[Step 2] Building binary vectors (training)...
+[15:06:14]   Shape: (943, 478), values: 0 or 1
+[15:06:14] 
+[Step 3] Generating 20 training images...
+[15:06:14]   1_report: 52 active features
+[15:06:15]   2_report: 11 active features
+[15:06:15]   3_report: 30 active features
+[15:06:15]   4_report: 82 active features
+[15:06:15]   5_report: 80 active features
+[15:06:15]   6_report: 40 active features
+[15:06:15]   7_report: 94 active features
+[15:06:15]   8_report: 45 active features
+[15:06:15]   9_report: 25 active features
+[15:06:15]   10_report: 38 active features
+[15:06:16]   11_report: 59 active features
+[15:06:16]   12_report: 50 active features
+[15:06:16]   13_report: 45 active features
+[15:06:16]   14_report: 54 active features
+[15:06:16]   15_report: 49 active features
+[15:06:16]   16_report: 27 active features
+[15:06:16]   17_report: 36 active features
+[15:06:16]   18_report: 52 active features
+[15:06:16]   19_report: 17 active features
+[15:06:17]   20_report: 69 active features
+[15:06:17]   Saved grid_train.png (6 samples)
+[15:06:17] 
+[Step 4] Loading test data...
+[15:06:17]  Loading Excel: d:\Cnn_V2\new_excel\DL_1017-1217.xlsx
+[15:06:17]  Loaded 201 samples from Excel
+[15:06:43]  Extracted signatures from 201 reports (0 failed/missing)
+[15:06:43] 
+[Step 5] Building binary vectors (test)...
+[15:06:43]   Shape: (201, 478), values: 0 or 1
+[15:06:43] 
+[Step 6] Generating 20 test images...
+[15:06:43]   1083_report: 77 active features
+[15:06:43]   1084_report: 34 active features
+[15:06:43]   1085_report: 23 active features
+[15:06:44]   1086_report: 64 active features
+[15:06:44]   1087_report: 29 active features
+[15:06:44]   1088_report: 42 active features
+[15:06:44]   1089_report: 43 active features
+[15:06:44]   1090_report: 57 active features
+[15:06:44]   1091_report: 93 active features
+[15:06:44]   1092_report: 28 active features
+[15:06:44]   1093_report: 14 active features
+[15:06:44]   1094_report: 51 active features
+[15:06:45]   1095_report: 21 active features
+[15:06:45]   1096_report: 38 active features
+[15:06:45]   1097_report: 39 active features
+[15:06:45]   1098_report: 86 active features
+[15:06:45]   1099_report: 25 active features
+[15:06:45]   1100_report: 31 active features
+[15:06:45]   1101_report: 36 active features
+[15:06:45]   1102_report: 56 active features
+[15:06:46]   Saved grid_test.png (6 samples)
+[15:06:46] 
+============================================================
+[15:06:46]  COMPLETE
+[15:06:46]   Train: 20 individual + grid (6 samples)
+[15:06:46]   Test:  20 individual + grid (6 samples)
+[15:06:46]   Image size: 22x22
+[15:06:46]   Colormap: inferno
+[15:06:46]   Values: Binary (0 = absent, 1 = present)
+[15:06:46]   No TF-IDF, no category weights
+[15:06:46] ============================================================

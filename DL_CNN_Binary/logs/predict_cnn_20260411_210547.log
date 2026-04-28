@@ -1,0 +1,26 @@
+[21:05:47] ============================================================
+[21:05:47]  CNN Malware Action Recommendation — Prediction
+[21:05:47] ============================================================
+[21:05:47]  Device: cpu
+[21:05:47] 
+[Step 1] Loading saved model...
+[21:05:47] Loaded 5 fold models from d:\DL_CNN\saved_model_cnn
+[21:05:47] 
+[Step 2] Loading new malware data...
+[21:05:47]  Loading Excel: d:\DL_CNN\new_excel\DL_1017-1217.xlsx
+[21:05:48]  Loaded 201 samples from Excel
+[21:05:48] 
+[Step 3] Extracting signatures from CAPE reports...
+[21:06:11]  Extracted signatures from 201 reports (0 failed/missing)
+[21:06:11] 
+[Step 4] Creating CNN image dataset...
+[21:06:11]  CNN Dataset: 201 samples, 478 features → 22x22 image
+[21:06:11] 
+[Step 5] Running ensemble prediction...
+[21:06:12] 
+[Step 6] Saving predictions...
+[21:06:12]  Predictions saved to: d:\DL_CNN\output_cnn\predictions_cnn.xlsx
+[21:06:12] 
+ Prediction complete in 24.4s
+[21:06:12]  Samples: 201
+[21:06:12]  Actions per sample: min=2, max=5, mean=4.9

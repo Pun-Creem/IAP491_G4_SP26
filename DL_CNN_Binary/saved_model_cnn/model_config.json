@@ -1,0 +1,12 @@
+{
+  "image_size": 22,
+  "num_actions": 33,
+  "channels": [
+    32,
+    48,
+    48
+  ],
+  "kernel_size": 3,
+  "classifier_dim": 96,
+  "dropout": 0.45
+}
