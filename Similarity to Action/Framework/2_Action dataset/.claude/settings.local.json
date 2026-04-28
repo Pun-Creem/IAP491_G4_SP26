@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \":*)",
+      "Read(//c/Users/puncu/OneDrive/Máy tính/Framework v3/Top K/Action space/**)"
+    ]
+  }
+}

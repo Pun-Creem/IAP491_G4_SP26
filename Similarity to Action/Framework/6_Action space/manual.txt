@@ -1,0 +1,5 @@
+generate_action_per_ttps.py
+gọi api d33fend để update nếu có them technique mới
+
+build_action_per_ttps.py
+ghép file action_per_ttps cũ với file actionPerReport để update, dung để them action nếu dataset action ban đầu mở rộng

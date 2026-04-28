@@ -1,0 +1,12 @@
+run,metric,w_sig,w_mbc,w_ttp,top_k,W,beta,tfidf_pattern
+1,cosine,0.7,0.1,0.2,10,0,1,FALSE
+2,cosine,0.7,0.1,0.2,10,0.1,0.9,FALSE
+3,cosine,0.7,0.1,0.2,10,0.2,0.8,FALSE
+4,cosine,0.7,0.1,0.2,10,0.3,0.7,FALSE
+5,cosine,0.7,0.1,0.2,10,0.4,0.6,FALSE
+6,cosine,0.7,0.1,0.2,10,0.5,0.5,FALSE
+7,cosine,0.7,0.1,0.2,10,0.6,0.4,FALSE
+8,cosine,0.7,0.1,0.2,10,0.7,0.3,FALSE
+9,cosine,0.7,0.1,0.2,10,0.8,0.2,FALSE
+10,cosine,0.7,0.1,0.2,10,0.9,0.1,FALSE
+11,cosine,0.7,0.1,0.2,10,1,0,FALSE

@@ -1,0 +1,30 @@
+{
+  "_comment": "Default arguments for auto_sim2action.py. CLI args override these values.",
+  "_guide": "See DATA_GUIDE.txt for instructions on how to populate the data/ folder.",
+
+  "metric": "jaccard",
+  "w_sig": 0.6,
+  "w_mbc": 0.3,
+  "w_ttp": 0.1,
+  "top_k": 5,
+  "W": 0.3,
+  "beta": 0.7,
+  "vt_key": "223b13835ace35e4fc3be592b937c43f109182b2660e612636b35365a5c6deda",
+  "no_vt": false,
+  "tfidf_pattern": false,
+  "keep_process_data": true,
+  "out_dir": "",
+
+  "paths": {
+    "pattern_sig":    "data/patterns/pattern_signature.csv",
+    "pattern_ttp":    "data/patterns/pattern_ttp_update.csv",
+    "pattern_mbc":    "data/patterns/pattern_mbc_update.csv",
+    "sig_unique":     "data/unique/signature_unique.csv",
+    "ttp_unique":     "data/unique/ttp_unique.csv",
+    "mbc_unique":     "data/unique/mbc_unique.csv",
+    "action_ttps":    "data/action_space/action_per_ttps.csv",
+    "action_report":  "data/top_k/actionPerReport.xlsx",
+    "unique_actions": "data/top_k/unique_actions.csv"
+  }
+}
+

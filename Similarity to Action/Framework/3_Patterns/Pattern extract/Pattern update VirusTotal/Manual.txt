@@ -1,0 +1,5 @@
+VirusTotalUpdateAPI.py
+tạo file update vt_update.csv chứa mbc và ttp xtract từ VirusTotal
+
+CascadeUpdate.py 
+tạo 2 file mbc và ttp mới bang cách kết hợp file pattern cũ và file xtract từ VT mới

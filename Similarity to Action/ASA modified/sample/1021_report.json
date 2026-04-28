@@ -1,0 +1,4140 @@
+{
+  "statistics": {
+    "processing": [
+      {
+        "name": "CAPE",
+        "time": 1.141
+      },
+      {
+        "name": "AnalysisInfo",
+        "time": 0.009
+      },
+      {
+        "name": "BehaviorAnalysis",
+        "time": 0.001
+      },
+      {
+        "name": "Debug",
+        "time": 0.001
+      },
+      {
+        "name": "NetworkAnalysis",
+        "time": 0.0
+      },
+      {
+        "name": "UrlAnalysis",
+        "time": 0.0
+      },
+      {
+        "name": "script_log_processing",
+        "time": 0.0
+      },
+      {
+        "name": "ProcessMemory",
+        "time": 0.0
+      }
+    ],
+    "signatures": [
+      {
+        "name": "packer_themida",
+        "time": 0.0
+      },
+      {
+        "name": "stealth_network",
+        "time": 0.0
+      },
+      {
+        "name": "disable_driver_via_blocklist",
+        "time": 0.0
+      },
+      {
+        "name": "disable_driver_via_hvcidisallowedimages",
+        "time": 0.0
+      },
+      {
+        "name": "disable_hypervisor_protected_code_integrity",
+        "time": 0.0
+      },
+      {
+        "name": "pendingfilerenameoperations_Operations",
+        "time": 0.0
+      },
+      {
+        "name": "anomalous_deletefile",
+        "time": 0.0
+      },
+      {
+        "name": "antiav_servicestop",
+        "time": 0.0
+      },
+      {
+        "name": "antidebug_guardpages",
+        "time": 0.0
+      },
+      {
+        "name": "antidebug_outputdebugstring",
+        "time": 0.0
+      },
+      {
+        "name": "antidebug_windows",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_cuckoocrash",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_foregroundwindows",
+        "time": 0.0
+      },
+      {
+        "name": "mouse_movement_detect",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_script_timer",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_sleep",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_unhook",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_directory_objects",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_display",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_generic_system",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_checks_available_memory",
+        "time": 0.0
+      },
+      {
+        "name": "detect_virtualization_via_recent_files",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vmware_events",
+        "time": 0.0
+      },
+      {
+        "name": "api_spamming",
+        "time": 0.0
+      },
+      {
+        "name": "api_uuidfromstringa",
+        "time": 0.0
+      },
+      {
+        "name": "bcdedit_command",
+        "time": 0.0
+      },
+      {
+        "name": "potential_overwrite_mbr",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_ioctl_scsipassthough",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_iocontrol_codes",
+        "time": 0.0
+      },
+      {
+        "name": "browser_needed",
+        "time": 0.0
+      },
+      {
+        "name": "uac_bypass_cmstp",
+        "time": 0.0
+      },
+      {
+        "name": "uac_bypass_eventvwr",
+        "time": 0.0
+      },
+      {
+        "name": "dotnet_code_compile",
+        "time": 0.0
+      },
+      {
+        "name": "queries_computer_name",
+        "time": 0.0
+      },
+      {
+        "name": "queries_user_name",
+        "time": 0.0
+      },
+      {
+        "name": "creates_largekey",
+        "time": 0.0
+      },
+      {
+        "name": "creates_nullvalue",
+        "time": 0.0
+      },
+      {
+        "name": "access_windows_passwords_vault",
+        "time": 0.0
+      },
+      {
+        "name": "lsass_credential_dumping",
+        "time": 0.0
+      },
+      {
+        "name": "critical_process",
+        "time": 0.0
+      },
+      {
+        "name": "cryptopool_domains",
+        "time": 0.0
+      },
+      {
+        "name": "dead_connect",
+        "time": 0.0
+      },
+      {
+        "name": "dead_link",
+        "time": 0.0
+      },
+      {
+        "name": "decoy_document",
+        "time": 0.0
+      },
+      {
+        "name": "decoy_image",
+        "time": 0.0
+      },
+      {
+        "name": "deletes_consolehost_history",
+        "time": 0.0
+      },
+      {
+        "name": "dep_bypass",
+        "time": 0.0
+      },
+      {
+        "name": "dep_disable",
+        "time": 0.0
+      },
+      {
+        "name": "disables_wfp",
+        "time": 0.0
+      },
+      {
+        "name": "add_windows_defender_exclusions",
+        "time": 0.0
+      },
+      {
+        "name": "document_script_exe_drop",
+        "time": 0.0
+      },
+      {
+        "name": "guloader_apis",
+        "time": 0.0
+      },
+      {
+        "name": "driver_load",
+        "time": 0.0
+      },
+      {
+        "name": "dynamic_function_loading",
+        "time": 0.0
+      },
+      {
+        "name": "encrypted_ioc",
+        "time": 0.0
+      },
+      {
+        "name": "process_creation_suspicious_location",
+        "time": 0.0
+      },
+      {
+        "name": "exploit_getbasekerneladdress",
+        "time": 0.0
+      },
+      {
+        "name": "exploit_gethaldispatchtable",
+        "time": 0.0
+      },
+      {
+        "name": "exploit_heapspray",
+        "time": 0.0
+      },
+      {
+        "name": "koadic_apis",
+        "time": 0.0
+      },
+      {
+        "name": "koadic_network_activity",
+        "time": 0.0
+      },
+      {
+        "name": "downloads_from_filehosting",
+        "time": 0.0
+      },
+      {
+        "name": "generic_phish",
+        "time": 0.0
+      },
+      {
+        "name": "http_request",
+        "time": 0.0
+      },
+      {
+        "name": "infostealer_browser",
+        "time": 0.0
+      },
+      {
+        "name": "infostealer_browser_password",
+        "time": 0.0
+      },
+      {
+        "name": "infostealer_cookies",
+        "time": 0.0
+      },
+      {
+        "name": "cryptbot_network",
+        "time": 0.0
+      },
+      {
+        "name": "purplewave_network_activity",
+        "time": 0.0
+      },
+      {
+        "name": "quilclipper_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "raccoon_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "captures_screenshot",
+        "time": 0.0
+      },
+      {
+        "name": "vidar_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "creates_suspended_process",
+        "time": 0.0
+      },
+      {
+        "name": "injection_network_traffic",
+        "time": 0.0
+      },
+      {
+        "name": "injection_themeinitapihook",
+        "time": 0.0
+      },
+      {
+        "name": "resumethread_remote_process",
+        "time": 0.0
+      },
+      {
+        "name": "injection_write_exe_process",
+        "time": 0.0
+      },
+      {
+        "name": "injection_write_process",
+        "time": 0.0
+      },
+      {
+        "name": "internet_dropper",
+        "time": 0.0
+      },
+      {
+        "name": "escalate_privilege_via_named_pipe",
+        "time": 0.0
+      },
+      {
+        "name": "ipc_namedpipe",
+        "time": 0.0
+      },
+      {
+        "name": "js_phish",
+        "time": 0.0
+      },
+      {
+        "name": "js_suspicious_redirect",
+        "time": 0.0
+      },
+      {
+        "name": "loader_alien",
+        "time": 0.0
+      },
+      {
+        "name": "execute_binary_via_internet_explorer_exporter",
+        "time": 0.0
+      },
+      {
+        "name": "execute_binary_via_run_exe_helper_utility",
+        "time": 0.0
+      },
+      {
+        "name": "execute_ps_via_syncappvpublishingserver",
+        "time": 0.0
+      },
+      {
+        "name": "malicious_dynamic_function_loading",
+        "time": 0.0
+      },
+      {
+        "name": "encrypt_pcinfo",
+        "time": 0.0
+      },
+      {
+        "name": "encrypt_data_agenttesla_http",
+        "time": 0.0
+      },
+      {
+        "name": "encrypt_data_agentteslat2_http",
+        "time": 0.0
+      },
+      {
+        "name": "encrypt_data_nanocore",
+        "time": 0.0
+      },
+      {
+        "name": "reads_memory_remote_process",
+        "time": 0.0
+      },
+      {
+        "name": "mimics_filetime",
+        "time": 0.0
+      },
+      {
+        "name": "amsi_bypass_via_com_registry",
+        "time": 0.0
+      },
+      {
+        "name": "access_auto_logons_via_registry",
+        "time": 0.0
+      },
+      {
+        "name": "access_boot_key_via_registry",
+        "time": 0.0
+      },
+      {
+        "name": "create_suspicious_lnk_files",
+        "time": 0.0
+      },
+      {
+        "name": "credential_access_via_windows_credential_history",
+        "time": 0.0
+      },
+      {
+        "name": "dll_hijacking_via_microsoft_exchange",
+        "time": 0.0
+      },
+      {
+        "name": "dll_hijacking_via_waas_medic_svc_com_typelib",
+        "time": 0.0
+      },
+      {
+        "name": "execute_file_downloaded_via_openssh",
+        "time": 0.0
+      },
+      {
+        "name": "execute_safe_mode_from_suspicious_process",
+        "time": 0.0
+      },
+      {
+        "name": "execute_scripts_via_microsoft_management_console",
+        "time": 0.0
+      },
+      {
+        "name": "execute_suspicious_processes_via_windows_mssql_service",
+        "time": 0.0
+      },
+      {
+        "name": "execution_from_self_extracting_archive",
+        "time": 0.0
+      },
+      {
+        "name": "ip_address_discovery_via_trusted_program",
+        "time": 0.0
+      },
+      {
+        "name": "load_dll_via_control_panel",
+        "time": 0.0
+      },
+      {
+        "name": "network_connection_via_suspicious_process",
+        "time": 0.0
+      },
+      {
+        "name": "potential_location_discovery_via_unusual_process",
+        "time": 0.0
+      },
+      {
+        "name": "store_executable_registry",
+        "time": 0.0
+      },
+      {
+        "name": "Suspicious_Execution_Via_MicrosoftExchangeTransportAgent",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_java_execution_via_win_scripts",
+        "time": 0.0
+      },
+      {
+        "name": "Suspicious_Scheduled_Task_Creation_Via_Masqueraded_XML_File",
+        "time": 0.0
+      },
+      {
+        "name": "uses_restart_manager_for_suspicious_activities",
+        "time": 0.0
+      },
+      {
+        "name": "modify_desktop_wallpaper",
+        "time": 0.0
+      },
+      {
+        "name": "move_file_on_reboot",
+        "time": 0.0
+      },
+      {
+        "name": "multiple_useragents",
+        "time": 0.0
+      },
+      {
+        "name": "network_anomaly",
+        "time": 0.0
+      },
+      {
+        "name": "network_bind",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_archive",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_free_webhosting",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_generic",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_interactsh",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_opensource",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_pastesite",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_payload",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_serviceinterface",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_socialmedia",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_telegram",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_tempstorage",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_temp_urldns",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_urlshortener",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_https_useragent",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_smtps_exfil",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_smtps_generic",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_idn",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_suspicious_querytype",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_tunneling_request",
+        "time": 0.0
+      },
+      {
+        "name": "network_document_http",
+        "time": 0.0
+      },
+      {
+        "name": "explorer_http",
+        "time": 0.0
+      },
+      {
+        "name": "network_fake_useragent",
+        "time": 0.0
+      },
+      {
+        "name": "legitimate_domain_abuse",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_communication_trusted_site",
+        "time": 0.0
+      },
+      {
+        "name": "network_tor",
+        "time": 0.0
+      },
+      {
+        "name": "office_cve2017_11882",
+        "time": 0.0
+      },
+      {
+        "name": "office_cve2017_11882_network",
+        "time": 0.0
+      },
+      {
+        "name": "office_cve_2021_40444",
+        "time": 0.0
+      },
+      {
+        "name": "office_cve_2021_40444_m2",
+        "time": 0.0
+      },
+      {
+        "name": "office_flash_load",
+        "time": 0.0
+      },
+      {
+        "name": "office_postscript",
+        "time": 0.0
+      },
+      {
+        "name": "office_suspicious_processes",
+        "time": 0.0
+      },
+      {
+        "name": "office_write_exe",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_via_autodial_dll_registry",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_autorun",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_autorun_tasks",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_bootexecute",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_registry_script",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_network_connection",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_download",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_request",
+        "time": 0.0
+      },
+      {
+        "name": "createtoolhelp32snapshot_module_enumeration",
+        "time": 0.0
+      },
+      {
+        "name": "enumerates_running_processes",
+        "time": 0.0
+      },
+      {
+        "name": "process_interest",
+        "time": 0.0
+      },
+      {
+        "name": "process_needed",
+        "time": 0.0
+      },
+      {
+        "name": "mass_data_encryption",
+        "time": 0.0
+      },
+      {
+        "name": "ransomware_file_modifications",
+        "time": 0.0
+      },
+      {
+        "name": "nemty_network_activity",
+        "time": 0.0
+      },
+      {
+        "name": "nemty_note",
+        "time": 0.0
+      },
+      {
+        "name": "sodinokibi_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "stop_ransomware_registry",
+        "time": 0.0
+      },
+      {
+        "name": "blackrat_apis",
+        "time": 0.0
+      },
+      {
+        "name": "blackrat_network_activity",
+        "time": 0.0
+      },
+      {
+        "name": "blackrat_registry_keys",
+        "time": 0.0
+      },
+      {
+        "name": "dcrat_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "karagany_system_event_objects",
+        "time": 0.0
+      },
+      {
+        "name": "rat_luminosity",
+        "time": 0.0
+      },
+      {
+        "name": "rat_nanocore",
+        "time": 0.0
+      },
+      {
+        "name": "netwire_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "obliquerat_network_activity",
+        "time": 0.0
+      },
+      {
+        "name": "orcusrat_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "trochilusrat_apis",
+        "time": 0.0
+      },
+      {
+        "name": "reads_self",
+        "time": 0.0
+      },
+      {
+        "name": "recon_beacon",
+        "time": 0.0
+      },
+      {
+        "name": "recon_programs",
+        "time": 0.0
+      },
+      {
+        "name": "accesses_recyclebin",
+        "time": 0.0
+      },
+      {
+        "name": "remcos_shell_code_dynamic_wrapper_x",
+        "time": 0.0
+      },
+      {
+        "name": "script_created_process",
+        "time": 0.0
+      },
+      {
+        "name": "script_network_activity",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_js_script",
+        "time": 0.0
+      },
+      {
+        "name": "javascript_timer",
+        "time": 0.0
+      },
+      {
+        "name": "secure_login_phishing",
+        "time": 0.0
+      },
+      {
+        "name": "securityxploded_modules",
+        "time": 0.0
+      },
+      {
+        "name": "get_clipboard_data",
+        "time": 0.0
+      },
+      {
+        "name": "sets_autoconfig_url",
+        "time": 0.0
+      },
+      {
+        "name": "spoofs_procname",
+        "time": 0.0
+      },
+      {
+        "name": "stack_pivot",
+        "time": 0.0
+      },
+      {
+        "name": "stack_pivot_file_created",
+        "time": 0.0
+      },
+      {
+        "name": "stack_pivot_process_create",
+        "time": 0.0
+      },
+      {
+        "name": "set_clipboard_data",
+        "time": 0.0
+      },
+      {
+        "name": "stealth_childproc",
+        "time": 0.0
+      },
+      {
+        "name": "stealth_file",
+        "time": 0.0
+      },
+      {
+        "name": "stealth_window",
+        "time": 0.0
+      },
+      {
+        "name": "queries_keyboard_layout",
+        "time": 0.0
+      },
+      {
+        "name": "queries_locale_api",
+        "time": 0.0
+      },
+      {
+        "name": "terminates_remote_process",
+        "time": 0.0
+      },
+      {
+        "name": "user_enum",
+        "time": 0.0
+      },
+      {
+        "name": "virus",
+        "time": 0.0
+      },
+      {
+        "name": "neshta_files",
+        "time": 0.0
+      },
+      {
+        "name": "neshta_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "webmail_phish",
+        "time": 0.0
+      },
+      {
+        "name": "persists_dev_util",
+        "time": 0.0
+      },
+      {
+        "name": "spawns_dev_util",
+        "time": 0.0
+      },
+      {
+        "name": "alters_windows_utility",
+        "time": 0.0
+      },
+      {
+        "name": "overwrites_accessibility_utility",
+        "time": 0.0
+      },
+      {
+        "name": "Potential_Lateral_Movement_Via_SMBEXEC",
+        "time": 0.0
+      },
+      {
+        "name": "potential_WebShell_Via_ScreenConnectServer",
+        "time": 0.0
+      },
+      {
+        "name": "uses_Microsoft_HTML_Help_Executable",
+        "time": 0.0
+      },
+      {
+        "name": "wiper_zeroedbytes",
+        "time": 0.0
+      },
+      {
+        "name": "wmi_create_process",
+        "time": 0.0
+      },
+      {
+        "name": "wmi_script_process",
+        "time": 0.0
+      },
+      {
+        "name": "antianalysis_tls_section",
+        "time": 0.0
+      },
+      {
+        "name": "antivirus_clamav",
+        "time": 0.0
+      },
+      {
+        "name": "antivirus_virustotal",
+        "time": 0.0
+      },
+      {
+        "name": "bad_certs",
+        "time": 0.0
+      },
+      {
+        "name": "bad_ssl_certs",
+        "time": 0.0
+      },
+      {
+        "name": "banker_zeus_p2p",
+        "time": 0.0
+      },
+      {
+        "name": "banker_zeus_url",
+        "time": 0.0
+      },
+      {
+        "name": "binary_yara",
+        "time": 0.0
+      },
+      {
+        "name": "bot_athenahttp",
+        "time": 0.0
+      },
+      {
+        "name": "bot_dirtjumper",
+        "time": 0.0
+      },
+      {
+        "name": "bot_drive",
+        "time": 0.0
+      },
+      {
+        "name": "bot_drive2",
+        "time": 0.0
+      },
+      {
+        "name": "bot_madness",
+        "time": 0.0
+      },
+      {
+        "name": "phishing_kit_detected",
+        "time": 0.0
+      },
+      {
+        "name": "family_proxyback",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_antianalysis",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_collection",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_communication",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_compiler",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_datamanipulation",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_executable",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_hostinteraction",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_impact",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_lib",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_linking",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_loadcode",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_malwarefamily",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_nursery",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_persistence",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_runtime",
+        "time": 0.0
+      },
+      {
+        "name": "flare_capa_targeting",
+        "time": 0.0
+      },
+      {
+        "name": "threatfox",
+        "time": 0.0
+      },
+      {
+        "name": "log4shell",
+        "time": 0.0
+      },
+      {
+        "name": "mimics_extension",
+        "time": 0.0
+      },
+      {
+        "name": "network_country_distribution",
+        "time": 0.0
+      },
+      {
+        "name": "network_cnc_http",
+        "time": 0.0
+      },
+      {
+        "name": "network_ip_exe",
+        "time": 0.0
+      },
+      {
+        "name": "network_dga",
+        "time": 0.0
+      },
+      {
+        "name": "network_dga_fraunhofer",
+        "time": 0.0
+      },
+      {
+        "name": "network_dyndns",
+        "time": 0.0
+      },
+      {
+        "name": "network_excessive_udp",
+        "time": 0.0
+      },
+      {
+        "name": "network_http",
+        "time": 0.0
+      },
+      {
+        "name": "network_icmp",
+        "time": 0.0
+      },
+      {
+        "name": "network_irc",
+        "time": 0.0
+      },
+      {
+        "name": "network_open_proxy",
+        "time": 0.0
+      },
+      {
+        "name": "network_questionable_http_path",
+        "time": 0.0
+      },
+      {
+        "name": "network_questionable_https_path",
+        "time": 0.0
+      },
+      {
+        "name": "network_smtp",
+        "time": 0.0
+      },
+      {
+        "name": "network_torgateway",
+        "time": 0.0
+      },
+      {
+        "name": "origin_langid",
+        "time": 0.0
+      },
+      {
+        "name": "origin_resource_langid",
+        "time": 0.0
+      },
+      {
+        "name": "overlay",
+        "time": 0.0
+      },
+      {
+        "name": "packer_unknown_pe_section_name",
+        "time": 0.0
+      },
+      {
+        "name": "packer_aspack",
+        "time": 0.0
+      },
+      {
+        "name": "packer_aspirecrypt",
+        "time": 0.0
+      },
+      {
+        "name": "packer_bedsprotector",
+        "time": 0.0
+      },
+      {
+        "name": "packer_confuser",
+        "time": 0.0
+      },
+      {
+        "name": "packer_enigma",
+        "time": 0.0
+      },
+      {
+        "name": "packer_entropy",
+        "time": 0.0
+      },
+      {
+        "name": "packer_mpress",
+        "time": 0.0
+      },
+      {
+        "name": "packer_nate",
+        "time": 0.0
+      },
+      {
+        "name": "packer_nspack",
+        "time": 0.0
+      },
+      {
+        "name": "packer_smartassembly",
+        "time": 0.0
+      },
+      {
+        "name": "packer_spices",
+        "time": 0.0
+      },
+      {
+        "name": "packer_themida",
+        "time": 0.0
+      },
+      {
+        "name": "packer_titan",
+        "time": 0.0
+      },
+      {
+        "name": "packer_upx",
+        "time": 0.0
+      },
+      {
+        "name": "packer_vmprotect",
+        "time": 0.0
+      },
+      {
+        "name": "packer_yoda",
+        "time": 0.0
+      },
+      {
+        "name": "pdf_annot_urls_checker",
+        "time": 0.0
+      },
+      {
+        "name": "polymorphic",
+        "time": 0.0
+      },
+      {
+        "name": "punch_plus_plus_pcres",
+        "time": 0.0
+      },
+      {
+        "name": "procmem_yara",
+        "time": 0.0
+      },
+      {
+        "name": "recon_checkip",
+        "time": 0.0
+      },
+      {
+        "name": "static_authenticode",
+        "time": 0.0
+      },
+      {
+        "name": "invalid_authenticode_signature",
+        "time": 0.0
+      },
+      {
+        "name": "static_dotnet_anomaly",
+        "time": 0.0
+      },
+      {
+        "name": "static_java",
+        "time": 0.0
+      },
+      {
+        "name": "static_pdf",
+        "time": 0.0
+      },
+      {
+        "name": "contains_pe_overlay",
+        "time": 0.0
+      },
+      {
+        "name": "static_pe_anomaly",
+        "time": 0.0
+      },
+      {
+        "name": "pe_compile_timestomping",
+        "time": 0.0
+      },
+      {
+        "name": "static_pe_pdbpath",
+        "time": 0.0
+      },
+      {
+        "name": "static_rat_config",
+        "time": 0.0
+      },
+      {
+        "name": "static_versioninfo_anomaly",
+        "time": 0.0
+      },
+      {
+        "name": "suricata_alert",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_html_body",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_html_name",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_html_title",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_devicetree_1",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_handles_1",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_ldrmodules_1",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_ldrmodules_2",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_malfind_1",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_malfind_2",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_modscan_1",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_svcscan_1",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_svcscan_2",
+        "time": 0.0
+      },
+      {
+        "name": "volatility_svcscan_3",
+        "time": 0.0
+      },
+      {
+        "name": "whois_create",
+        "time": 0.0
+      },
+      {
+        "name": "accesses_mailslot",
+        "time": 0.0
+      },
+      {
+        "name": "accesses_netlogon_regkey",
+        "time": 0.0
+      },
+      {
+        "name": "accesses_public_folder",
+        "time": 0.0
+      },
+      {
+        "name": "accesses_sysvol",
+        "time": 0.0
+      },
+      {
+        "name": "writes_sysvol",
+        "time": 0.0
+      },
+      {
+        "name": "adds_admin_user",
+        "time": 0.0
+      },
+      {
+        "name": "adds_user",
+        "time": 0.0
+      },
+      {
+        "name": "overwrites_admin_password",
+        "time": 0.0
+      },
+      {
+        "name": "antianalysis_detectfile",
+        "time": 0.001
+      },
+      {
+        "name": "antianalysis_detectreg",
+        "time": 0.0
+      },
+      {
+        "name": "modify_attachment_manager",
+        "time": 0.0
+      },
+      {
+        "name": "antiav_detectfile",
+        "time": 0.001
+      },
+      {
+        "name": "antiav_detectreg",
+        "time": 0.001
+      },
+      {
+        "name": "antiav_srp",
+        "time": 0.0
+      },
+      {
+        "name": "antiav_whitespace",
+        "time": 0.0
+      },
+      {
+        "name": "antidebug_devices",
+        "time": 0.0
+      },
+      {
+        "name": "antiemu_windefend",
+        "time": 0.0
+      },
+      {
+        "name": "antiemu_wine_reg",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_cuckoo_files",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_fortinet_files",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_joe_anubis_files",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_sboxie_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_sunbelt_files",
+        "time": 0.0
+      },
+      {
+        "name": "antisandbox_threattrack_files",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_bochs_keys",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_generic_bios",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_generic_diskreg",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_hyperv_keys",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_parallels_keys",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_recentdocs",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vbox_devices",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vbox_files",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vbox_keys",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vmware_devices",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vmware_files",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vmware_keys",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vmware_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vpc_files",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vpc_keys",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_vpc_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "antivm_xen_keys",
+        "time": 0.0
+      },
+      {
+        "name": "asyncrat_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "gulpix_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "ketrican_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "okrum_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "banker_cridex",
+        "time": 0.0
+      },
+      {
+        "name": "geodo_banking_trojan",
+        "time": 0.0
+      },
+      {
+        "name": "banker_spyeye_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "banker_zeus_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "bitcoin_opencl",
+        "time": 0.0
+      },
+      {
+        "name": "accesses_primary_patition",
+        "time": 0.0
+      },
+      {
+        "name": "direct_hdd_access",
+        "time": 0.0
+      },
+      {
+        "name": "enumerates_physical_drives",
+        "time": 0.0
+      },
+      {
+        "name": "physical_drive_access",
+        "time": 0.0
+      },
+      {
+        "name": "bot_russkill",
+        "time": 0.0
+      },
+      {
+        "name": "browser_addon",
+        "time": 0.0
+      },
+      {
+        "name": "chromium_browser_extension_directory",
+        "time": 0.0
+      },
+      {
+        "name": "browser_helper_object",
+        "time": 0.0
+      },
+      {
+        "name": "browser_security",
+        "time": 0.0
+      },
+      {
+        "name": "browser_startpage",
+        "time": 0.0
+      },
+      {
+        "name": "ie_disables_process_tab",
+        "time": 0.0
+      },
+      {
+        "name": "odbcconf_bypass",
+        "time": 0.0
+      },
+      {
+        "name": "squiblydoo_bypass",
+        "time": 0.0
+      },
+      {
+        "name": "squiblytwo_bypass",
+        "time": 0.0
+      },
+      {
+        "name": "bypass_chromium_protection",
+        "time": 0.0
+      },
+      {
+        "name": "bypass_firewall",
+        "time": 0.0
+      },
+      {
+        "name": "checks_uac_status",
+        "time": 0.0
+      },
+      {
+        "name": "uac_bypass_cmstpcom",
+        "time": 0.0
+      },
+      {
+        "name": "uac_bypass_delegateexecute_sdclt",
+        "time": 0.0
+      },
+      {
+        "name": "uac_bypass_fodhelper",
+        "time": 0.0
+      },
+      {
+        "name": "cape_extracted_content",
+        "time": 0.0
+      },
+      {
+        "name": "carberp_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "clears_logs",
+        "time": 0.0
+      },
+      {
+        "name": "cmdline_obfuscation",
+        "time": 0.0
+      },
+      {
+        "name": "cmdline_switches",
+        "time": 0.0
+      },
+      {
+        "name": "cmdline_terminate",
+        "time": 0.0
+      },
+      {
+        "name": "cmdline_forfiles_wildcard",
+        "time": 0.0
+      },
+      {
+        "name": "cmdline_http_link",
+        "time": 0.0
+      },
+      {
+        "name": "cmdline_long_string",
+        "time": 0.0
+      },
+      {
+        "name": "cmdline_reversed_http_link",
+        "time": 0.0
+      },
+      {
+        "name": "long_commandline",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_renamed_commandline",
+        "time": 0.0
+      },
+      {
+        "name": "copies_self",
+        "time": 0.0
+      },
+      {
+        "name": "credwiz_credentialaccess",
+        "time": 0.0
+      },
+      {
+        "name": "enables_wdigest",
+        "time": 0.0
+      },
+      {
+        "name": "vaultcmd_credentialaccess",
+        "time": 0.0
+      },
+      {
+        "name": "file_credential_store_access",
+        "time": 0.0
+      },
+      {
+        "name": "file_credential_store_write",
+        "time": 0.0
+      },
+      {
+        "name": "kerberos_credential_access_via_rubeus",
+        "time": 0.0
+      },
+      {
+        "name": "registry_credential_dumping",
+        "time": 0.0
+      },
+      {
+        "name": "registry_credential_store_access",
+        "time": 0.0
+      },
+      {
+        "name": "registry_lsa_secrets_access",
+        "time": 0.0
+      },
+      {
+        "name": "comsvcs_credentialdump",
+        "time": 0.0
+      },
+      {
+        "name": "cryptomining_stratum_command",
+        "time": 0.0
+      },
+      {
+        "name": "cypherit_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "darkcomet_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "datop_loader",
+        "time": 0.0
+      },
+      {
+        "name": "deepfreeze_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "deletes_executed_files",
+        "time": 0.0
+      },
+      {
+        "name": "disables_app_launch",
+        "time": 0.0
+      },
+      {
+        "name": "disables_auto_app_termination",
+        "time": 0.0
+      },
+      {
+        "name": "disables_appv_virtualization",
+        "time": 0.0
+      },
+      {
+        "name": "disables_backups",
+        "time": 0.0
+      },
+      {
+        "name": "disables_browser_warn",
+        "time": 0.0
+      },
+      {
+        "name": "disables_context_menus",
+        "time": 0.0
+      },
+      {
+        "name": "disables_cpl_disable",
+        "time": 0.0
+      },
+      {
+        "name": "disables_crashdumps",
+        "time": 0.0
+      },
+      {
+        "name": "disables_event_logging",
+        "time": 0.0
+      },
+      {
+        "name": "disables_folder_options",
+        "time": 0.0
+      },
+      {
+        "name": "disables_notificationcenter",
+        "time": 0.0
+      },
+      {
+        "name": "disables_power_options",
+        "time": 0.0
+      },
+      {
+        "name": "disables_restore_default_state",
+        "time": 0.0
+      },
+      {
+        "name": "disables_run_command",
+        "time": 0.0
+      },
+      {
+        "name": "disables_smartscreen",
+        "time": 0.0
+      },
+      {
+        "name": "disables_startmenu_search",
+        "time": 0.0
+      },
+      {
+        "name": "disables_system_restore",
+        "time": 0.0
+      },
+      {
+        "name": "disables_uac",
+        "time": 0.0
+      },
+      {
+        "name": "disables_wer",
+        "time": 0.0
+      },
+      {
+        "name": "disables_windows_defender",
+        "time": 0.0
+      },
+      {
+        "name": "disables_windows_defender_logging",
+        "time": 0.0
+      },
+      {
+        "name": "removes_windows_defender_contextmenu",
+        "time": 0.0
+      },
+      {
+        "name": "removes_windows_defender_updates",
+        "time": 0.0
+      },
+      {
+        "name": "windows_defender_powershell",
+        "time": 0.0
+      },
+      {
+        "name": "disables_windows_file_protection",
+        "time": 0.0
+      },
+      {
+        "name": "disables_windowsupdate",
+        "time": 0.0
+      },
+      {
+        "name": "disables_winfirewall",
+        "time": 0.0
+      },
+      {
+        "name": "adfind_domain_enumeration",
+        "time": 0.0
+      },
+      {
+        "name": "domain_enumeration_commands",
+        "time": 0.0
+      },
+      {
+        "name": "andromut_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "downloader_cabby",
+        "time": 0.0
+      },
+      {
+        "name": "phorpiex_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "protonbot_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "driver_filtermanager",
+        "time": 0.0
+      },
+      {
+        "name": "dropper",
+        "time": 0.0
+      },
+      {
+        "name": "dll_archive_execution",
+        "time": 0.0
+      },
+      {
+        "name": "lnk_archive_execution",
+        "time": 0.0
+      },
+      {
+        "name": "script_archive_execution",
+        "time": 0.0
+      },
+      {
+        "name": "excel4_macro_urls",
+        "time": 0.0
+      },
+      {
+        "name": "escalate_privilege_via_ntlm_relay",
+        "time": 0.0
+      },
+      {
+        "name": "spooler_access",
+        "time": 0.0
+      },
+      {
+        "name": "spooler_svc_start",
+        "time": 0.0
+      },
+      {
+        "name": "mapped_drives_uac",
+        "time": 0.0
+      },
+      {
+        "name": "hides_recycle_bin_icon",
+        "time": 0.0
+      },
+      {
+        "name": "apocalypse_stealer_file_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "arkei_files",
+        "time": 0.0
+      },
+      {
+        "name": "azorult_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "infostealer_bitcoin",
+        "time": 0.0
+      },
+      {
+        "name": "cryptbot_files",
+        "time": 0.0
+      },
+      {
+        "name": "echelon_files",
+        "time": 0.0
+      },
+      {
+        "name": "infostealer_ftp",
+        "time": 0.001
+      },
+      {
+        "name": "infostealer_im",
+        "time": 0.0
+      },
+      {
+        "name": "infostealer_mail",
+        "time": 0.0
+      },
+      {
+        "name": "masslogger_files",
+        "time": 0.0
+      },
+      {
+        "name": "poullight_files",
+        "time": 0.0
+      },
+      {
+        "name": "purplewave_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "quilclipper_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "qulab_files",
+        "time": 0.0
+      },
+      {
+        "name": "qulab_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "asyncrat_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "Evade_Execution_Via_ASPNet_Compiler",
+        "time": 0.0
+      },
+      {
+        "name": "Evade_Execute_Via_DeviceCredentialDeployment",
+        "time": 0.0
+      },
+      {
+        "name": "Evade_Execution_Via_Filter_Manager_Control",
+        "time": 0.0
+      },
+      {
+        "name": "Evade_Execution_Via_Intel_GFXDownloadWrapper",
+        "time": 0.0
+      },
+      {
+        "name": "execute_binary_via_appvlp",
+        "time": 0.0
+      },
+      {
+        "name": "execute_binary_via_pcalua",
+        "time": 0.0
+      },
+      {
+        "name": "Execute_Binary_Via_OpenSSH",
+        "time": 0.0
+      },
+      {
+        "name": "execute_binary_via_pcalua",
+        "time": 0.0
+      },
+      {
+        "name": "Execute_Binary_Via_PesterPSModule",
+        "time": 0.0
+      },
+      {
+        "name": "Execute_Binary_Via_ScriptRunner",
+        "time": 0.0
+      },
+      {
+        "name": "execute_binary_via_ttdinject",
+        "time": 0.0
+      },
+      {
+        "name": "Execute_Binary_Via_VisualStudioLiveShare",
+        "time": 0.0
+      },
+      {
+        "name": "Execute_Msiexec_Via_Explorer",
+        "time": 0.0
+      },
+      {
+        "name": "execute_remote_msi",
+        "time": 0.0
+      },
+      {
+        "name": "execute_suspicious_powershell_via_runscripthelper",
+        "time": 0.0
+      },
+      {
+        "name": "execute_suspicious_powershell_via_sqlps",
+        "time": 0.0
+      },
+      {
+        "name": "Indirect_Command_Execution_Via_ConsoleWindowHost",
+        "time": 0.0
+      },
+      {
+        "name": "Perform_Malicious_Activities_Via_Headless_Browser",
+        "time": 0.0
+      },
+      {
+        "name": "Register_DLL_Via_CertOC",
+        "time": 0.0
+      },
+      {
+        "name": "Register_DLL_Via_MSIEXEC",
+        "time": 0.0
+      },
+      {
+        "name": "Register_DLL_Via_Odbcconf",
+        "time": 0.0
+      },
+      {
+        "name": "Scriptlet_Proxy_Execution_Via_Pubprn",
+        "time": 0.0
+      },
+      {
+        "name": "ie_martian_children",
+        "time": 0.0
+      },
+      {
+        "name": "office_martian_children",
+        "time": 0.0
+      },
+      {
+        "name": "mimics_icon",
+        "time": 0.0
+      },
+      {
+        "name": "masquerade_process_name",
+        "time": 0.001
+      },
+      {
+        "name": "mimikatz_modules",
+        "time": 0.0
+      },
+      {
+        "name": "ms_office_cmd_rce",
+        "time": 0.0
+      },
+      {
+        "name": "mount_copy_to_webdav_share",
+        "time": 0.0
+      },
+      {
+        "name": "potential_protocol_tunneling_via_legit_utilities",
+        "time": 0.0
+      },
+      {
+        "name": "potential_protocol_tunneling_via_qemu",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_execution_via_dotnet_remoting",
+        "time": 0.0
+      },
+      {
+        "name": "modify_certs",
+        "time": 0.0
+      },
+      {
+        "name": "dotnet_clr_usagelog_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "modify_hostfile",
+        "time": 0.0
+      },
+      {
+        "name": "modify_oem_information",
+        "time": 0.0
+      },
+      {
+        "name": "modify_security_center_warnings",
+        "time": 0.0
+      },
+      {
+        "name": "modify_uac_prompt",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_blockchain",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_opennic",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_paste_site",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_reverse_proxy",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_temp_file_storage",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_temp_urldns",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_url_shortener",
+        "time": 0.0
+      },
+      {
+        "name": "network_dns_doh_tls",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_tld",
+        "time": 0.0
+      },
+      {
+        "name": "network_tor_service",
+        "time": 0.0
+      },
+      {
+        "name": "office_code_page",
+        "time": 0.0
+      },
+      {
+        "name": "office_addinloading",
+        "time": 0.0
+      },
+      {
+        "name": "office_perfkey",
+        "time": 0.0
+      },
+      {
+        "name": "office_macro",
+        "time": 0.0
+      },
+      {
+        "name": "changes_trust_center_settings",
+        "time": 0.0
+      },
+      {
+        "name": "disables_vba_trust_access",
+        "time": 0.0
+      },
+      {
+        "name": "office_macro_autoexecution",
+        "time": 0.0
+      },
+      {
+        "name": "office_macro_ioc",
+        "time": 0.0
+      },
+      {
+        "name": "office_macro_malicious_prediction",
+        "time": 0.0
+      },
+      {
+        "name": "office_macro_suspicious",
+        "time": 0.0
+      },
+      {
+        "name": "rtf_aslr_bypass",
+        "time": 0.0
+      },
+      {
+        "name": "rtf_anomaly_characterset",
+        "time": 0.0
+      },
+      {
+        "name": "rtf_anomaly_version",
+        "time": 0.0
+      },
+      {
+        "name": "rtf_embedded_content",
+        "time": 0.0
+      },
+      {
+        "name": "rtf_embedded_office_file",
+        "time": 0.0
+      },
+      {
+        "name": "rtf_exploit_static",
+        "time": 0.0
+      },
+      {
+        "name": "office_security",
+        "time": 0.0
+      },
+      {
+        "name": "accesses_office_username",
+        "time": 0.0
+      },
+      {
+        "name": "office_anomalous_feature",
+        "time": 0.0
+      },
+      {
+        "name": "office_dde_command",
+        "time": 0.0
+      },
+      {
+        "name": "packer_armadillo_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "packer_armadillo_regkey",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_safeboot",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_ifeo",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_silent_process_exit",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_rdp_registry",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_rdp_shadowing",
+        "time": 0.0
+      },
+      {
+        "name": "persistence_shim_database",
+        "time": 0.0
+      },
+      {
+        "name": "powerpool_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_scriptblock_logging",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_command_suspicious",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_history_save_mod",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_renamed",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_reversed",
+        "time": 0.0
+      },
+      {
+        "name": "powershell_variable_obfuscation",
+        "time": 0.0
+      },
+      {
+        "name": "prevents_safeboot",
+        "time": 0.0
+      },
+      {
+        "name": "cmdline_process_discovery",
+        "time": 0.0
+      },
+      {
+        "name": "cryptomix_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "dharma_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "ransomware_extensions_generic",
+        "time": 0.0
+      },
+      {
+        "name": "ransomware_extensions_known",
+        "time": 0.001
+      },
+      {
+        "name": "ransomware_files",
+        "time": 0.002
+      },
+      {
+        "name": "fonix_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "gandcrab_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "germanwiper_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "medusalocker_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "medusalocker_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "nemty_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "nemty_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "pysa_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "ransomware_radamant",
+        "time": 0.0
+      },
+      {
+        "name": "ransomware_recyclebin",
+        "time": 0.0
+      },
+      {
+        "name": "revil_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "ransomware_revil_regkey",
+        "time": 0.0
+      },
+      {
+        "name": "satan_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "snake_ransom_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "stop_ransom_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "stop_ransomware_cmd",
+        "time": 0.0
+      },
+      {
+        "name": "rat_beebus_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "blacknet_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "blackrat_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "crat_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "dcrat_files",
+        "time": 0.0
+      },
+      {
+        "name": "dcrat_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "rat_fynloski_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "limerat_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "limerat_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "lodarat_file_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "modirat_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "njrat_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "obliquerat_files",
+        "time": 0.0
+      },
+      {
+        "name": "obliquerat_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "parallax_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "rat_pcclient",
+        "time": 0.0
+      },
+      {
+        "name": "rat_plugx_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "rat_poisonivy_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "rat_quasar_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "ratsnif_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "rat_spynet",
+        "time": 0.0
+      },
+      {
+        "name": "venomrat_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "warzonerat_files",
+        "time": 0.0
+      },
+      {
+        "name": "warzonerat_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "xpertrat_files",
+        "time": 0.0
+      },
+      {
+        "name": "xpertrat_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "rat_xtreme_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "reads_password_database",
+        "time": 0.0
+      },
+      {
+        "name": "recon_fingerprint",
+        "time": 0.0
+      },
+      {
+        "name": "remcos_files",
+        "time": 0.0
+      },
+      {
+        "name": "remcos_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "remcos_regkeys",
+        "time": 0.0
+      },
+      {
+        "name": "rdptcp_key",
+        "time": 0.0
+      },
+      {
+        "name": "uses_rdp_clip",
+        "time": 0.0
+      },
+      {
+        "name": "uses_remote_desktop_session",
+        "time": 0.0
+      },
+      {
+        "name": "removes_networking_icon",
+        "time": 0.0
+      },
+      {
+        "name": "removes_pinned_programs",
+        "time": 0.0
+      },
+      {
+        "name": "removes_security_maintenance_icon",
+        "time": 0.0
+      },
+      {
+        "name": "removes_startmenu_defaults",
+        "time": 0.0
+      },
+      {
+        "name": "removes_username_startmenu",
+        "time": 0.0
+      },
+      {
+        "name": "spicyhotpot_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "sniffer_winpcap",
+        "time": 0.0
+      },
+      {
+        "name": "spreading_autoruninf",
+        "time": 0.0
+      },
+      {
+        "name": "stealth_hidden_extension",
+        "time": 0.0
+      },
+      {
+        "name": "stealth_hiddenreg",
+        "time": 0.0
+      },
+      {
+        "name": "stealth_hide_notifications",
+        "time": 0.0
+      },
+      {
+        "name": "stealth_webhistory",
+        "time": 0.0
+      },
+      {
+        "name": "sysinternals_psexec",
+        "time": 0.0
+      },
+      {
+        "name": "sysinternals_tools",
+        "time": 0.0
+      },
+      {
+        "name": "language_check_registry",
+        "time": 0.0
+      },
+      {
+        "name": "tampers_etw",
+        "time": 0.0
+      },
+      {
+        "name": "lsa_tampering",
+        "time": 0.0
+      },
+      {
+        "name": "tampers_powershell_logging",
+        "time": 0.0
+      },
+      {
+        "name": "targeted_flame",
+        "time": 0.0
+      },
+      {
+        "name": "territorial_disputes_sigs",
+        "time": 0.001
+      },
+      {
+        "name": "trickbot_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "fleercivet_mutex",
+        "time": 0.0
+      },
+      {
+        "name": "lokibot_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "ursnif_behavior",
+        "time": 0.0
+      },
+      {
+        "name": "uses_adfind",
+        "time": 0.0
+      },
+      {
+        "name": "uses_ms_protocol",
+        "time": 0.0
+      },
+      {
+        "name": "neshta_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "renamer_mutexes",
+        "time": 0.0
+      },
+      {
+        "name": "owa_web_shell_files",
+        "time": 0.0
+      },
+      {
+        "name": "web_shell_files",
+        "time": 0.0
+      },
+      {
+        "name": "web_shell_processes",
+        "time": 0.0
+      },
+      {
+        "name": "dotnet_csc_build",
+        "time": 0.0
+      },
+      {
+        "name": "mavinject_lolbin",
+        "time": 0.0
+      },
+      {
+        "name": "multiple_explorer_instances",
+        "time": 0.0
+      },
+      {
+        "name": "script_tool_executed",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_certutil_use",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_command_tools",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_mpcmdrun_use",
+        "time": 0.0
+      },
+      {
+        "name": "suspicious_ping_use",
+        "time": 0.0
+      },
+      {
+        "name": "uses_powershell_copyitem",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_appcmd",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_csvde_ldifde",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_cipher",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_clickonce",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_curl",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_dsquery",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_esentutl",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_finger",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_mode",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_ntdsutil",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_nltest",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_setx",
+        "time": 0.0
+      },
+      {
+        "name": "uses_windows_utilities_xcopy",
+        "time": 0.0
+      },
+      {
+        "name": "wmic_command_suspicious",
+        "time": 0.0
+      },
+      {
+        "name": "scrcons_wmi_script_consumer",
+        "time": 0.0
+      },
+      {
+        "name": "allaple_mutexes",
+        "time": 0.0
+      }
+    ],
+    "reporting": [
+      {
+        "name": "BinGraph",
+        "time": 0.0
+      },
+      {
+        "name": "MITRE_TTPS",
+        "time": 0.0
+      }
+    ]
+  },
+  "target": {
+    "category": "file",
+    "file": {
+      "name": "435a836a250603d3014f.exe",
+      "path": "/opt/CAPEv2/storage/binaries/435a836a250603d3014f794b7123a5ed21d5481a4a86c10d669e8b1f71e9f113",
+      "guest_paths": "",
+      "size": 102400,
+      "crc32": "2BEAE506",
+      "md5": "d6e428677d03e98845a2c84cb1e04ade",
+      "sha1": "919abeb108f85e10cece90c349cea08043e307ca",
+      "sha256": "435a836a250603d3014f794b7123a5ed21d5481a4a86c10d669e8b1f71e9f113",
+      "sha512": "e0ebac44fd156eefd2861c908346baa900b45ee74c17bd11fc5ab903270d6817d5ffd87816c7ef510b70a3a964489108e33921d5409ab858d892abefff994e5c",
+      "rh_hash": null,
+      "ssdeep": "1536:cqEA70HzLJksPEOajozLElnqiO2imd+bli:cXTLJkQ7zAV32b0",
+      "type": "PE32 executable (GUI) Intel 80386, for MS Windows",
+      "yara": [],
+      "cape_yara": [
+        {
+          "name": "RunningRAT",
+          "meta": {
+            "author": "ditekSHen",
+            "description": "Detects RunningRAT",
+            "cape_type": "RunningRAT Payload"
+          },
+          "strings": [
+            "%s%d.dll",
+            "/c ping 127.0.0.1 -n",
+            "del /f/q \"%s\"",
+            "GUpdate",
+            "%s\\%d.bak",
+            "\"%s\",MainThread",
+            "rundll32.exe",
+            "emankcosteg",
+            "ini.revreS\\",
+            "daerhTniaM,\"s%\" s%",
+            "s% etadpUllD,\"s%\" 23lldnuR",
+            "---DNE yromeMmorFdaoL",
+            "eMnigulP",
+            "exe.23lldnuR\\",
+            "dnammoc\\nepo\\llehs\\",
+            "\"s%\" k- exe.tsohcvs\\23metsyS\\%%tooRmetsyS%",
+            "emanybtsohteg",
+            "tekcosesolc",
+            "tpokcostes",
+            "emantsohteg"
+          ],
+          "addresses": {
+            "s1": 80496,
+            "s2": 80952,
+            "s3": 80978,
+            "s4": 80764,
+            "s5": 80844,
+            "s6": 80465,
+            "s7": 80448,
+            "rev1": 38445,
+            "rev2": 38837,
+            "rev3": 39614,
+            "rev4": 40322,
+            "rev5": 40623,
+            "rev6": 40612,
+            "rev7": 39599,
+            "rev8": 40287,
+            "rev9": 40713,
+            "rev10": 38355,
+            "rev11": 38401,
+            "rev12": 38414,
+            "rev13": 38457
+          }
+        }
+      ],
+      "clamav": [],
+      "tlsh": "T143A3F751A3E02422E16F3779697413364A7E3C755F2482CFF2E6C48F18699E1EAB530B",
+      "sha3_384": "4db51ecc1ec7cc4f8f18e9594658cd42dbfd405981de11190e94ffc7c686ba7fd1540bab014b49c663d82f24a7937516",
+      "pe": {
+        "guest_signers": {
+          "aux_sha1": null,
+          "aux_timestamp": null,
+          "aux_valid": false,
+          "aux_error": true,
+          "aux_error_desc": "No signature found.",
+          "aux_signers": []
+        },
+        "digital_signers": [],
+        "imagebase": "0x00400000",
+        "entrypoint": "0x00003178",
+        "ep_bytes": "558bec6aff68586d4000687231400064",
+        "peid_signatures": null,
+        "reported_checksum": "0x00000000",
+        "actual_checksum": "0x0002073c",
+        "osversion": "4.0",
+        "machine_type": "IMAGE_FILE_MACHINE_I386",
+        "pdbpath": null,
+        "imports": {
+          "MFC42": {
+            "dll": "MFC42.DLL",
+            "imports": []
+          },
+          "MSVCRT": {
+            "dll": "MSVCRT.dll",
+            "imports": [
+              {
+                "address": "0x415dfc",
+                "name": "__set_app_type"
+              },
+              {
+                "address": "0x415e00",
+                "name": "__p__fmode"
+              },
+              {
+                "address": "0x415e04",
+                "name": "__p__commode"
+              },
+              {
+                "address": "0x415e08",
+                "name": "_adjust_fdiv"
+              },
+              {
+                "address": "0x415e0c",
+                "name": "__setusermatherr"
+              },
+              {
+                "address": "0x415e10",
+                "name": "_initterm"
+              },
+              {
+                "address": "0x415e14",
+                "name": "__getmainargs"
+              },
+              {
+                "address": "0x415e18",
+                "name": "_acmdln"
+              },
+              {
+                "address": "0x415e1c",
+                "name": "exit"
+              },
+              {
+                "address": "0x415e20",
+                "name": "_XcptFilter"
+              },
+              {
+                "address": "0x415e24",
+                "name": "_exit"
+              },
+              {
+                "address": "0x415e28",
+                "name": "_onexit"
+              },
+              {
+                "address": "0x415e2c",
+                "name": "__dllonexit"
+              },
+              {
+                "address": "0x415e30",
+                "name": "_except_handler3"
+              },
+              {
+                "address": "0x415e34",
+                "name": "memset"
+              },
+              {
+                "address": "0x415e38",
+                "name": "__p__pgmptr"
+              },
+              {
+                "address": "0x415e3c",
+                "name": "sprintf"
+              },
+              {
+                "address": "0x415e40",
+                "name": "memcpy"
+              },
+              {
+                "address": "0x415e44",
+                "name": "_access"
+              },
+              {
+                "address": "0x415e48",
+                "name": "strstr"
+              },
+              {
+                "address": "0x415e4c",
+                "name": "__CxxFrameHandler"
+              },
+              {
+                "address": "0x415e50",
+                "name": "_setmbcp"
+              },
+              {
+                "address": "0x415e54",
+                "name": "_mkdir"
+              },
+              {
+                "address": "0x415e58",
+                "name": "_controlfp"
+              }
+            ]
+          },
+          "KERNEL32": {
+            "dll": "KERNEL32.dll",
+            "imports": [
+              {
+                "address": "0x415798",
+                "name": "CloseHandle"
+              },
+              {
+                "address": "0x41579c",
+                "name": "CreateFileA"
+              },
+              {
+                "address": "0x4157a0",
+                "name": "FreeLibrary"
+              },
+              {
+                "address": "0x4157a4",
+                "name": "GetTickCount"
+              },
+              {
+                "address": "0x4157a8",
+                "name": "GetFileAttributesA"
+              },
+              {
+                "address": "0x4157ac",
+                "name": "ExpandEnvironmentStringsA"
+              },
+              {
+                "address": "0x4157b0",
+                "name": "GetLastError"
+              },
+              {
+                "address": "0x4157b4",
+                "name": "GetProcAddress"
+              },
+              {
+                "address": "0x4157b8",
+                "name": "LoadLibraryA"
+              },
+              {
+                "address": "0x4157bc",
+                "name": "lstrcpyA"
+              },
+              {
+                "address": "0x4157c0",
+                "name": "GetCommandLineA"
+              },
+              {
+                "address": "0x4157c4",
+                "name": "Sleep"
+              },
+              {
+                "address": "0x4157c8",
+                "name": "lstrcmpiA"
+              },
+              {
+                "address": "0x4157cc",
+                "name": "SetThreadPriority"
+              },
+              {
+                "address": "0x4157d0",
+                "name": "GetCurrentThread"
+              },
+              {
+                "address": "0x4157d4",
+                "name": "SetPriorityClass"
+              },
+              {
+                "address": "0x4157d8",
+                "name": "GetCurrentProcess"
+              },
+              {
+                "address": "0x4157dc",
+                "name": "GetModuleHandleA"
+              },
+              {
+                "address": "0x4157e0",
+                "name": "GetStartupInfoA"
+              },
+              {
+                "address": "0x4157e4",
+                "name": "WriteFile"
+              }
+            ]
+          },
+          "USER32": {
+            "dll": "USER32.dll",
+            "imports": [
+              {
+                "address": "0x415e98",
+                "name": "wsprintfA"
+              },
+              {
+                "address": "0x415e9c",
+                "name": "EnableWindow"
+              }
+            ]
+          }
+        },
+        "exported_dll_name": null,
+        "exports": [],
+        "dirents": [
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_EXPORT",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_IMPORT",
+            "virtual_address": "0x00015000",
+            "size": "0x00000064"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_RESOURCE",
+            "virtual_address": "0x00017000",
+            "size": "0x00001fbc"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_EXCEPTION",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_SECURITY",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_BASERELOC",
+            "virtual_address": "0x00019000",
+            "size": "0x0000090c"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_DEBUG",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_COPYRIGHT",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_GLOBALPTR",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_TLS",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_IAT",
+            "virtual_address": "0x00015798",
+            "size": "0x00000734"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          },
+          {
+            "name": "IMAGE_DIRECTORY_ENTRY_RESERVED",
+            "virtual_address": "0x00000000",
+            "size": "0x00000000"
+          }
+        ],
+        "sections": [
+          {
+            "name": ".text",
+            "raw_address": "0x00001000",
+            "virtual_address": "0x00001000",
+            "virtual_size": "0x0000475e",
+            "size_of_data": "0x00005000",
+            "characteristics": "IMAGE_SCN_CNT_CODE|IMAGE_SCN_MEM_EXECUTE|IMAGE_SCN_MEM_READ",
+            "characteristics_raw": "0x60000020",
+            "entropy": "3.53"
+          },
+          {
+            "name": ".rdata",
+            "raw_address": "0x00006000",
+            "virtual_address": "0x00006000",
+            "virtual_size": "0x0000132a",
+            "size_of_data": "0x00002000",
+            "characteristics": "IMAGE_SCN_CNT_INITIALIZED_DATA|IMAGE_SCN_MEM_READ",
+            "characteristics_raw": "0x40000040",
+            "entropy": "2.27"
+          },
+          {
+            "name": ".data",
+            "raw_address": "0x00008000",
+            "virtual_address": "0x00008000",
+            "virtual_size": "0x0000c01c",
+            "size_of_data": "0x0000c000",
+            "characteristics": "IMAGE_SCN_CNT_INITIALIZED_DATA|IMAGE_SCN_MEM_READ|IMAGE_SCN_MEM_WRITE",
+            "characteristics_raw": "0xc0000040",
+            "entropy": "5.20"
+          },
+          {
+            "name": ".idata",
+            "raw_address": "0x00014000",
+            "virtual_address": "0x00015000",
+            "virtual_size": "0x000012ef",
+            "size_of_data": "0x00002000",
+            "characteristics": "IMAGE_SCN_CNT_INITIALIZED_DATA|IMAGE_SCN_MEM_READ|IMAGE_SCN_MEM_WRITE",
+            "characteristics_raw": "0xc0000040",
+            "entropy": "2.97"
+          },
+          {
+            "name": ".rsrc",
+            "raw_address": "0x00016000",
+            "virtual_address": "0x00017000",
+            "virtual_size": "0x00002000",
+            "size_of_data": "0x00002000",
+            "characteristics": "IMAGE_SCN_CNT_INITIALIZED_DATA|IMAGE_SCN_MEM_READ",
+            "characteristics_raw": "0x40000040",
+            "entropy": "3.40"
+          },
+          {
+            "name": ".reloc",
+            "raw_address": "0x00018000",
+            "virtual_address": "0x00019000",
+            "virtual_size": "0x00000b6f",
+            "size_of_data": "0x00001000",
+            "characteristics": "IMAGE_SCN_CNT_INITIALIZED_DATA|IMAGE_SCN_MEM_DISCARDABLE|IMAGE_SCN_MEM_READ",
+            "characteristics_raw": "0x42000040",
+            "entropy": "4.52"
+          }
+        ],
+        "overlay": null,
+        "resources": [
+          {
+            "name": "RT_DIALOG",
+            "offset": "0x000173d0",
+            "size": "0x0000012e",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "3.41"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00017500",
+            "size": "0x00000132",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.97"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00017634",
+            "size": "0x000000a4",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.80"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x000176d8",
+            "size": "0x00000042",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.06"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x0001771c",
+            "size": "0x00000536",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "3.20"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00017c54",
+            "size": "0x00000240",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.79"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00017e94",
+            "size": "0x000003d8",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "3.21"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x0001826c",
+            "size": "0x00000298",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "3.10"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00018504",
+            "size": "0x00000158",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.97"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x0001865c",
+            "size": "0x000000d2",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.81"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00018730",
+            "size": "0x00000044",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.12"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00018774",
+            "size": "0x000000e0",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.86"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00018854",
+            "size": "0x00000242",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "3.06"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00018a98",
+            "size": "0x000000ce",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.78"
+          },
+          {
+            "name": "RT_STRING",
+            "offset": "0x00018b68",
+            "size": "0x0000008e",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.55"
+          },
+          {
+            "name": "RT_VERSION",
+            "offset": "0x00018bf8",
+            "size": "0x00000390",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "3.57"
+          },
+          {
+            "name": "None",
+            "offset": "0x00018f88",
+            "size": "0x00000012",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.86"
+          },
+          {
+            "name": "None",
+            "offset": "0x00018f9c",
+            "size": "0x0000001e",
+            "filetype": null,
+            "language": "LANG_FRENCH",
+            "sublanguage": "SUBLANG_FRENCH",
+            "entropy": "2.77"
+          }
+        ],
+        "versioninfo": [
+          {
+            "name": "CompanyName",
+            "value": "Windows (R) Server 2003 DDK provider"
+          },
+          {
+            "name": "FileDescription",
+            "value": "Windows Setup API"
+          },
+          {
+            "name": "FileVersion",
+            "value": "5.2.3790.0 built by: WinDDK"
+          },
+          {
+            "name": "InternalName",
+            "value": "SETUPAPI.DLL"
+          },
+          {
+            "name": "LegalCopyright",
+            "value": "Â© Microsoft Corporation. All rights reserved."
+          },
+          {
+            "name": "OriginalFilename",
+            "value": "SETUPAPI.DLL"
+          },
+          {
+            "name": "ProductName",
+            "value": "Windows (R) Server 2003 DDK driver"
+          },
+          {
+            "name": "ProductVersion",
+            "value": "5.2.3790.0"
+          },
+          {
+            "name": "Translation",
+            "value": "0x0409 0x04b0"
+          }
+        ],
+        "imphash": "7e3107c64f6a7a76d8463e3f374f74af",
+        "timestamp": "2017-04-09 02:40:35",
+        "icon": null,
+        "icon_hash": null,
+        "icon_fuzzy": null,
+        "icon_dhash": null,
+        "imported_dll_count": 4
+      },
+      "data": null,
+      "strings": [
+        "<w<9;",
+        "MFCKING2017.Document",
+        "rorrE",
+        "%Temp%\\",
+        "CMFCKING2017View",
+        "MFC KING 2017",
+        "5b5N5H5B505,5(5$5 5",
+        "emanybtsohteg",
+        "UQ($L",
+        "5.2.3790.0",
+        ">}>x>l>R>",
+        "etadpUllD",
+        "GetModuleFileNameA",
+        "emankcosteg",
+        "EnregistrerAEnregistre le document actif sous un nouveau nom",
+        "_onexit",
+        ",h$$D",
+        "_acmdln",
+        "1 1$1(1,1014181<1@1D1H1L1P1T1X1\\1`1d1h1l1p1t1",
+        "1%1*1P1V1\\1b1h1n1t1~1",
+        "AeliFypoC",
+        "txeN23ssecorP",
+        "CloseHandle",
+        "7Ferme le mode d'aper",
+        "EnableWindow",
+        "Atacrtsl",
+        "llatsnI",
+        "re le contenu du Presse-papiers",
+        "rtPdaeRdaBsI",
+        "lld.23tuaelO",
+        "RE0$T",
+        "=T=-<",
+        "AeliFevoM",
+        "?e?^?)>",
+        "5w5q5",
+        "tixeno_",
+        "lld.lldtn",
+        "cexEniW",
+        "BOuvre une nouvelle fen",
+        "peelS",
+        "AtnevEetaerC",
+        " h@$D",
+        "MS Sans Serif",
+        "Windows (R) Server 2003 DDK driver",
+        "lld.23RESU",
+        "ssecorPedoCtixEteG",
+        "mrettini_",
+        ":x:c:::1:",
+        "6u6g6Y6K6=6/6!6",
+        "jRQSI",
+        "AemaNeliFeludoMteG",
+        "lld.TRCVSM",
+        "ofnImetsySevitaNteG",
+        "Efface la s",
+        "616C6\\6c6z6",
+        "tre au format de l'",
+        "AeulaVegelivirPpukooL",
+        "rifiez que les biblioth",
+        "tre active et propose l'enregistrement des documents",
+        "9{9`9[9P9K939.9 9",
+        "AeulaVmunEgeR",
+        "Anelrtsl",
+        "=z=t=b=H<",
+        "9W9O8I8A7",
+        "ADVAPI32.dll",
+        "rpurts_",
+        "tceles",
+        "puorG",
+        "lection",
+        "hhW0$D",
+        "Windows Setup API",
+        "_mkdir",
+        "6X6L6",
+        "tohspanS23plehlooTetaerC",
+        "bhP4$T",
+        "Nouveau!Ouvre un document existant",
+        "ini.revreS\\",
+        "ezilaitininUoC",
+        "AecivreSetaerC",
+        "Sleep",
+        "USER32.dll",
+        "XhK$D",
+        "FreeLibrary",
+        "AnoitamrofnItcejbOresUteG",
+        "8g8b8T8O848/8!8",
+        "jV$$D",
+        "2/24292F2~2",
+        "segelivirPnekoTtsujdA",
+        "exe.23lldnuR\\",
+        "AgoLtnevEnepO",
+        "7~7m7Y7L7D737\"7",
+        "Dh`$D",
+        "nelrts",
+        "3 3$3(3,3034383<3@3D3H3L3P3T3X3\\3`3d3h3l3p3t3x3|3",
+        "shell32.dll",
+        ".yromem morf yrarbil daol t'naC",
+        " yromeMmorFdaoL",
+        "Ph|:A",
+        "gnirtSeerFsyS",
+        "KERNEL32.dll",
+        "ne(Agrandit la fen",
+        "CMainFrame",
+        "0w0Z0A",
+        "QR $L",
+        "ssecorPtixE",
+        "krameR",
+        "GetLastError",
+        "4L4B3",
+        "atad.@",
+        "putratSASW",
+        "vidf_tsujda_",
+        "3Q333.3",
+        "xEswodniWtixE",
+        "[Echec de l'initialisation OLE. V",
+        "ytiruceS",
+        "ProductVersion",
+        "AxEyeKetaerCgeR",
+        "5i5d585",
+        "ecnatsnIetaerCoC",
+        "4~4p4d4O4H4<46404",
+        "ReleaseMutex",
+        "collAlautriV",
+        "2Affiche ou masque la barre d'outils",
+        "cran'Passe ",
+        "lld.23resu",
+        "tablir",
+        "> >&>,>2>8>>>D>J>P>V>\\>b>h>n>t>z>",
+        "Based on enterprise management optimization installation services to provide security and stability",
+        "7z7u7g7b7G7B747/7",
+        "CreateFileA",
+        "lectionne le document entier",
+        "AeldnaHeludoMteG",
+        "<}<v<n<f<A<2<-<%<",
+        "tre de document suivante)Passe ",
+        "---DNE yromeMmorFdaoL",
+        "Couper&Recherche le texte sp",
+        "CChildFrame",
+        "Z@IXAPAY@2??",
+        "0u0p0U0P0E0@0(0#0",
+        "qhciR",
+        "h&t$$|",
+        "Mettre ",
+        "eerFpaeH",
+        "0hWVS",
+        "6z6u6g6_6R6G6A695",
+        "dnammoc\\nepo\\llehs\\exe.erolpxei\\snoitacilppA",
+        "xedaerhtnigeb_",
+        "pmcrts",
+        "CMFCKING2017Doc",
+        "5.2.3790.0 built by: WinDDK",
+        "eldnaHecivreSesolC",
+        "MSVCRT.dll",
+        "=r=Y=G=/=",
+        ":s:n:S:N:@:;: :",
+        "tsavA",
+        "noitacilppA",
+        "A propos de MFC KING 2017",
+        "7r7l7b7@7,7",
+        "%s:%d:%s",
+        "kernel32.dll",
+        "Active la liste des t",
+        "_access",
+        "que0R",
+        "<p<#<",
+        "2{2m2h2M2H2:252",
+        "SVW&u",
+        "hQ $D",
+        "@@ofni_epytVA?.",
+        "rhcrrts",
+        "rivacrA",
+        "GetTickCount",
+        "Active cette fen",
+        "VS_VERSION_INFO",
+        "organise les ic",
+        "9%9p9w9",
+        "sutatSecivreSyreuQ",
+        "6064686<6p6t6x6",
+        "daerhTetanimreT",
+        "jV $L",
+        "Enterprise services",
+        "lld.23_2sw",
+        "GetCurrentThread",
+        "?@?E?",
+        "emaNyldneirF",
+        "AeliFetaerC",
+        "hWWWW",
+        "s% etadpUllD,\"s%\" 23lldnuR",
+        "LLUN =!yxorPmh",
+        "VarFileInfo",
+        "Translation",
+        "sprintf",
+        "\"s%\" k- exe.tsohcvs\\23metsyS\\%%tooRmetsyS%%",
+        "AgoLtnevEraelC",
+        "8$:*:0:6:<:B:H:N:T:Z:`:f:l:r:x:~:",
+        "3q3l3^3Y3>393.3)3",
+        "GetModuleHandleA",
+        ";0;<;@;H;L;d;",
+        "AxEnoisreVteG",
+        "tekcosesolc",
+        "ecivreSlortnoC",
+        "AyeKeteleDgeR",
+        "Install",
+        "MFC KING 2017 version 1.0",
+        ":W:P:J:E:#9",
+        "GetFileAttributesA",
+        "eMnigulP",
+        "2Affiche des pages enti",
+        "3F3@2",
+        "kcolBtnemnorivnEetaerC",
+        "Y[]^_",
+        "tre pour le document actif",
+        "Quitter",
+        ":@:P:\\:`:d:h:l:p:t:x:|:",
+        "__p__fmode",
+        "Volet pr",
+        "ZMnode.oplay.pw",
+        "WriteFile",
+        "tre de document pr",
+        "sserddAcorPteG",
+        "nekoTssecorPnepO",
+        "noitpircseD",
+        "__setusermatherr",
+        "lstrcmpiA",
+        "CMFCKING2017SrvrItem",
+        "5 5$5(5,5054585<5@5D5H5L5P5T5X5\\5`5d5h5l5p5t5x5|5",
+        "tsriF23ssecorP",
+        "@.data",
+        "AxEeulaVyreuQgeR",
+        ";q;b;];Q;H;;;%;",
+        "s%\\secivreS\\teSlortnoCtnerruC\\METSYS",
+        "lection et la place dans le Presse-papiers",
+        ">\"u:F",
+        "AegasseMdneS",
+        "SYSTEM\\CurrentControlSet\\Services\\%s\\Parameters",
+        "1w1R1M1G1",
+        "_adjust_fdiv",
+        "dInoisseSelosnoCevitcAteGSTW",
+        "WV,tF",
+        "@.reloc",
+        "'uZM($|",
+        "SSPh@:A",
+        "enterprise",
+        "ShellExecuteA",
+        "%s%d.dll",
+        "3WVUS",
+        "s%:d%:s%",
+        "laeH kciuQ",
+        "daerhTniaM",
+        "hWVUS",
+        "e un nouveau document",
+        "memcpy",
+        "1|1n1i1N1I1>191!1",
+        "snoth",
+        "3reldnah_tpecxe_",
+        "tnevEteS",
+        "VPRQSS",
+        "< <$<(<,<0<4<8<<<@<D<H<L<P<T<X<\\<`<d<h<l<p<t<x<|<",
+        "%ProgramFiles%\\StormII\\",
+        "RegQueryValueExA",
+        "Remplacer0S",
+        "emiTlacoLteG",
+        "Barre d'",
+        "AecivreStratS",
+        "collApaeH",
+        "xEnekoTetacilpuD",
+        "elosnoCeerF",
+        "PVRVVV",
+        "2 2$2(2,2024282<2@2D2H2L2P2T2X2\\2`2d2h2l2p2t2x2|2",
+        "@hWVUSd",
+        "collam",
+        "CreateMutexA",
+        "455G5",
+        "dIdaerhTtnerruCteG",
+        "RegCloseKey",
+        ".idata",
+        "QWl$L",
+        " jour le conteneur pour afficher toute modification",
+        "SETUPAPI.DLL",
+        "?@?\\?p?",
+        "arivA",
+        "SPW7u",
+        "hP\\$|",
+        "0@000 0",
+        "Default",
+        "MFC KING 20175",
+        "ecivreSeteleD",
+        "<hl$D",
+        "MFCKIN",
+        "4m4h4Z4U4=484*4%4",
+        "AxEyeKnepOgeR",
+        "tcennoc",
+        "ltcoIASW",
+        "llatsninU,\"s%\" 23lldnuR",
+        "_exit",
+        ">C>5>",
+        "AxoBegasseM",
+        "GetCurrentProcess",
+        "4H4T4X4`4d4",
+        "Process32First",
+        "potkseDdaerhTteG",
+        "ssecorPtnerruCteG",
+        "/c ping 127.0.0.1 -n 1 && del /f/q \"%s\"",
+        "GetProcAddress",
+        "QP`$L",
+        "GetSystemDirectoryA",
+        "cmd.exe",
+        "8q8g898!8",
+        "u avant impressionFMet ",
+        "reldnaHemarFxxC__",
+        "GetCommandLineA",
+        "tlebnuS",
+        "AreldnaHlrtCecivreSretsigeR",
+        "2x2l2\\2<202,2",
+        "Aipmcrtsl",
+        "0N0C0",
+        "tcejbOelgniSroFtiaW",
+        "18101(1",
+        "hP4$L",
+        "4 4&4,4",
+        "demment annul",
+        "AxEeliFevoM",
+        "noitpecxEworhTxxC_",
+        "9t9;9/9(9#9",
+        "Configuration de l'impression\"Imprime le document actif",
+        "DisplayName",
+        "potkseDesolC",
+        "Ouvrir",
+        "tnuoCkciTteG",
+        "AreganaMCSnepO",
+        "ExpandEnvironmentStringsA",
+        "tablit l'action pr",
+        "egelivirPnwodtuhSeS",
+        "5#6>6V6m6",
+        "?g?=?6?+?#?",
+        "RQ($T",
+        "0,0@0\\0p0",
+        "7 7$7(7,7074787<7@7D7H7L7P7T7X7\\7`7d7h7l7p7t7x7|7",
+        "Process32Next",
+        "__p__pgmptr",
+        "Description",
+        "!tH-t",
+        "Cascade0R",
+        "kab.d%\\s%",
+        "th($|",
+        "MFC42.DLL",
+        "0W0B0",
+        "eliFetirW",
+        "2]202",
+        "AnepOtenretnI",
+        "lotf_",
+        "j/t_I",
+        "GUpdate",
+        "tre en ic",
+        "tres en une mosa",
+        "9m9A9,9",
+        "emantsohteg",
+        "eerFlautriV",
+        "1p1d1`1\\1X1T1P1@10",
+        "\\hWVUS",
+        "/Passe au volet de fen",
+        "ypcnrts",
+        "lld.teniniw",
+        "sbmotscw",
+        "AecivreSnepO",
+        "ezilaitinIoC",
+        "FileVersion",
+        "collaer",
+        ":s:l:e:V:@:",
+        "AyrarbiLdaoL",
+        " \"%s\",MainThread",
+        "Pjjjjj",
+        "; ;&;,;2;8;>;D;J;P;V;\\;b;h;n;t;z;",
+        "AresUsAssecorPetaerC",
+        "0.6 EISM",
+        "__set_app_type",
+        "Windows (R) Server 2003 DDK provider",
+        "lld.vneresu",
+        "AeulaVeteleDgeR",
+        "tnevEteseR",
+        "pmcirts_",
+        "`.rdata",
+        "Coller",
+        ".Echec de l'initialisation des sockets Windows.",
+        "OriginalFilename",
+        "potkseDtupnInepO",
+        "0\\rossecorPlartneC\\metsyS\\NOITPIRCSED\\ERAWDRAH",
+        "tixenolld__",
+        "lld.23resU",
+        "<X<^<d<k<s<}<",
+        "noitamrofnInekoTteS",
+        "Wh$<A",
+        "Aypcrtsl",
+        "tluafeD\\0atSniW",
+        "K4\\4c4p4",
+        "GetStartupInfoA",
+        "tesmem",
+        "d2.%:d2.% d2.%-d2.%-d4%",
+        "Ph,<A",
+        "AxEyeKmunEgeR",
+        "tre@R",
+        "AssecorPetaerC",
+        "AlrUnepOtenretnI",
+        "Ferme le document actif",
+        "wsprintfA",
+        "StringFileInfo",
+        "strstr",
+        "AsgnirtStnemnorivnEdnapxE",
+        "egnahcxEdekcolretnI",
+        "nes*R",
+        "8W8m8s8y8",
+        "diaire d'une messagerie ",
+        "<\\=`=",
+        "yrarbiLeerF",
+        "memset",
+        "ftnirp",
+        "7\"7(7-7>7D7I7[7e7n7y7~7",
+        "tre Change la position de la fen",
+        "Imprimer",
+        "SVctI",
+        "lld.23IPAVDA",
+        "xEsutatSyromeMlabolG",
+        "u avant impression",
+        "101L1`1|1",
+        "lld.23elO",
+        "Nouvelle fen",
+        "eerFlacoL",
+        "yxorP_pooL",
+        "!This program cannot be run in DOS mode.",
+        "MoveFileExA",
+        "0hWVS ",
+        "dnammoc\\nepo\\llehs\\s%",
+        "RQP0$L",
+        "s% s%",
+        "__getmainargs",
+        "paeHssecorPteG",
+        "Aftnirpsw",
+        "yxorPnepO",
+        "5P5+5%5",
+        "hV$$D",
+        "AgnirtSgubeDtuptuO",
+        "4p4h4<4/4",
+        "rtsrts",
+        "9y9b9Q9F9/9",
+        "cifique par un texte diff",
+        "SetPriorityClass",
+        "zHMs%*d%",
+        "2dniwnu_lacol_",
+        "__dllonexit",
+        "Change la taille de la fen",
+        "7c7<6",
+        "lectionner tout!Annule la derni",
+        "8~8m8_8K8:8/8",
+        ";{;v;3;(;",
+        "re action",
+        "daerhTniaM,\"s%\" s%",
+        "tekcos",
+        "AxetuMetaerC",
+        "0$0*00060<0B0H0N0T0Z0`0f0l0r0x0~0",
+        "LoadLibraryA",
+        "3{3[3V3@3<3834303,3(2",
+        "SYSTEM\\CurrentControlSet\\Services\\%s",
+        "?|?c?\\>",
+        "7z7]7",
+        "oIlecnaC",
+        "rhcrts",
+        "=$=*=0=6=<=B=H=N=T=Z=`=f=l=r=x=~=",
+        "revaN",
+        "Fermer l'aper",
+        "RegOpenKeyExA",
+        "?\"?(?.?4?:?@?F?L?R?X?^?d?j?p?v?|?",
+        "jPh$D",
+        "GetVersionExA",
+        "duit la fen",
+        "tWZM8",
+        "llatsninU",
+        "organise les fen",
+        "AsetubirttAeliFteG",
+        "s%etadpUG",
+        "lstrcpyA",
+        "A2gifnoCecivreSegnahC",
+        "3p3l3L3,3$3",
+        "WVUVv",
+        "lld.23lenrek",
+        "CreateToolhelp32Snapshot",
+        "nes en bas de la fen",
+        "__CxxFrameHandler",
+        "23DON",
+        "6%6+616@6q6",
+        "AyrotceriDtnerruCteG",
+        "Annuler/R",
+        "ypcmem",
+        "MFCKIN Document",
+        "eziSlacoL",
+        "punaelCASW",
+        "%s\\%d.bak",
+        "atadr.`",
+        "ques OLE sont de la bonne version.",
+        "Pdj`$D",
+        "SQ<$L",
+        ".rsrc",
+        "Efface tout",
+        "yeKesolCgeR",
+        "elbisiVwodniWsI",
+        "yxorPesolC",
+        "6z6t6]6X6Q6L5",
+        "3|3+2",
+        "RS $T",
+        ".text",
+        "SetThreadPriority",
+        "Z@XAPXAY@3??",
+        ".j`$|",
+        "_XcptFilter",
+        "Envoyer un message",
+        "collAlacoL",
+        "te la derni",
+        "lectronique",
+        "h4(@P",
+        "tcetorPlautriV",
+        "2u2g2`2Y2L291",
+        "Enregistrer une copie`Envoie le document en cours par l'interm",
+        "eldnaHesolCtenretnI",
+        "Volet suivant*Revient au volet pr",
+        "rundll32.exe",
+        "imulation Layer",
+        "Ouvre ce document",
+        "xetuMesaeleR",
+        "AyrotceriDmetsySteG",
+        "<\"<(<.<4<:<@<F<L<R<X<^<d<j<p<v<|<",
+        "swodniWmunE",
+        "emiTllatsnI",
+        " la fen",
+        ")Restaure la fen",
+        "muitnehtuA",
+        "CompanyName",
+        ">n>_=",
+        "<y<b<1<!<",
+        "XPVSS",
+        "Copyright (C) 2017",
+        "srebmuNnoisreVtNteGltR",
+        "4h4\\4@444 3",
+        "1^1m1v1|1",
+        "_setmbcp",
+        "1u1a0",
+        "rorrEtsaLteG",
+        "2z2u2\\1",
+        "tpokcostes",
+        "CInPlaceFrame",
+        ";m;a;Z;",
+        "tres en cascade",
+        " Microsoft Corporation. All rights reserved.",
+        "LegalCopyright",
+        "eefAcM",
+        "ter=Remplace le texte sp",
+        "ofnImetsySteG",
+        "txet.",
+        "A propos deAFerme l'application ; propose d'enregistrer les documents",
+        "9 9$9(9,9094989<9@9D9H9L9P9T9X9\\9`9d9h9l9p9t9x9|9",
+        " jourPEnregistre une copie du document actif sous un nouveau nom",
+        "BEW.rD",
+        "8v8q8E8?8.8#7",
+        "Barre d'outils.Affiche ou masque la barre d'",
+        "denteAFerme la fen",
+        "niaMecivreS",
+        ".edom SOD ni nur eb tonnac margorp sihT!",
+        "<x<m;",
+        "Effacer",
+        "Enregistrer sous,Change les options d'impression",
+        "4o4c4]4S4-4",
+        ">(>F>K>",
+        "\\h$$|",
+        "ipmcrts_",
+        ";|;d;Y;N;9;2;&;",
+        "Effacer tout<Copie la s",
+        "ZX@EAU@@ofni_epyt1??",
+        "potkseDdaerhTteS",
+        "8z8t8Z8S7",
+        "5j5S5L4",
+        "lld.23LENREK",
+        "rednefeDtiB",
+        "Mise en pageMChange les options d'imprimante et d'impression",
+        "ApotkseDnepO",
+        "SVgtF",
+        "7@8L8P8X8\\8t8",
+        "etacollA dab",
+        "_controlfp",
+        "tsohcvS\\noisreVtnerruC\\TN swodniW\\tfosorciM\\ERAWTFOS",
+        "InternalName",
+        "_initterm",
+        "_except_handler3",
+        "FileDescription",
+        "Copier?Supprime la s",
+        "llDecivreS",
+        "AxEeulaVteSgeR",
+        "2h2@212*2",
+        "QP $L",
+        "__p__commode",
+        "reffub dab",
+        "eliFdaeRtenretnI",
+        "ProductName",
+        "sretemaraP\\s%\\secivreS\\teSlortnoCtnerruC\\METSYS",
+        "Rechercher*Ins",
+        "040L0d0",
+        "sutatSecivreSteS",
+        "coler.",
+        "ro de version et le copyright",
+        "MoveFileA",
+        "[Affiche des informations sur le programme, le num",
+        "metsyS",
+        "eldnaHesolC",
+        "goLtnevEesolC",
+        "1}1[1T1&1",
+        "6x6s6X6S6'6",
+        "5X5d5s5",
+        "Fermer(Enregistre le document actif",
+        "lld.llDniaM",
+        "tre suivant",
+        "040904B0",
+        " sa taille d'origine",
+        "3$3*30363<3B3H3N3T3Z3`3f3l3r3x3~3",
+        "PVPPPPPPRQ"
+      ],
+      "virustotal": {
+        "error": true,
+        "msg": "Unable to complete connection to VirusTotal. Status code: 429"
+      },
+      "cape_type_code": 0,
+      "cape_type": "RunningRAT Payload: 32-bit executable"
+    }
+  },
+  "detections": [
+    {
+      "family": "RunningRAT",
+      "details": [
+        {
+          "Yara": "435a836a250603d3014f794b7123a5ed21d5481a4a86c10d669e8b1f71e9f113"
+        }
+      ]
+    }
+  ],
+  "CAPE": {
+    "payloads": [],
+    "configs": []
+  },
+  "info": {
+    "version": "2.5",
+    "started": "2026-03-26 13:34:38",
+    "ended": "2026-03-26 13:34:47",
+    "duration": 9,
+    "id": 710,
+    "category": "file",
+    "custom": "",
+    "machine": {
+      "id": 710,
+      "status": "stopping",
+      "name": "win10",
+      "label": "win10",
+      "platform": "windows",
+      "manager": "KVM",
+      "started_on": "2026-03-26 13:34:38",
+      "shutdown_on": "2026-03-26 13:34:46"
+    },
+    "package": "exe",
+    "timeout": false,
+    "tlp": null,
+    "parent_sample": {
+      "id": 1327,
+      "file_size": 32974,
+      "file_type": "Zip archive data, at least v5.1 to extract, compression method=AES Encrypted",
+      "md5": "319b8bff5a94dd3c96bc4ea8e9ca0f15",
+      "crc32": "8329719B",
+      "sha1": "9b5e355f8320deeb7d2ddf420429c10a5c5f22ad",
+      "sha256": "a683096d16398fb26f1f3c0e1ebe0e91f135f7b5afb92b87ac29be73026b8cad",
+      "sha512": "de658eb5a6d501a17c6d01fa70856343eeda729fd1bbb499ed3f4e3a5e06aa13e082546ecc328e18482f29061fbec4e912eb82596377793438cbded023901839",
+      "ssdeep": null,
+      "source_url": null
+    },
+    "options": {
+      "password": "infected"
+    },
+    "source_url": null,
+    "route": "none",
+    "user_id": 0,
+    "CAPE_current_commit": "354c9c19527ad6d44d50a5a9bee9282405678f71"
+  },
+  "behavior": {
+    "processes": []
+  },
+  "debug": {
+    "log": "2026-02-05 13:06:37,011 [root] INFO: Date set to: 20260326T13:34:42, timeout set to: 200\n2026-02-05 13:06:37,026 [root] DEBUG: Starting analyzer from: C:\\dl5t31t8\n2026-02-05 13:06:37,026 [root] DEBUG: Storing results at: C:\\vkCMbY\n2026-02-05 13:06:37,026 [root] DEBUG: Pipe server name: \\\\.\\PIPE\\JIfYRN\n2026-02-05 13:06:37,026 [root] DEBUG: Python path: C:\\Users\\levaw\\AppData\\Local\\Programs\\Python\\Python311-32\n2026-02-05 13:06:37,026 [root] INFO: analysis running as a normal user\n2026-02-05 13:06:37,026 [root] INFO: analysis package specified: \"exe\"\n2026-02-05 13:06:37,026 [root] DEBUG: importing analysis package module: \"modules.packages.exe\"...\n2026-02-05 13:06:37,026 [root] DEBUG: imported analysis package \"exe\"\n2026-02-05 13:06:37,026 [root] DEBUG: initializing analysis package \"exe\"...\n2026-02-05 13:06:37,026 [lib.common.common] INFO: wrapping\n2026-02-05 13:06:37,026 [lib.core.compound] INFO: C:\\Users\\levaw\\AppData\\Local\\Temp already exists, skipping creation\n2026-02-05 13:06:37,026 [root] DEBUG: New location of moved file: C:\\Users\\levaw\\AppData\\Local\\Temp\\435a836a250603d3014f.exe\n2026-02-05 13:06:37,026 [root] INFO: Analyzer: Package modules.packages.exe does not specify a DLL option\n2026-02-05 13:06:37,026 [root] INFO: Analyzer: Package modules.packages.exe does not specify a DLL_64 option\n2026-02-05 13:06:37,026 [root] INFO: Analyzer: Package modules.packages.exe does not specify a loader option\n2026-02-05 13:06:37,026 [root] INFO: Analyzer: Package modules.packages.exe does not specify a loader_64 option\n2026-02-05 13:06:37,058 [root] DEBUG: Imported auxiliary module \"modules.auxiliary.browser\"\n2026-02-05 13:06:37,089 [root] DEBUG: Imported auxiliary module \"modules.auxiliary.digisig\"\n2026-02-05 13:06:37,105 [root] DEBUG: Imported auxiliary module \"modules.auxiliary.disguise\"\n2026-02-05 13:06:37,120 [root] DEBUG: Imported auxiliary module \"modules.auxiliary.human\"\n2026-02-05 13:06:37,167 [lib.api.screenshot] DEBUG: Importing 'PIL.ImageChops'\n2026-02-05 13:06:37,167 [lib.api.screenshot] DEBUG: Importing 'PIL.ImageGrab'\n2026-02-05 13:06:37,167 [lib.api.screenshot] DEBUG: Importing 'PIL.ImageDraw'\n2026-02-05 13:06:37,198 [lib.api.screenshot] INFO: Please upgrade Pillow to >= 5.4.1 for best performance\n2026-02-05 13:06:37,198 [root] DEBUG: Imported auxiliary module \"modules.auxiliary.screenshots\"\n2026-02-05 13:06:37,198 [root] DEBUG: Imported auxiliary module \"modules.auxiliary.tlsdump\"\n2026-02-05 13:06:37,198 [root] DEBUG: Initialized auxiliary module \"Browser\"\n2026-02-05 13:06:37,198 [root] DEBUG: attempting to configure 'Browser' from data\n2026-02-05 13:06:37,198 [root] DEBUG: module Browser does not support data configuration, ignoring\n2026-02-05 13:06:37,198 [root] DEBUG: Trying to start auxiliary module \"modules.auxiliary.browser\"...\n2026-02-05 13:06:37,198 [root] DEBUG: Started auxiliary module modules.auxiliary.browser\n2026-02-05 13:06:37,198 [root] DEBUG: Initialized auxiliary module \"DigiSig\"\n2026-02-05 13:06:37,198 [root] DEBUG: attempting to configure 'DigiSig' from data\n2026-02-05 13:06:37,198 [root] DEBUG: module DigiSig does not support data configuration, ignoring\n2026-02-05 13:06:37,198 [root] DEBUG: Trying to start auxiliary module \"modules.auxiliary.digisig\"...\n2026-02-05 13:06:37,198 [modules.auxiliary.digisig] DEBUG: Checking for a digital signature\n2026-02-05 13:06:37,370 [modules.auxiliary.digisig] DEBUG: File is not signed\n2026-02-05 13:06:37,370 [modules.auxiliary.digisig] INFO: Uploading signature results to aux/DigiSig.json\n2026-02-05 13:06:37,370 [root] DEBUG: Started auxiliary module modules.auxiliary.digisig\n2026-02-05 13:06:37,370 [root] DEBUG: Initialized auxiliary module \"Disguise\"\n2026-02-05 13:06:37,370 [root] DEBUG: attempting to configure 'Disguise' from data\n2026-02-05 13:06:37,370 [root] DEBUG: module Disguise does not support data configuration, ignoring\n2026-02-05 13:06:37,370 [root] DEBUG: Trying to start auxiliary module \"modules.auxiliary.disguise\"...\n2026-02-05 13:06:37,386 [root] WARNING: Cannot execute auxiliary module modules.auxiliary.disguise: [WinError 5] Access is denied\n2026-02-05 13:06:37,386 [root] DEBUG: Initialized auxiliary module \"Human\"\n2026-02-05 13:06:37,386 [root] DEBUG: attempting to configure 'Human' from data\n2026-02-05 13:06:37,386 [root] DEBUG: module Human does not support data configuration, ignoring\n2026-02-05 13:06:37,386 [root] DEBUG: Trying to start auxiliary module \"modules.auxiliary.human\"...\n2026-02-05 13:06:37,386 [root] DEBUG: Started auxiliary module modules.auxiliary.human\n2026-02-05 13:06:37,386 [root] DEBUG: Initialized auxiliary module \"Screenshots\"\n2026-02-05 13:06:37,386 [root] DEBUG: attempting to configure 'Screenshots' from data\n2026-02-05 13:06:37,386 [root] DEBUG: module Screenshots does not support data configuration, ignoring\n2026-02-05 13:06:37,386 [root] DEBUG: Trying to start auxiliary module \"modules.auxiliary.screenshots\"...\n2026-02-05 13:06:37,386 [root] DEBUG: Started auxiliary module modules.auxiliary.screenshots\n2026-02-05 13:06:37,386 [root] DEBUG: Initialized auxiliary module \"TLSDumpMasterSecrets\"\n2026-02-05 13:06:37,386 [root] DEBUG: attempting to configure 'TLSDumpMasterSecrets' from data\n2026-02-05 13:06:37,386 [root] DEBUG: module TLSDumpMasterSecrets does not support data configuration, ignoring\n2026-02-05 13:06:37,386 [root] DEBUG: Trying to start auxiliary module \"modules.auxiliary.tlsdump\"...\n2026-02-05 13:06:37,386 [modules.auxiliary.tlsdump] INFO: lsass.exe found, pid 552\n2026-02-05 13:06:37,386 [lib.api.process] WARNING: failed to open process 552\n2026-02-05 13:06:37,386 [lib.api.process] WARNING: failed to open process 552\n2026-02-05 13:06:37,386 [lib.api.process] WARNING: failed to open process 552\n2026-02-05 13:06:37,386 [lib.api.process] DEBUG: Failed getting image name for pid 552\n2026-02-05 13:06:37,386 [lib.api.process] WARNING: failed to open process 552\n2026-02-05 13:06:37,386 [lib.api.process] DEBUG: Failed getting image name for pid 552\n2026-02-05 13:06:37,386 [lib.api.process] DEBUG: Failed getting exit code for <Process 552 ???>\n2026-02-05 13:06:37,386 [lib.api.process] WARNING: failed to open process 552\n2026-02-05 13:06:37,386 [lib.api.process] DEBUG: Failed getting image name for pid 552\n2026-02-05 13:06:37,386 [lib.api.process] WARNING: failed to open process 552\n2026-02-05 13:06:37,386 [lib.api.process] DEBUG: Failed getting image name for pid 552\n2026-02-05 13:06:37,386 [lib.api.process] WARNING: the <Process 552 ???> is not alive, injection aborted\n2026-02-05 13:06:37,386 [root] DEBUG: Started auxiliary module modules.auxiliary.tlsdump\n2026-02-05 13:06:37,839 [root] INFO: Restarting WMI Service\n2026-02-05 13:06:37,902 [root] DEBUG: package modules.packages.exe does not support configure, ignoring\n2026-02-05 13:06:37,902 [root] WARNING: configuration error for package modules.packages.exe: error importing data.packages.exe: No module named 'data.packages'\n2026-02-05 13:06:37,902 [lib.core.compound] INFO: C:\\Users\\levaw\\AppData\\Local\\Temp already exists, skipping creation\n2026-02-05 13:06:37,902 [lib.api.process] ERROR: Failed to execute process from path \"C:\\Users\\levaw\\AppData\\Local\\Temp\\435a836a250603d3014f.exe\" with arguments \"None\" (Error: 740)\n2026-02-05 13:06:37,902 [root] ERROR: You probably submitted the job with wrong package\nTraceback (most recent call last):\n  File \"C:\\dl5t31t8\\analyzer.py\", line 631, in run\n    pids = self.package.start(self.target)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\dl5t31t8\\modules\\packages\\exe.py\", line 47, in start\n    return self.execute(path, args, path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\dl5t31t8\\lib\\common\\abstracts.py\", line 174, in execute\n    raise CuckooPackageError(\"Unable to execute the initial process, analysis aborted\")\nlib.common.exceptions.CuckooPackageError: Unable to execute the initial process, analysis aborted\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\dl5t31t8\\analyzer.py\", line 1538, in <module>\n    success = analyzer.run()\n              ^^^^^^^^^^^^^^\n  File \"C:\\dl5t31t8\\analyzer.py\", line 635, in run\n    raise CuckooError(f'The package \"{self.package_name}\" start function raised an error: {e}') from e\nlib.common.exceptions.CuckooError: The package \"modules.packages.exe\" start function raised an error: Unable to execute the initial process, analysis aborted\n2026-02-05 13:06:37,917 [root] WARNING: Folder at path \"C:\\vkCMbY\\debugger\" does not exist, skipping\n2026-02-05 13:06:37,917 [root] WARNING: Folder at path \"C:\\vkCMbY\\tlsdump\" does not exist, skipping\n2026-02-05 13:06:37,917 [root] INFO: Analysis completed\n",
+    "errors": []
+  },
+  "network": {},
+  "url_analysis": {},
+  "procmemory": [],
+  "signatures": [
+    {
+      "name": "static_pe_anomaly",
+      "description": "Anomalous binary characteristics",
+      "categories": [
+        "static"
+      ],
+      "severity": 3,
+      "weight": 1,
+      "confidence": 80,
+      "references": [],
+      "data": [
+        {
+          "anomaly": "OriginalFilename version info claims file is a DLL but binary is a main executable"
+        }
+      ],
+      "new_data": [],
+      "alert": false,
+      "families": []
+    }
+  ],
+  "malscore": 10.0,
+  "ttps": [],
+  "malstatus": "Malicious"
+}

@@ -1,0 +1,41 @@
+﻿No,Action,D3FEND Tactic,D3FEND Technique,D3FEND Technique Level 0,D3FEND Technique Level 1,Definition
+1,D3-CAA - Connection Attempt Analysis,Detect,,Connection Attempt Analysis,,Analyzing failed connections in a network to detect unauthorized activity.
+2,D3-CCSA - Credential Compromise Scope Analysis,Detect,,Credential Compromise Scope Analysis,,Determining which credentials may have been compromised by analyzing the user logon history of a particular system.
+3,D3-CE - Credential Eviction,Evict,Credential Eviction,,,
+4,D3-CQ - Content Quarantine,Isolate,,Content Quarantine,,Transfer content that does not comply with policy to a quarantine zone.
+5,D3-CR - Credential Revocation,Evict,,Credential Revocation,,Deleting a set of credentials permanently to prevent them from being used to authenticate.
+6,D3-CRO - Credential Rotation,Harden,,Credential Rotation,,"Credential rotation is a security procedure in which authentication credentials, such as passwords, API keys, or certificates, are regularly changed or replaced to minimize the risk of unauthorized access."
+7,D3-DNSDL - DNS Denylisting,Isolate,,DNS Denylisting,,"Blocking DNS Network Traffic based on criteria such as IP address, domain name, or DNS query type."
+8,D3-DNSTA - DNS Traffic Analysis,Detect,,DNS Traffic Analysis,,"Analysis of domain name metadata, including name and DNS records, to determine whether the domain is likely to resolve to an undesirable host."
+9,D3-EAL - Executable Allowlisting,Isolate,,Executable Allowlisting,,Using a digital signature to authenticate a file before opening.
+10,D3-EDL - Executable Denylisting,Isolate,,Executable Denylisting,,Blocking the execution of files on a host in accordance with defined application policy rules.
+11,D3-EI - Execution Isolation,Isolate,Execution Isolation,,,
+12,D3-FA - File Analysis,Detect,File Analysis,,,
+13,D3-FAPA - File Access Pattern Analysis,Detect,,File Access Pattern Analysis,,Analyzing the files accessed by a process to identify unauthorized activity.
+14,D3-FCA - File Creation Analysis,Detect,,,File Creation Analysis,Analyzing the properties of file create system call invocations.
+15,D3-FCOA - File Content Analysis,Detect,,File Content Analysis,,Employing a pattern matching algorithm to statically analyze the content of files.
+16,D3-FEV - File Eviction,Evict,,File Eviction,,File eviction techniques delete files from system storage.
+17,D3-FHRA - File Hash Reputation Analysis,Detect,,,File Hash Reputation Analysis,Analyzing the reputation of a file hash.
+18,D3-FIM - File Integrity Monitoring,Detect,,File Integrity Monitoring,,Detecting any suspicious changes to files in a computer system.
+19,D3-FRDDL - Forward Resolution Domain Denylisting,Isolate,,,Forward Resolution Domain Denylisting,Blocking a lookup based on the query's domain name value.
+20,D3-FRIDL - Forward Resolution IP Denylisting,Isolate,,,Forward Resolution IP Denylisting,Blocking a DNS lookup's answer's IP address value.
+21,D3-ITF - Inbound Traffic Filtering,Isolate,,,Inbound Traffic Filtering,Restricting network traffic originating from untrusted networks destined towards a private host or enclave.
+22,D3-NI - Network Isolation,Isolate,Network Isolation,,,
+23,D3-NTA - Network Traffic Analysis,Detect,Network Traffic Analysis,,,
+24,D3-OTF - Outbound Traffic Filtering,Isolate,,,Outbound Traffic Filtering,Restricting network traffic originating from a private host or enclave destined towards untrusted networks.
+25,D3-PA - Process Analysis,Detect,Process Analysis,,,
+26,D3-PCSV - Process Code Segment Verification,Detect,,Process Code Segment Verification,,"Comparing the ""text"" or ""code"" memory segments to a source of truth."
+27,D3-PLA - Process Lineage Analysis,Detect,,,Process Lineage Analysis,"Identification of suspicious processes executing on an end-point device by examining the ancestry and siblings of a process, and the associated metadata of each node on the tree, such as process execution, duration, and order relative to siblings and ancestors."
+28,D3-PSA - Process Spawn Analysis,Detect,,Process Spawn Analysis,,Analyzing spawn arguments or attributes of a process to detect processes that are unauthorized.
+29,D3-PSMD - Process Self,Detect,,Process Self-Modification Detection,,"Detects processes that modify, change, or replace their own code at runtime."
+30,D3-PT - Process Termination,Evict,,Process Termination,,Terminating a running application process on a computer system.
+31,D3-RC - Restore Configuration,Restore,,Restore Configuration,,Restoring an software configuration.
+32,D3-RF - Restore File,Restore,,Restore File,,Restoring a file for an entity to access.
+33,D3-RKD - Registry Key Deletion,Evict,,Registry Key Deletion,,Delete a registry key.
+34,D3-RTSD - Remote Terminal Session Detection,Detect,,Remote Terminal Session Detection,,Detection of an unauthorized remote live terminal console session by examining network traffic to a network host.
+35,D3-RUAA - Restore User Account Access,Restore,,Restore User Account Access,,Restoring a user account's access to resources.
+36,D3-SCA - System Call Analysis,Detect,,System Call Analysis,,Analyzing system calls to determine whether a process is exhibiting unauthorized behavior.
+37,D3-SEA - Script Execution Analysis,Detect,,Script Execution Analysis,,Analyzing the execution of a script to detect unauthorized user activity.
+38,D3-SICA - System Init Config Analysis,Detect,,,System Init Config Analysis,Analysis of any system process startup configuration.
+39,D3-SJA - Scheduled Job Analysis,Detect,,,Scheduled Job Analysis,"Analysis of source files, processes, destination files, or destination servers associated with a scheduled job to detect unauthorized use of job scheduling."
+40,D3-ST - Session Termination,Evict,,Session Termination,,Forcefully end all active sessions associated with compromised accounts or devices.

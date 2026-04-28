@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python generate_action_per_ttps.py)",
+      "Bash(python -c \":*)",
+      "Bash(python -X utf8 generate_action_per_ttps.py)",
+      "Bash(python generate_unique_actions.py)",
+      "WebFetch(domain:d3fend.mitre.org)"
+    ]
+  }
+}

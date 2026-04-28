@@ -1,0 +1,33 @@
+======================================================================
+ Log file: extract_best_f1_20260424_192624.log
+ Script : extract_best_f1.py
+ Started: 2026-04-24 19:26:24
+ CWD    : C:\WINDOWS\System32
+======================================================================
+
+[LOG] Logging to: C:\Users\puncu\OneDrive\Máy tính\Similarity to Action\Result 2\logs\extract_best_f1_20260424_192624.log
+=== F1 Extraction Tool ===
+
+Selected folder: C:/Users/puncu/OneDrive/Máy tính/Similarity to Action/Result 2/binary Jaccard/top 8 jaccard
+Found 11 CSV file(s): ['1.csv', '10.csv', '11.csv', '2.csv', '3.csv', '4.csv', '5.csv', '6.csv', '7.csv', '8.csv', '9.csv']
+
+Selected option: 1
+
+
+Output saved to: C:\Users\puncu\OneDrive\Máy tính\Similarity to Action\Result 2\extracted_f1_results.csv
+  file  top_k  precision  recall     f1
+ 1.csv      4     0.6088  0.6209 0.6011
+10.csv      4     0.5525  0.5578 0.5429
+11.csv      5     0.0510  0.0644 0.0558
+ 2.csv      4     0.6150  0.6290 0.6080
+ 3.csv      4     0.6162  0.6315 0.6097
+ 4.csv      4     0.6138  0.6293 0.6073
+ 5.csv      4     0.6175  0.6329 0.6110
+ 6.csv      3     0.7283  0.5580 0.6179
+ 7.csv      3     0.7483  0.5678 0.6317
+ 8.csv      3     0.7500  0.5664 0.6315
+ 9.csv      4     0.5850  0.5898 0.5743
+
+======================================================================
+ Finished: 2026-04-24 19:26:29
+======================================================================

@@ -1,0 +1,27 @@
+{
+  "_comment": "Default arguments for framework.py. CLI args override these values.",
+
+  "metric": "cosine",
+  "w_sig": 0.6,
+  "w_mbc": 0.3,
+  "w_ttp": 0.1,
+  "top_k": 5,
+  "W": 0.3,
+  "beta": 0.7,
+  "vt_key": "223b13835ace35e4fc3be592b937c43f109182b2660e612636b35365a5c6deda",
+  "no_vt": false,
+  "tfidf_pattern": false,
+  "out_dir": "",
+
+  "paths": {
+    "pattern_sig":    "5_Similarity/dataset pattern/pattern_signature.csv",
+    "pattern_ttp":    "5_Similarity/dataset pattern/pattern_ttp_update.csv",
+    "pattern_mbc":    "5_Similarity/dataset pattern/pattern_mbc_update.csv",
+    "sig_unique":     "3_Patterns/unique/signature_unique.csv",
+    "ttp_unique":     "3_Patterns/unique/ttp_unique.csv",
+    "mbc_unique":     "3_Patterns/unique/mbc_unique.csv",
+    "action_ttps":    "6_Action space/action_per_ttps.csv",
+    "action_report":  "7_Top K/actionPerReport.xlsx",
+    "unique_actions": "7_Top K/unique_actions.csv"
+  }
+}

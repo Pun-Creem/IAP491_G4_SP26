@@ -1,0 +1,140 @@
+action,score
+D3-APCA - Application Protocol Command Analysis,0.4
+D3-CSPP - Client-server Payload Profiling,0.4
+D3-NTCD - Network Traffic Community Deviation,0.4
+D3-NTF - Network Traffic Filtering,0.4
+D3-NTSA - Network Traffic Signature Analysis,0.4
+D3-OTF - Outbound Traffic Filtering,0.4
+D3-PHDURA - Per Host Download-Upload Ratio Analysis,0.4
+D3-PMAD - Protocol Metadata Anomaly Detection,0.4
+D3-RPA - Relay Pattern Analysis,0.4
+D3-RTSD - Remote Terminal Session Detection,0.4
+D3-UGLPA - User Geolocation Logon Pattern Analysis,0.4
+D3-CF - Content Filtering,0.4
+D3-CM - Content Modification,0.4
+D3-CQ - Content Quarantine,0.620566801606
+D3-DF - Decoy File,0.4
+D3-FA - File Analysis,0.4
+D3-FE - File Encryption,0.4
+D3-FEV - File Eviction,0.4
+D3-FIM - File Integrity Monitoring,0.4
+D3-LFP - Local File Permissions,0.4
+D3-RF - Restore File,0.4
+D3-RFAM - Remote File Access Mediation,0.4
+D3-EAL - Executable Allowlisting,0.4
+D3-EDL - Executable Denylisting,1.17705005941
+D3-HBPI - Hardware-based Process Isolation,0.4
+D3-PSA - Process Spawn Analysis,0.4
+D3-SCA - System Call Analysis,0.4
+D3-SCF - System Call Filtering,0.4
+D3-DI - Data Inventory,0.4
+D3-RD - Restore Database,0.4
+D3-SCP - System Configuration Permissions,0.4
+D3-AVE - Asset Vulnerability Enumeration,0.4
+D3-FBA - Firmware Behavior Analysis,0.0
+D3-FEMC - Firmware Embedded Monitoring Code,0.0
+D3-FV - Firmware Verification,0.0
+D3-RS - Restore Software,0.4
+D3-SU - Software Update,0.4
+D3-SWI - Software Inventory,0.4
+D3-DA - Dynamic Analysis,0.4
+D3-EFA - Emulated File Analysis,0.4
+D3-SFA - System File Analysis,0.4
+D3-CAA - Connection Attempt Analysis,0.0
+D3-ST - Session Termination,0.620566801606
+D3-ABPI - Application-based Process Isolation,0.0
+D3-DTP - Domain Trust Policy,0.0
+D3-HR - Host Reboot,0.0
+D3-HS - Host Shutdown,0.0
+D3-KBPI - Kernel-based Process Isolation,0.0
+D3-PLA - Process Lineage Analysis,0.0
+D3-PS - Process Suspension,0.0
+D3-PSEP - Process Segment Execution Prevention,0.4
+D3-PSMD - Process Self-Modification Detection,0.0
+D3-PT - Process Termination,0.491298508938
+D3-SAOR - Segment Address Offset Randomization,0.4
+D3-WSAM - Web Session Access Mediation,0.0
+D3-SJA - Scheduled Job Analysis,0.0
+D3-CI - Configuration Inventory,0.4
+D3-RC - Restore Configuration,0.4
+D3-SICA - System Init Config Analysis,0.4
+D3-DNSTA - DNS Traffic Analysis,0.4
+D3-CA - Certificate Analysis,0.4
+D3-ANAA - Administrative Network Activity Analysis,0.0
+D3-SDM - System Daemon Monitoring,0.0
+D3-MBT - Memory Boundary Tracking,0.4
+D3-PCSV - Process Code Segment Verification,0.6871764036279999
+D3-HCI - Hardware Component Inventory,0.4
+D3-IDA - Input Device Analysis,0.4
+D3-IOPR - IO Port Restriction,0.4
+D3-SBV - Service Binary Verification,0.4
+D3-AEM - Application Exception Monitoring,0.4
+D3-DNR - Decoy Network Resource,0.0
+D3-NRAM - Network Resource Access Mediation,0.0
+D3-OPM - Operational Process Monitoring,0.4
+D3-DNSAL - DNS Allowlisting,0.4
+D3-DNSDL - DNS Denylisting,0.4
+D3-FC - File Carving,0.4
+D3-FRDDL - Forward Resolution Domain Denylisting,0.4
+D3-RRID - Reverse Resolution IP Denylisting,0.4
+D3-FCA - File Creation Analysis,0.0
+D3-AA - Agent Authentication,0.0
+D3-AL - Account Locking,0.0
+D3-AM - Access Modeling,0.4
+D3-CDP - Change Default Password,0.0
+D3-DAM - Domain Account Monitoring,0.0
+D3-LAM - Local Account Monitoring,0.0
+D3-RUAA - Restore User Account Access,0.0
+D3-UAP - User Account Permissions,0.0
+D3-ULA - Unlock Account,0.0
+D3-DE - Decoy Environment,0.4
+D3-ANCI - Authentication Cache Invalidation,0.4
+D3-CCSA - Credential Compromise Scope Analysis,0.620566801606
+D3-CH - Credential Hardening,0.4
+D3-CR - Credential Revocation,0.4
+D3-CRO - Credential Rotation,0.620566801606
+D3-CTS - Credential Transmission Scoping,0.4
+D3-DUC - Decoy User Credential,0.4
+D3-MFA - Multi-factor Authentication,0.4
+D3-RIC - Reissue Credential,0.4
+D3-ACH - Application Configuration Hardening,0.4
+D3-DRA - Disable Remote Access,0.4
+D3-EF - Email Filtering,0.0
+D3-EHB - Endpoint Health Beacon,0.0
+D3-ER - Email Removal,0.0
+D3-HD - Homoglyph Detection,0.0
+D3-LLM - Logical Link Mapping,0.0
+D3-NNI - Network Node Inventory,0.0
+D3-PLM - Physical Link Mapping,0.0
+D3-RE - Restore Email,0.0
+D3-RNA - Restore Network Access,0.0
+D3-SMRA - Sender MTA Reputation Analysis,0.0
+D3-SRA - Sender Reputation Analysis,0.0
+D3-VS - Video Surveillance,0.0
+D3-NTPM - Network Traffic Policy Mapping,0.4
+D3-TB - Token Binding,0.4
+D3-TBA - Token-based Authentication,0.4
+D3-ISVA - Inbound Session Volume Analysis,0.0
+D3-ITF - Inbound Traffic Filtering,0.0
+D3-SFCV - Stack Frame Canary Validation,0.0
+D3-SSC - Shadow Stack Comparisons,0.0
+D3-BA - Bootloader Authentication,0.0
+D3-SFV - System Firmware Verification,0.0
+D3-USICA - User Session Init Config Analysis,0.4
+D3-RKD - Registry Key Deletion,0.0
+D3-SYSVA - System Vulnerability Assessment,0.0
+D3-DENCR - Disk Encryption,0.4
+D3-FFV - File Format Verification,0.4
+D3-IAA - Identifier Activity Analysis,0.0
+D3-UA - URL Analysis,0.0
+D3-URA - URL Reputation Analysis,0.0
+D3-CE - Credential Eviction,0.0
+D3-EI - Execution Isolation,0.0
+D3-FAPA - File Access Pattern Analysis,0.0
+D3-FCOA - File Content Analysis,0.489873655782
+D3-FHRA - File Hash Reputation Analysis,0.0
+D3-FRIDL - Forward Resolution IP Denylisting,0.0
+D3-NI - Network Isolation,0.0
+D3-NTA - Network Traffic Analysis,0.0
+D3-PA - Process Analysis,0.0
+D3-SEA - Script Execution Analysis,0.0

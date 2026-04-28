@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python extract_unique_features.py pattern_mbc_update.csv)",
+      "Bash(python -c \"import csv; rows=list\\(csv.reader\\(open\\(''mbc_unique.csv''\\)\\)\\); print\\(rows[:5], ''...'', rows[-3:]\\)\")",
+      "Bash(python -c \"import tkinter; print\\(''tkinter OK''\\)\")"
+    ]
+  }
+}

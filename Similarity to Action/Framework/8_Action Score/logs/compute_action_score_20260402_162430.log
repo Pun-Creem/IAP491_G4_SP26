@@ -1,0 +1,19 @@
+======================================================================
+ Log file: compute_action_score_20260402_162430.log
+ Script : compute_action_score.py
+ Started: 2026-04-02 16:24:30
+ CWD    : C:\WINDOWS\System32
+======================================================================
+
+[LOG] Logging to: C:\Users\puncu\OneDrive\Máy tính\Similarity to Action\Framework\8_Action Score\logs\compute_action_score_20260402_162430.log
+Mapped action file : C:/Users/puncu/OneDrive/Máy tính/Similarity to Action/Framework/8_Action Score/981/981_mapped_action.csv
+Top-x file         : C:/Users/puncu/OneDrive/Máy tính/Similarity to Action/Framework/8_Action Score/981\981_top5.csv
+W = 0.4, β = 0.6
+Target hash        : 139480e1c4ae77b2b865460af38b48ad32fbc8a68c3c657baac3ab3896226192
+Number of neighbors: 5
+Number of actions  : 139
+Output saved to: C:/Users/puncu/OneDrive/Máy tính/Similarity to Action/Framework/8_Action Score/981/981_mapped_action_scores.csv
+
+======================================================================
+ Finished: 2026-04-02 16:24:59
+======================================================================

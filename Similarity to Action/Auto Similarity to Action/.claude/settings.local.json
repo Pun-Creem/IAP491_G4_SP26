@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"C:\\\\Users\\\\puncu\\\\OneDrive\\\\Máy tính\\\\Similarity to Action\\\\Auto Similarity to Action\\\\precision&recall\")",
+      "Bash(ls -la \"C:\\\\Users\\\\puncu\\\\OneDrive\\\\Máy tính\\\\Similarity to Action\\\\Auto Similarity to Action\\\\precision&recall\\\\sample_ground_truth\")",
+      "Bash(ls \"C:/Users/puncu/OneDrive/Máy tính/Similarity to Action/Auto Similarity to Action/precision&recall/\")",
+      "Bash(python3 -c \":*)",
+      "Bash(python3:*)"
+    ]
+  }
+}

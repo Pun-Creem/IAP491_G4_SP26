@@ -1,0 +1,232 @@
+================================================================================
+              MANUAL - AUTO SIMILARITY TO ACTION (PHIEN BAN GOC)
+================================================================================
+
+Mo ta:
+  Pipeline tu dong chuyen doi bao cao phan tich malware (JSON) thanh
+  cac hanh dong phong thu D3FEND, su dung do tuong dong (Jaccard/Cosine)
+  giua cac mau malware.
+
+================================================================================
+1. CAU TRUC THU MUC
+================================================================================
+
+Auto Similarity to Action/
+  |-- auto_sim2action.py          # Pipeline chinh (xu ly 1 mau)
+  |-- auto_sim2action_multi.py    # Chay nhieu mau (batch)
+  |-- auto_precision&recall.py    # Danh gia P/R/F1 tu dong
+  |-- run_multi_config.py         # Chay nhieu cau hinh trong so
+  |-- config.json                 # Cau hinh mac dinh
+  |-- config_list.csv             # Danh sach cau hinh (W/beta)
+  |-- config_list_sim.csv         # Danh sach cau hinh (TFIDF)
+  |-- sample/                     # Thu muc chua bao cao JSON
+  |   |-- XXXX_report.json
+  |   |-- vt_update/              # Du lieu cap nhat tu VirusTotal
+  |-- data/
+  |   |-- patterns/               # Pattern cua dataset
+  |   |   |-- pattern_signature.csv
+  |   |   |-- pattern_ttp_update.csv
+  |   |   |-- pattern_mbc_update.csv
+  |   |-- unique/                 # Danh sach feature duy nhat
+  |   |   |-- signature_unique.csv
+  |   |   |-- ttp_unique.csv
+  |   |   |-- mbc_unique.csv
+  |   |-- action_space/
+  |   |   |-- action_per_ttps.csv # Anh xa TTP -> D3FEND actions
+  |   |-- top_k/
+  |       |-- actionPerReport.xlsx
+  |       |-- unique_actions.csv
+  |-- output/                     # Ket qua dau ra
+  |-- precision&recall/
+      |-- calc_precision_recall_f1.py      # Tinh P/R/F1 (chon file thu cong)
+      |-- calc_precision_recall_f1_auto.py # Tinh P/R/F1 (tu dong tu output/)
+      |-- sample_ground_truth/
+          |-- sample_ground_truth.xlsx     # Ground truth
+
+================================================================================
+2. CAC SCRIPT VA CACH SU DUNG
+================================================================================
+
+--------------------------------------------------------------------------------
+2.1 auto_sim2action.py - Pipeline chinh (1 mau)
+--------------------------------------------------------------------------------
+  Mo ta: Xu ly 1 bao cao JSON qua 7 giai doan de tao danh sach
+         hanh dong phong thu D3FEND duoc xep hang.
+
+  7 Giai doan:
+    1. Trich xuat pattern (Signature, TTP, MBC) tu JSON
+    2. Cap nhat TTP/MBC qua VirusTotal API (tuy chon)
+    3. Tinh do tuong dong (Jaccard hoac Cosine)
+    4. Gop 3 diem tuong dong thanh 1 (trong so)
+    5. Chon Top-K mau tuong dong nhat
+    6. Anh xa TTP -> D3FEND actions
+    7. Tinh diem action: score(a) = W * px(a) + beta * sum(sim_j * yj(a))
+
+  Lenh chay:
+    python auto_sim2action.py --sample report.json
+    python auto_sim2action.py --sample report.json --metric cosine --W 0.3 --beta 0.7
+    python auto_sim2action.py   (mo GUI chon file)
+
+  Tham so:
+    --sample          : Duong dan file JSON (bat buoc)
+    --out-dir         : Thu muc dau ra (mac dinh: output/<ten_mau>)
+    --metric          : jaccard | cosine (mac dinh: jaccard)
+    --w-sig           : Trong so Signature (mac dinh: 0.33)
+    --w-mbc           : Trong so MBC (mac dinh: 0.33)
+    --w-ttp           : Trong so TTP (mac dinh: 0.34)
+                        (w-sig + w-mbc + w-ttp phai bang 1.0)
+    --top-k           : So luong mau tuong dong (mac dinh: 5)
+    --W               : Trong so cua mau chinh (mac dinh: 1.0)
+    --beta            : Trong so cua cac mau lang gieng (mac dinh: 1.0)
+    --vt-key          : API key VirusTotal
+    --no-vt           : Bo qua lam giau VirusTotal
+    --tfidf-pattern   : Ap dung TF-IDF truoc khi tinh tuong dong
+    --keep-process-data : Giu lai file trung gian (mac dinh: true)
+
+  Dau vao (Input):
+    - File JSON bao cao malware (vd: 1017_report.json)
+    - Cac file data trong thu muc data/
+
+  Dau ra (Output) - luu trong output/<ten_mau>/:
+    - <mau>_signatture.csv          : Pattern Signature
+    - <mau>_ttp_update.csv          : Pattern TTP
+    - <mau>_mbc_update.csv          : Pattern MBC
+    - <mau>_signature_similarity.csv: Diem tuong dong Signature
+    - <mau>_ttp_similarity.csv      : Diem tuong dong TTP
+    - <mau>_mbc_similarity.csv      : Diem tuong dong MBC
+    - <mau>_merged_similarity.csv   : Diem tuong dong tong hop
+    - <mau>_top5.csv                : Top-K mau tuong dong nhat
+    - <mau>_mapped_action.csv       : Anh xa TTP -> Actions
+    - <mau>_action_scores.csv       : ** KET QUA CHINH ** (danh sach actions xep hang)
+
+--------------------------------------------------------------------------------
+2.2 auto_sim2action_multi.py - Chay nhieu mau (batch)
+--------------------------------------------------------------------------------
+  Mo ta: Wrapper chay pipeline cho nhieu file JSON cung luc.
+
+  Lenh chay:
+    python auto_sim2action_multi.py --sample-dir sample/
+    python auto_sim2action_multi.py --samples s1.json s2.json s3.json
+    python auto_sim2action_multi.py   (mo GUI chon file)
+
+  Tham so:
+    --sample-dir      : Thu muc chua cac file JSON
+    --samples         : Danh sach file JSON
+    (Cac tham so khac duoc chuyen tiep cho auto_sim2action.py)
+
+  Dau vao: Nhieu file JSON
+  Dau ra:  Moi mau tao 1 thu muc rieng trong output/
+           In tom tat: X/Y thanh cong, liet ke mau loi
+
+--------------------------------------------------------------------------------
+2.3 auto_precision&recall.py - Danh gia tu dong
+--------------------------------------------------------------------------------
+  Mo ta: Chay pipeline cho nhieu mau, tinh Precision/Recall/F1,
+         roi don dep thu muc output.
+
+  Lenh chay:
+    python auto_precision&recall.py --sample-dir sample/
+
+  Dau vao:
+    - Cac file JSON bao cao malware
+    - precision&recall/sample_ground_truth/sample_ground_truth.xlsx
+      (cot: sha256, actions)
+
+  Dau ra:
+    - precision&recall/precision_recall_f1_results.csv
+      Cot: sha256, precision_top1..5, recall_top1..5, f1_top1..5
+      Dong cuoi: AVERAGE (gia tri trung binh)
+
+--------------------------------------------------------------------------------
+2.4 run_multi_config.py - Chay nhieu cau hinh trong so
+--------------------------------------------------------------------------------
+  Mo ta: Toi uu hoa viec thu nghiem nhieu bo trong so (W/beta)
+         bang cach cache cac buoc khong phu thuoc trong so.
+
+  Lenh chay:
+    python run_multi_config.py --sample-dir sample/
+
+  Quy trinh:
+    Phase 1 (1 lan): Chay stage 1-4 & 6 cho tat ca mau, cache lai
+    Phase 2 (moi config): Chi chay lai stage 5 & 7 voi W/beta khac nhau
+
+  Dau vao:
+    - Cac file JSON bao cao malware
+    - config_list.csv (danh sach cau hinh)
+    - config.json (cau hinh co so)
+
+  File config_list.csv:
+    run,metric,w_sig,w_mbc,w_ttp,top_k,W,beta,tfidf_pattern
+    1,jaccard,1,0,0,5,0,1,FALSE
+    2,jaccard,1,0,0,5,0.1,0.9,FALSE
+    ...
+    11,jaccard,1,0,0,5,1,0,FALSE
+
+  Dau ra:
+    - precision&recall/<run_number>.csv cho moi cau hinh
+
+--------------------------------------------------------------------------------
+2.5 calc_precision_recall_f1.py - Tinh P/R/F1 thu cong
+--------------------------------------------------------------------------------
+  Mo ta: Chon file action_scores thu cong qua GUI, tinh P/R/F1.
+
+  Lenh chay:
+    python precision&recall/calc_precision_recall_f1.py
+
+  Dau vao: Chon *_action_scores.csv qua GUI
+  Dau ra:  precision&recall/precision_recall_f1_results.csv
+
+--------------------------------------------------------------------------------
+2.6 calc_precision_recall_f1_auto.py - Tinh P/R/F1 tu dong
+--------------------------------------------------------------------------------
+  Mo ta: Tu dong tim tat ca *_action_scores.csv trong output/,
+         tinh P/R/F1 cho toan bo.
+
+  Lenh chay:
+    python precision&recall/calc_precision_recall_f1_auto.py
+
+  Dau vao: Tu dong quet output/
+  Dau ra:  precision&recall/precision_recall_f1_results.csv
+
+================================================================================
+3. FILE CAU HINH
+================================================================================
+
+config.json:
+  {
+    "metric": "jaccard",
+    "w_sig": 0.6, "w_mbc": 0.3, "w_ttp": 0.1,
+    "top_k": 5,
+    "W": 0.3, "beta": 0.7,
+    "vt_key": "...",
+    "no_vt": false,
+    "tfidf_pattern": false,
+    "keep_process_data": true,
+    "paths": { ... duong dan toi cac file du lieu ... }
+  }
+
+  Uu tien: Tham so dong lenh > config.json > Gia tri mac dinh
+
+config_list.csv:
+  Moi dong la 1 cau hinh (run, metric, w_sig, w_mbc, w_ttp, top_k, W, beta, tfidf_pattern)
+
+config_list_sim.csv:
+  66 cau hinh thu nghiem tat ca to hop trong so voi TFIDF=TRUE
+
+================================================================================
+4. QUY TRINH SU DUNG DIEN HINH
+================================================================================
+
+  Buoc 1: Chuan bi file JSON bao cao malware trong thu muc sample/
+  Buoc 2: Chay batch:
+          python auto_sim2action_multi.py --sample-dir sample/
+  Buoc 3: Danh gia:
+          python precision&recall/calc_precision_recall_f1_auto.py
+
+  Hoac chay toan bo (pipeline + danh gia + don dep):
+          python auto_precision&recall.py --sample-dir sample/
+
+  Hoac thu nghiem nhieu cau hinh:
+          python run_multi_config.py --sample-dir sample/
+
+================================================================================

@@ -1,0 +1,15 @@
+{
+  "_comment": "Config for eval_from_topk.py – uses pre-computed top-k similarity, only needs W and beta.",
+  "W": 0.3,
+  "beta": 0.7,
+  "top_k": 10,
+
+  "paths": {
+    "action_ttps":    "data/action_space/action_per_ttps.csv",
+    "action_report":  "data/top_k/actionPerReport.xlsx",
+    "unique_actions": "data/top_k/unique_actions.csv",
+    "ttp_unique":     "data/unique/ttp_unique.csv",
+    "mbc_unique":     "data/unique/mbc_unique.csv",
+    "sig_unique":     "data/unique/signature_unique.csv"
+  }
+}

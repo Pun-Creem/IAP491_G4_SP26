@@ -1,0 +1,33 @@
+======================================================================
+ Log file: extract_best_f1_20260408_142154.log
+ Script : extract_best_f1.py
+ Started: 2026-04-08 14:21:54
+ CWD    : C:\WINDOWS\System32
+======================================================================
+
+[LOG] Logging to: C:\Users\puncu\OneDrive\Máy tính\Similarity to Action\Result 2\logs\extract_best_f1_20260408_142154.log
+=== F1 Extraction Tool ===
+
+Selected folder: C:/Users/puncu/OneDrive/Máy tính/Similarity to Action/Result 2/RandomForest/10
+Found 11 CSV file(s): ['1.csv', '10.csv', '11.csv', '2.csv', '3.csv', '4.csv', '5.csv', '6.csv', '7.csv', '8.csv', '9.csv']
+
+Selected option: 1
+
+
+Output saved to: C:\Users\puncu\OneDrive\Máy tính\Similarity to Action\Result 2\extracted_f1_results.csv
+  file  top_k  precision  recall     f1
+ 1.csv      5     0.5400  0.6797 0.5890
+10.csv      3     0.5350  0.3992 0.4474
+11.csv      5     0.1100  0.1417 0.1209
+ 2.csv      5     0.5410  0.6812 0.5903
+ 3.csv      4     0.5962  0.6083 0.5886
+ 4.csv      4     0.5975  0.6099 0.5900
+ 5.csv      4     0.5988  0.6118 0.5914
+ 6.csv      4     0.6000  0.6102 0.5914
+ 7.csv      4     0.6012  0.6086 0.5911
+ 8.csv      4     0.6062  0.6065 0.5930
+ 9.csv      4     0.5387  0.5279 0.5227
+
+======================================================================
+ Finished: 2026-04-08 14:22:00
+======================================================================

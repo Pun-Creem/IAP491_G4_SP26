@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \":*)",
+      "Bash(ls \"C:/Users/puncu/OneDrive/Máy tính/Framework v3/9_Accuracy&Recall/\")"
+    ]
+  }
+}

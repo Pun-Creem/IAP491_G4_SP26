@@ -1,0 +1,255 @@
+================================================================================
+            MANUAL - ASA MODIFIED (PHIEN BAN CAI TIEN)
+================================================================================
+
+Mo ta:
+  Phien ban cai tien cua Auto Similarity to Action, bo sung them cac
+  script danh gia tu file Top-K similarity da tinh san (pre-computed).
+  Cho phep tinh action scores va P/R/F1 ma khong can chay lai toan bo
+  pipeline tu dau.
+
+================================================================================
+1. CAU TRUC THU MUC
+================================================================================
+
+ASA modified/
+  |-- auto_sim2action.py          # Pipeline chinh (xu ly 1 mau)
+  |-- auto_sim2action_multi.py    # Chay nhieu mau (batch)
+  |-- auto_precision&recall.py    # Danh gia P/R/F1 tu dong (full pipeline)
+  |-- action_from_topk.py         # Tinh action scores tu Top-K co san
+  |-- precision_recall_from_topk.py # Danh gia P/R/F1 tu Top-K co san
+  |-- run_multi_config_eval.py    # Chay nhieu cau hinh (tu Top-K co san)
+  |-- config.json                 # Cau hinh pipeline chinh
+  |-- config_eval.json            # Cau hinh cho cac script Top-K
+  |-- config_eval_list.csv        # Danh sach cau hinh W/beta
+  |-- sample/                     # Bao cao JSON
+  |-- sample top k similarity/    # Du lieu Top-K similarity da tinh san
+  |-- data/                       # Du lieu patterns, actions, unique features
+  |-- output/                     # Ket qua dau ra
+  |-- precision&recall/
+      |-- calc_precision_recall_f1.py
+      |-- calc_precision_recall_f1_auto.py
+      |-- sample_ground_truth/
+          |-- sample_ground_truth.xlsx
+
+================================================================================
+2. CAC SCRIPT VA CACH SU DUNG
+================================================================================
+
+=== NHOM 1: PIPELINE DAY DU (giong phien ban goc) ===
+
+--------------------------------------------------------------------------------
+2.1 auto_sim2action.py - Pipeline chinh (1 mau)
+--------------------------------------------------------------------------------
+  Mo ta: Xu ly 1 bao cao JSON qua 7 giai doan.
+
+  7 Giai doan:
+    1. Trich xuat pattern (Signature, TTP, MBC)
+    2. Cap nhat qua VirusTotal (tuy chon)
+    3. Tinh do tuong dong (Jaccard/Cosine)
+    4. Gop diem tuong dong (trong so)
+    5. Chon Top-K mau tuong dong nhat
+    6. Anh xa TTP -> D3FEND actions
+    7. Tinh diem: score(a) = W * px(a) + beta * sum(sim_j * yj(a))
+
+  Lenh chay:
+    python auto_sim2action.py --sample report.json
+    python auto_sim2action.py --sample report.json --metric cosine --W 0.3 --beta 0.7
+    python auto_sim2action.py   (mo GUI)
+
+  Tham so:
+    --sample          : File JSON (bat buoc)
+    --out-dir         : Thu muc dau ra
+    --metric          : jaccard | cosine
+    --w-sig/--w-mbc/--w-ttp : Trong so 3 loai pattern (tong = 1.0)
+    --top-k           : So mau tuong dong (mac dinh: 5)
+    --W               : Trong so mau chinh
+    --beta            : Trong so lang gieng
+    --vt-key          : API key VirusTotal
+    --no-vt           : Bo qua VirusTotal
+    --tfidf-pattern   : Dung TF-IDF
+
+  Dau vao: File JSON + data/
+  Dau ra:  output/<ten_mau>/<mau>_action_scores.csv (va cac file trung gian)
+
+--------------------------------------------------------------------------------
+2.2 auto_sim2action_multi.py - Chay nhieu mau
+--------------------------------------------------------------------------------
+  Lenh chay:
+    python auto_sim2action_multi.py --sample-dir sample/
+    python auto_sim2action_multi.py --samples s1.json s2.json
+
+  Dau vao: Nhieu file JSON
+  Dau ra:  Moi mau 1 thu muc rieng trong output/
+
+--------------------------------------------------------------------------------
+2.3 auto_precision&recall.py - Danh gia full pipeline
+--------------------------------------------------------------------------------
+  Lenh chay:
+    python auto_precision&recall.py --sample-dir sample/
+
+  Dau vao: File JSON + ground truth
+  Dau ra:  precision&recall/precision_recall_f1_results.csv
+
+=== NHOM 2: SU DUNG TOP-K DA TINH SAN (MOI - CHI CO TRONG ASA MODIFIED) ===
+
+--------------------------------------------------------------------------------
+2.4 action_from_topk.py - Tinh action scores tu Top-K co san
+--------------------------------------------------------------------------------
+  Mo ta: Tinh diem action ma KHONG can chay lai pipeline 7 buoc.
+         Su dung file Top-K similarity da duoc tinh san truoc.
+
+  Lenh chay:
+    python action_from_topk.py --sample-dir sample/ --topk-dir "sample top k similarity/report_XGBoost"
+    python action_from_topk.py   (mo GUI chon thu muc)
+
+  Tham so:
+    --sample-dir      : Thu muc chua file JSON
+    --topk-dir        : Thu muc chua file Top-K similarity (CSV/XLSX, dat ten theo sha256)
+    --W               : Trong so mau chinh (lay tu config_eval.json neu khong chi dinh)
+    --beta            : Trong so lang gieng
+    --out-dir         : Thu muc dau ra
+
+  Dau vao:
+    - File JSON bao cao malware (trong sample-dir)
+    - File Top-K similarity da tinh san (trong topk-dir)
+      Moi file dat ten theo sha256 cua mau, vd: abcd1234....csv
+      Noi dung: danh sach cac mau tuong dong va diem tuong dong
+    - config_eval.json (W, beta, duong dan data)
+
+  Quy trinh:
+    1. Doc sha256 va TTPs tu JSON
+    2. Tim file Top-K tuong ung (theo sha256)
+    3. Doc danh sach lang gieng va diem tuong dong
+    4. Anh xa TTPs -> D3FEND actions (px)
+    5. Tinh: score(a) = W * px(a) + beta * sum(sim_j * yj(a))
+
+  Dau ra:
+    - output/<mau>_action_scores.csv
+
+--------------------------------------------------------------------------------
+2.5 precision_recall_from_topk.py - Danh gia P/R/F1 tu Top-K co san
+--------------------------------------------------------------------------------
+  Mo ta: Giong action_from_topk nhung them buoc tinh Precision/Recall/F1.
+
+  Lenh chay:
+    python precision_recall_from_topk.py --sample-dir sample/ --topk-dir sim_folder/
+    python precision_recall_from_topk.py   (mo GUI)
+
+  Tham so:
+    --sample-dir      : Thu muc JSON
+    --topk-dir        : Thu muc Top-K similarity
+    --W, --beta       : Trong so (ghi de config)
+
+  Dau vao:
+    - File JSON + file Top-K + config_eval.json
+    - precision&recall/sample_ground_truth/sample_ground_truth.xlsx
+
+  Dau ra:
+    - precision&recall/precision_recall_f1_results_topk.csv
+      Cot: sha256, precision_top1..5, recall_top1..5, f1_top1..5, AVERAGE
+
+--------------------------------------------------------------------------------
+2.6 run_multi_config_eval.py - Chay nhieu cau hinh tu Top-K
+--------------------------------------------------------------------------------
+  Mo ta: Thu nghiem nhieu bo trong so W/beta bang cach:
+         Phase 1: Load mau va Top-K 1 lan duy nhat (cache)
+         Phase 2: Moi config chi tinh lai action scores + P/R/F1
+
+  Lenh chay:
+    python run_multi_config_eval.py --sample-dir sample/ --topk-dir sim_folder/
+
+  Dau vao:
+    - File JSON + file Top-K
+    - config_eval.json (duong dan data)
+    - config_eval_list.csv (danh sach cau hinh)
+
+  File config_eval_list.csv:
+    run,W,beta
+    1,0,1
+    2,0.1,0.9
+    3,0.2,0.8
+    ...
+    11,1,0
+
+  Dau ra:
+    - precision&recall/<run_number>.csv cho moi cau hinh
+
+=== NHOM 3: TINH P/R/F1 TU KET QUA CO SAN ===
+
+--------------------------------------------------------------------------------
+2.7 calc_precision_recall_f1.py - Tinh P/R/F1 thu cong
+--------------------------------------------------------------------------------
+  Lenh chay:
+    python precision&recall/calc_precision_recall_f1.py
+
+  Dau vao: Chon *_action_scores.csv qua GUI
+  Dau ra:  precision&recall/precision_recall_f1_results.csv
+
+--------------------------------------------------------------------------------
+2.8 calc_precision_recall_f1_auto.py - Tinh P/R/F1 tu dong
+--------------------------------------------------------------------------------
+  Lenh chay:
+    python precision&recall/calc_precision_recall_f1_auto.py
+
+  Dau vao: Tu dong quet output/
+  Dau ra:  precision&recall/precision_recall_f1_results.csv
+
+================================================================================
+3. FILE CAU HINH
+================================================================================
+
+config.json (cho pipeline day du):
+  {
+    "metric": "jaccard",
+    "w_sig": 0.6, "w_mbc": 0.3, "w_ttp": 0.1,
+    "top_k": 5,
+    "W": 0.3, "beta": 0.7,
+    "vt_key": "...",
+    "no_vt": false,
+    "tfidf_pattern": false,
+    "keep_process_data": false,
+    "paths": { ... }
+  }
+
+config_eval.json (cho cac script Top-K):
+  {
+    "W": 0.3, "beta": 0.7,
+    "paths": {
+      "action_ttps": "data/action_space/action_per_ttps.csv",
+      "action_report": "data/top_k/actionPerReport.xlsx",
+      "unique_actions": "data/top_k/unique_actions.csv",
+      "ttp_unique": "data/unique/ttp_unique.csv",
+      "mbc_unique": "data/unique/mbc_unique.csv",
+      "sig_unique": "data/unique/signature_unique.csv"
+    }
+  }
+
+config_eval_list.csv:
+  Moi dong: run, W, beta (11 cau hinh tu W=0 den W=1, buoc 0.1)
+
+================================================================================
+4. QUY TRINH SU DUNG DIEN HINH
+================================================================================
+
+  --- Cach 1: Pipeline day du ---
+  python auto_precision&recall.py --sample-dir sample/
+
+  --- Cach 2: Tu Top-K co san (nhanh hon) ---
+  python precision_recall_from_topk.py --sample-dir sample/ --topk-dir "sample top k similarity/report_XGBoost"
+
+  --- Cach 3: Thu nhieu cau hinh ---
+  python run_multi_config_eval.py --sample-dir sample/ --topk-dir "sample top k similarity/report_XGBoost"
+
+================================================================================
+5. DIEM KHAC BIET VOI PHIEN BAN GOC (Auto Similarity to Action)
+================================================================================
+
+  - Them action_from_topk.py: tinh action tu Top-K da tinh san
+  - Them precision_recall_from_topk.py: danh gia tu Top-K da tinh san
+  - Them run_multi_config_eval.py: chay nhieu cau hinh tu Top-K
+  - Them config_eval.json: cau hinh rieng cho cac script Top-K
+  - Them config_eval_list.csv: danh sach cau hinh W/beta
+  - Them thu muc "sample top k similarity": chua du lieu Top-K co san
+
+================================================================================

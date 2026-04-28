@@ -1,0 +1,41 @@
+sha256,rank,action,score
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,1,D3-EDL - Executable Denylisting,1.078154
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,2,D3-PSA - Process Spawn Analysis,0.782451
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,3,D3-FEV - File Eviction,0.756275
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,4,D3-SICA - System Init Config Analysis,0.756275
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,5,D3-CAA - Connection Attempt Analysis,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,6,D3-CQ - Content Quarantine,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,7,D3-EAL - Executable Allowlisting,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,8,D3-FA - File Analysis,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,9,D3-FIM - File Integrity Monitoring,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,10,D3-OTF - Outbound Traffic Filtering,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,11,D3-RC - Restore Configuration,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,12,D3-RF - Restore File,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,13,D3-RTSD - Remote Terminal Session Detection,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,14,D3-SCA - System Call Analysis,0.600000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,15,D3-PT - Process Termination,0.486053
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,16,D3-PCSV - Process Code Segment Verification,0.169736
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,17,D3-FCOA - File Content Analysis,0.152144
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,18,D3-CCSA - Credential Compromise Scope Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,19,D3-CE - Credential Eviction,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,20,D3-CR - Credential Revocation,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,21,D3-CRO - Credential Rotation,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,22,D3-DNSDL - DNS Denylisting,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,23,D3-DNSTA - DNS Traffic Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,24,D3-EI - Execution Isolation,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,25,D3-FAPA - File Access Pattern Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,26,D3-FCA - File Creation Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,27,D3-FHRA - File Hash Reputation Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,28,D3-FRDDL - Forward Resolution Domain Denylisting,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,29,D3-FRIDL - Forward Resolution IP Denylisting,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,30,D3-ITF - Inbound Traffic Filtering,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,31,D3-NI - Network Isolation,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,32,D3-NTA - Network Traffic Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,33,D3-PA - Process Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,34,D3-PLA - Process Lineage Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,35,D3-PSMD - Process Self,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,36,D3-RKD - Registry Key Deletion,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,37,D3-RUAA - Restore User Account Access,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,38,D3-SEA - Script Execution Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,39,D3-SJA - Scheduled Job Analysis,0.000000
+cd2bc2ceb0e1b7d7c31f7a2aec7e838d3a90767ed3d02e1720170875e4a23cb6,40,D3-ST - Session Termination,0.000000

@@ -1,0 +1,33 @@
+======================================================================
+ Log file: extract_best_f1_20260424_191821.log
+ Script : extract_best_f1.py
+ Started: 2026-04-24 19:18:21
+ CWD    : C:\WINDOWS\System32
+======================================================================
+
+[LOG] Logging to: C:\Users\puncu\OneDrive\Máy tính\Similarity to Action\Result 2\logs\extract_best_f1_20260424_191821.log
+=== F1 Extraction Tool ===
+
+Selected folder: C:/Users/puncu/OneDrive/Máy tính/Similarity to Action/Result 2/binary cosine/9
+Found 11 CSV file(s): ['1.csv', '10.csv', '11.csv', '2.csv', '3.csv', '4.csv', '5.csv', '6.csv', '7.csv', '8.csv', '9.csv']
+
+Selected option: 1
+
+
+Output saved to: C:\Users\puncu\OneDrive\Máy tính\Similarity to Action\Result 2\extracted_f1_results.csv
+  file  top_k  precision  recall     f1
+ 1.csv      4     0.6125  0.6263 0.6054
+10.csv      3     0.6517  0.4948 0.5499
+11.csv      5     0.0510  0.0644 0.0558
+ 2.csv      4     0.6175  0.6309 0.6101
+ 3.csv      4     0.6175  0.6309 0.6101
+ 4.csv      4     0.6175  0.6309 0.6101
+ 5.csv      4     0.6138  0.6263 0.6060
+ 6.csv      3     0.7250  0.5578 0.6161
+ 7.csv      3     0.7250  0.5578 0.6161
+ 8.csv      3     0.7483  0.5718 0.6336
+ 9.csv      3     0.7583  0.5746 0.6393
+
+======================================================================
+ Finished: 2026-04-24 19:18:28
+======================================================================

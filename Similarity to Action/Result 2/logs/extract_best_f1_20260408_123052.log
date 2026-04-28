@@ -1,0 +1,16 @@
+======================================================================
+ Log file: extract_best_f1_20260408_123052.log
+ Script : extract_best_f1.py
+ Started: 2026-04-08 12:30:52
+ CWD    : C:\WINDOWS\System32
+======================================================================
+
+[LOG] Logging to: C:\Users\puncu\OneDrive\Máy tính\Similarity to Action\Result 2\logs\extract_best_f1_20260408_123052.log
+=== F1 Extraction Tool ===
+
+Selected folder: C:/Users/puncu/OneDrive/Máy tính/Similarity to Action/Result 2/Doc2vec/3
+No valid CSV files found in the selected folder.
+
+======================================================================
+ Finished: 2026-04-08 12:30:55
+======================================================================
