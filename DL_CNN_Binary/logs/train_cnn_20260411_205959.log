@@ -1,0 +1,204 @@
+[20:59:59] ============================================================
+[20:59:59]  CNN Malware Action Recommendation — Training
+[20:59:59] ============================================================
+[20:59:59] 
+[Step 1] Loading Excel data...
+[20:59:59]  Loading Excel: d:\DL_CNN\train_excel\DL_1-953.xlsx
+[20:59:59]  Loaded 943 samples from Excel
+[20:59:59] 
+[Step 2] Extracting signatures from CAPE reports...
+[21:01:51]  Extracted signatures from 943 reports (0 failed/missing)
+[21:01:51] 
+[Step 3] Building feature vocabulary...
+[21:01:51]  Feature filtering:
+[21:01:51]   Total features found: 588
+[21:01:51]   Removed (too rare, <3): 110
+[21:01:51]   Removed (too common, >95%): 0
+[21:01:51]   Kept: 478
+[21:01:51]   Breakdown: TTPs=158, MBCs=195, Signatures=125
+[21:01:51]   Total features: 478
+[21:01:51]   Image size: 22x22 = 484 (padding 6 zeros)
+[21:01:51] 
+[Step 4] Loading D3FEND action labels...
+[21:01:51] Loading actions from: d:\DL_CNN\train_actions\report_hash_action.xlsx
+[21:01:51] Loaded actions for 943 reports
+[21:01:51] Total unique actions: 41
+[21:01:51] After filtering (min 3 samples): 33
+[21:01:51] Matched: 943/943 samples
+[21:01:51] Actions per sample: min=1, max=5, mean=3.2
+[21:01:51] Enriching 41 D3FEND actions with category + description...
+[21:02:04] D3FEND API appears unreachable. Using fallback classification.
+[21:02:04] D3FEND enrichment complete:
+[21:02:04]   From cache: 0
+[21:02:04]   From API:   5
+[21:02:04]   Fallback:   36
+[21:02:04]   Category distribution: {'Detect': 19, 'Evict': 7, 'Isolate': 10, 'Restore': 3, 'Unknown': 1, 'Harden': 1}
+[21:02:04] Action distribution:
+[21:02:04]   D3-CCSA (Detect: Credential Compromise Scope Analysis): 17 samples
+[21:02:04]   D3-CE (Evict: Credential Eviction): 14 samples
+[21:02:04]   D3-CQ (Isolate: Content Quarantine): 71 samples
+[21:02:04]   D3-CR (Evict: Credential Revocation): 6 samples
+[21:02:04]   D3-CRO (Harden: Credential Rotation): 3 samples
+[21:02:04]   D3-DNSDL (Isolate: DNS Denylisting): 25 samples
+[21:02:04]   D3-EAL (Isolate: Executable Allowlisting): 3 samples
+[21:02:04]   D3-EDL (Isolate: Executable Denylisting): 51 samples
+[21:02:04]   D3-EI (Isolate: Execution Isolation): 12 samples
+[21:02:04]   D3-FA (Detect: File Analysis): 11 samples
+[21:02:04]   D3-FAPA (Detect: File Access Pattern Analysis): 84 samples
+[21:02:04]   D3-FCOA (Detect: File Content Analysis): 4 samples
+[21:02:04]   D3-FEV (Evict: File Eviction): 356 samples
+[21:02:04]   D3-FIM (Detect: File Integrity Monitoring): 3 samples
+[21:02:04]   D3-FR (Evict: File Removal): 12 samples
+[21:02:04]   D3-FRDDL (Isolate: Forward Resolution Domain Denylisting): 44 samples
+[21:02:04]   D3-NI (Isolate: Network Isolation): 364 samples
+[21:02:04]   D3-NTA (Detect: Network Traffic Analysis): 8 samples
+[21:02:04]   D3-OTF (Isolate: Outbound Traffic Filtering): 262 samples
+[21:02:04]   D3-PA (Detect: Process Analysis): 52 samples
+[21:02:04]   D3-PCSV (Detect: Process Code Segment Verification): 98 samples
+[21:02:04]   D3-PLA (Detect: Process Lineage Analysis): 38 samples
+[21:02:04]   D3-PSA (Detect: Process Spawn Analysis): 264 samples
+[21:02:04]   D3-PSMD (Unknown: Process Self): 3 samples
+[21:02:04]   D3-PT (Evict: Process Termination): 904 samples
+[21:02:04]   D3-RC (Restore: Restore Configuration): 12 samples
+[21:02:04]   D3-RF (Restore: Restore File): 22 samples
+[21:02:04]   D3-RKD (Evict: Registry Key Deletion): 148 samples
+[21:02:04]   D3-SCA (Detect: System Call Analysis): 13 samples
+[21:02:04]   D3-SEA (Detect: Script Execution Analysis): 3 samples
+[21:02:04]   D3-SICA (Detect: System Init Config Analysis): 84 samples
+[21:02:04]   D3-SJA (Detect: Scheduled Job Analysis): 4 samples
+[21:02:04]   D3-ST (Evict: Session Termination): 13 samples
+[21:02:04] 
+[Step 5] Creating CNN image dataset...
+[21:02:04]  CNN Dataset: 943 samples, 478 features → 22x22 image
+[21:02:04] 
+[Step 6] Training CNN with K-Fold Cross Validation...
+[21:02:04]  Device: cpu
+[21:02:04] 
+============================================================
+[21:02:04]  FOLD 1/5 — Train: 754, Val: 189
+[21:02:04] ============================================================
+[21:02:04]  Model parameters: 43,137
+[21:02:06]   Fold 1/5 | Epoch   1 | LR 0.000140 | Train Loss 0.5607 | Val Loss 0.3309 | Val F1 0.0888
+[21:02:08]   Fold 1/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3757 | Val Loss 0.2695 | Val F1 0.1442
+[21:02:11]   Fold 1/5 | Epoch  20 | LR 0.000691 | Train Loss 0.3311 | Val Loss 0.2510 | Val F1 0.1836
+[21:02:15]   Fold 1/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2868 | Val Loss 0.2621 | Val F1 0.2092
+[21:02:19]   Fold 1/5 | Epoch  40 | LR 0.000649 | Train Loss 0.2569 | Val Loss 0.3436 | Val F1 0.1981
+[21:02:23]   Fold 1/5 | Epoch  50 | LR 0.000616 | Train Loss 0.2423 | Val Loss 0.3868 | Val F1 0.1751
+[21:02:27]   Fold 1/5 | Epoch  60 | LR 0.000576 | Train Loss 0.2236 | Val Loss 0.2111 | Val F1 0.2598
+[21:02:30]   Fold 1/5 | Epoch  70 | LR 0.000530 | Train Loss 0.2088 | Val Loss 0.4823 | Val F1 0.2367
+[21:02:34]   Fold 1/5 | Epoch  80 | LR 0.000479 | Train Loss 0.1937 | Val Loss 0.2234 | Val F1 0.2299
+[21:02:34]   Early stopping at epoch 82 (patience=25)
+[21:02:34]  Fold 1 — Best Val Loss: 0.2110, F1@0.5: 0.2427
+[21:02:34] 
+============================================================
+[21:02:34]  FOLD 2/5 — Train: 754, Val: 189
+[21:02:34] ============================================================
+[21:02:35]   Fold 2/5 | Epoch   1 | LR 0.000140 | Train Loss 0.4759 | Val Loss 0.3663 | Val F1 0.0725
+[21:02:39]   Fold 2/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3487 | Val Loss 0.3831 | Val F1 0.1669
+[21:02:42]   Fold 2/5 | Epoch  20 | LR 0.000691 | Train Loss 0.3107 | Val Loss 0.3254 | Val F1 0.1936
+[21:02:46]   Fold 2/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2703 | Val Loss 0.4162 | Val F1 0.2222
+[21:02:49]   Fold 2/5 | Epoch  40 | LR 0.000649 | Train Loss 0.2548 | Val Loss 0.3281 | Val F1 0.2112
+[21:02:54]   Fold 2/5 | Epoch  50 | LR 0.000616 | Train Loss 0.2194 | Val Loss 0.3455 | Val F1 0.2170
+[21:02:57]   Fold 2/5 | Epoch  60 | LR 0.000576 | Train Loss 0.2179 | Val Loss 0.2938 | Val F1 0.2306
+[21:03:01]   Fold 2/5 | Epoch  70 | LR 0.000530 | Train Loss 0.2046 | Val Loss 0.3195 | Val F1 0.2381
+[21:03:05]   Early stopping at epoch 79 (patience=25)
+[21:03:05]  Fold 2 — Best Val Loss: 0.2920, F1@0.5: 0.2442
+[21:03:05] 
+============================================================
+[21:03:05]  FOLD 3/5 — Train: 754, Val: 189
+[21:03:05] ============================================================
+[21:03:05]   Fold 3/5 | Epoch   1 | LR 0.000140 | Train Loss 0.4943 | Val Loss 0.3230 | Val F1 0.0842
+[21:03:08]   Fold 3/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3599 | Val Loss 0.3279 | Val F1 0.1537
+[21:03:12]   Fold 3/5 | Epoch  20 | LR 0.000691 | Train Loss 0.2991 | Val Loss 0.3674 | Val F1 0.1763
+[21:03:17]   Fold 3/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2778 | Val Loss 0.5164 | Val F1 0.1820
+[21:03:19]   Fold 3/5 | Epoch  40 | LR 0.000649 | Train Loss 0.2465 | Val Loss 0.4457 | Val F1 0.2395
+[21:03:24]   Fold 3/5 | Epoch  50 | LR 0.000616 | Train Loss 0.2185 | Val Loss 0.3089 | Val F1 0.2538
+[21:03:25]   Early stopping at epoch 54 (patience=25)
+[21:03:25]  Fold 3 — Best Val Loss: 0.2804, F1@0.5: 0.2045
+[21:03:25] 
+============================================================
+[21:03:25]  FOLD 4/5 — Train: 755, Val: 188
+[21:03:25] ============================================================
+[21:03:25]   Fold 4/5 | Epoch   1 | LR 0.000140 | Train Loss 0.5297 | Val Loss 0.2807 | Val F1 0.0368
+[21:03:29]   Fold 4/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3681 | Val Loss 0.2671 | Val F1 0.1478
+[21:03:32]   Fold 4/5 | Epoch  20 | LR 0.000691 | Train Loss 0.3294 | Val Loss 0.2626 | Val F1 0.1992
+[21:03:37]   Fold 4/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2870 | Val Loss 0.2490 | Val F1 0.2001
+[21:03:41]   Fold 4/5 | Epoch  40 | LR 0.000649 | Train Loss 0.2637 | Val Loss 0.2651 | Val F1 0.1972
+[21:03:45]   Fold 4/5 | Epoch  50 | LR 0.000616 | Train Loss 0.2482 | Val Loss 0.2661 | Val F1 0.2214
+[21:03:48]   Fold 4/5 | Epoch  60 | LR 0.000576 | Train Loss 0.2241 | Val Loss 0.3533 | Val F1 0.2161
+[21:03:53]   Fold 4/5 | Epoch  70 | LR 0.000530 | Train Loss 0.2160 | Val Loss 0.5678 | Val F1 0.1956
+[21:03:56]   Fold 4/5 | Epoch  80 | LR 0.000479 | Train Loss 0.1933 | Val Loss 0.2303 | Val F1 0.2355
+[21:03:59]   Early stopping at epoch 87 (patience=25)
+[21:03:59]  Fold 4 — Best Val Loss: 0.2040, F1@0.5: 0.2378
+[21:03:59] 
+============================================================
+[21:03:59]  FOLD 5/5 — Train: 755, Val: 188
+[21:03:59] ============================================================
+[21:04:00]   Fold 5/5 | Epoch   1 | LR 0.000140 | Train Loss 0.5517 | Val Loss 0.3052 | Val F1 0.0621
+[21:04:03]   Fold 5/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3770 | Val Loss 0.2662 | Val F1 0.1505
+[21:04:07]   Fold 5/5 | Epoch  20 | LR 0.000691 | Train Loss 0.3203 | Val Loss 0.2442 | Val F1 0.2134
+[21:04:11]   Fold 5/5 | Epoch  30 | LR 0.000674 | Train Loss 0.3058 | Val Loss 0.2420 | Val F1 0.1990
+[21:04:14]   Fold 5/5 | Epoch  40 | LR 0.000649 | Train Loss 0.2564 | Val Loss 0.2744 | Val F1 0.2150
+[21:04:18]   Fold 5/5 | Epoch  50 | LR 0.000616 | Train Loss 0.2544 | Val Loss 0.2554 | Val F1 0.2106
+[21:04:22]   Early stopping at epoch 59 (patience=25)
+[21:04:22]  Fold 5 — Best Val Loss: 0.2345, F1@0.5: 0.2140
+[21:04:22] 
+============================================================
+[21:04:22]  K-FOLD RESULTS
+[21:04:22] ============================================================
+[21:04:22]  F1@0.5 per fold: ['0.2427', '0.2442', '0.2045', '0.2378', '0.2140']
+[21:04:22]  Mean F1@0.5: 0.2286 ± 0.0162
+[21:04:22] 
+ Tuning per-action thresholds...
+[21:04:23]  Threshold range: [0.05, 0.75], mean=0.53
+[21:04:23] 
+ With tuned thresholds:
+[21:04:23]   Macro F1:   0.2791
+[21:04:23]   Micro F1:   0.4720
+[21:04:23]   Sample F1:  0.4786
+[21:04:23]   Precision:  0.2289
+[21:04:23]   Recall:     0.5720
+[21:04:23] 
+ Per-action F1 (tuned threshold):
+[21:04:23]   D3-CCSA: F1=0.2778 (t=0.75, support=17)
+[21:04:23]   D3-CE: F1=0.0539 (t=0.50, support=14)
+[21:04:23]   D3-CQ: F1=0.1846 (t=0.50, support=71)
+[21:04:23]   D3-CR: F1=0.3000 (t=0.70, support=6)
+[21:04:23]   D3-CRO: F1=0.0274 (t=0.50, support=3)
+[21:04:23]   D3-DNSDL: F1=0.2410 (t=0.55, support=25)
+[21:04:23]   D3-EAL: F1=0.0396 (t=0.45, support=3)
+[21:04:23]   D3-EDL: F1=0.1803 (t=0.55, support=51)
+[21:04:23]   D3-EI: F1=0.1333 (t=0.55, support=12)
+[21:04:23]   D3-FA: F1=0.0432 (t=0.55, support=11)
+[21:04:23]   D3-FAPA: F1=0.5208 (t=0.55, support=84)
+[21:04:23]   D3-FCOA: F1=0.0342 (t=0.45, support=4)
+[21:04:23]   D3-FEV: F1=0.6353 (t=0.50, support=356)
+[21:04:23]   D3-FIM: F1=0.6667 (t=0.65, support=3)
+[21:04:23]   D3-FR: F1=0.1163 (t=0.55, support=12)
+[21:04:23]   D3-FRDDL: F1=0.4521 (t=0.50, support=44)
+[21:04:23]   D3-NI: F1=0.6197 (t=0.45, support=364)
+[21:04:23]   D3-NTA: F1=0.0488 (t=0.55, support=8)
+[21:04:23]   D3-OTF: F1=0.5434 (t=0.50, support=262)
+[21:04:23]   D3-PA: F1=0.1762 (t=0.50, support=52)
+[21:04:23]   D3-PCSV: F1=0.2530 (t=0.50, support=98)
+[21:04:23]   D3-PLA: F1=0.2197 (t=0.55, support=38)
+[21:04:23]   D3-PSA: F1=0.4801 (t=0.50, support=264)
+[21:04:23]   D3-PSMD: F1=0.0263 (t=0.45, support=3)
+[21:04:23]   D3-PT: F1=0.9789 (t=0.05, support=904)
+[21:04:23]   D3-RC: F1=0.1739 (t=0.75, support=12)
+[21:04:23]   D3-RF: F1=0.4737 (t=0.65, support=22)
+[21:04:23]   D3-RKD: F1=0.5930 (t=0.50, support=148)
+[21:04:23]   D3-SCA: F1=0.0461 (t=0.50, support=13)
+[21:04:23]   D3-SEA: F1=0.0253 (t=0.50, support=3)
+[21:04:23]   D3-SICA: F1=0.4610 (t=0.50, support=84)
+[21:04:23]   D3-SJA: F1=0.0889 (t=0.50, support=4)
+[21:04:23]   D3-ST: F1=0.0976 (t=0.60, support=13)
+[21:04:23] 
+[Step 7] Saving model...
+[21:04:23] 
+ Model saved to: d:\DL_CNN\saved_model_cnn
+[21:04:23]  Files: ['action_info.json', 'action_vocab.json', 'feature_types.json', 'metrics.json', 'model_config.json', 'model_fold_1.pt', 'model_fold_2.pt', 'model_fold_3.pt', 'model_fold_4.pt', 'model_fold_5.pt', 'thresholds.npy', 'vocab.json']
+[21:04:23] 
+ Training complete in 264.0s
+[21:04:23]  Mean F1@0.5: 0.2286 ± 0.0162
+[21:04:23]  Tuned Macro F1: 0.2791

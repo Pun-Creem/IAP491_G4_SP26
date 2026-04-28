@@ -1,0 +1,35 @@
+[18:15:12] ============================================================
+[18:15:12]  CNN Malware Action Recommendation — Prediction
+[18:15:12] ============================================================
+[18:15:12]  Device: cpu
+[18:15:12] 
+[Step 1] Loading saved model...
+[18:15:12] Loaded TF-IDF transformer
+[18:15:13] Loaded 5 fold models from d:\DL_CNN\saved_model_cnn
+[18:15:13] 
+[Step 2] Loading new malware data...
+[18:15:13]  Loading Excel: d:\DL_CNN\new_excel\DL_1017-1217.xlsx
+[18:15:13]  Loaded 201 samples from Excel
+[18:15:13] 
+[Step 3] Extracting signatures from CAPE reports...
+[18:15:38]  Extracted signatures from 201 reports (0 failed/missing)
+[18:15:38] 
+[Step 4] Building features, applying TF-IDF and category weights...
+[18:15:38]  Applied TF-IDF: (201, 478) → (201, 478)
+[18:15:38]  Category weights applied:
+[18:15:38]   Signatures (125 features): weight=1.0
+[18:15:38]   TTPs (158 features): weight=0.0
+[18:15:38]   MBCs (195 features): weight=0.0
+[18:15:38]   Active features: 125/478 (353 zeroed out)
+[18:15:38] 
+[Step 5] Creating CNN image dataset...
+[18:15:38]  CNN Dataset: 201 samples, 478 features → 22x22 image
+[18:15:38] 
+[Step 6] Running ensemble prediction...
+[18:15:38] 
+[Step 7] Saving predictions...
+[18:15:38]  Predictions saved to: d:\DL_CNN\output_cnn\predictions_cnn.xlsx
+[18:15:38] 
+ Prediction complete in 26.1s
+[18:15:38]  Samples: 201
+[18:15:38]  Actions per sample: min=1, max=5, mean=4.3

@@ -1,0 +1,42 @@
+2026-04-07 12:01:05 | INFO    | Log file: d:\Deep_Learning_V5\logs\evaluate_mlp_2026-04-07_12-01-05.log
+2026-04-07 12:01:05 | INFO    | ============================================================
+2026-04-07 12:01:05 | INFO    | MLP — EVALUATE PREDICTIONS VS GROUND TRUTH
+2026-04-07 12:01:05 | INFO    | ============================================================
+2026-04-07 12:01:06 | INFO    | Ground truth: d:\Deep_Learning_V5\ground_truth\ground_truth_1017-1217.xlsx
+2026-04-07 12:01:06 | INFO    |   Samples: 201
+2026-04-07 12:01:06 | INFO    |   Actions/sample: min=2, max=5, mean=4.1
+2026-04-07 12:01:06 | INFO    | Predictions: d:\Deep_Learning_V5\output_mlp\predictions_mlp.xlsx
+2026-04-07 12:01:06 | INFO    |   Samples: 201
+2026-04-07 12:01:06 | INFO    | 
+============================================================
+2026-04-07 12:01:06 | INFO    | MLP — EVALUATION RESULTS
+2026-04-07 12:01:06 | INFO    | ============================================================
+2026-04-07 12:01:06 | INFO    |   Matched samples: 201
+2026-04-07 12:01:06 | INFO    | 
+    k   Precision@k    Recall@k      F1@k
+2026-04-07 12:01:06 | INFO    |   ----------------------------------------
+2026-04-07 12:01:06 | INFO    |     1       0.9900      0.2599    0.4041
+2026-04-07 12:01:06 | INFO    |     2       0.6642      0.3569    0.4530
+2026-04-07 12:01:06 | INFO    |     3       0.5406      0.4260    0.4649
+2026-04-07 12:01:06 | INFO    |     4       0.4465      0.4643    0.4443
+2026-04-07 12:01:06 | INFO    |     5       0.3672      0.4751    0.4047
+2026-04-07 12:01:06 | INFO    | 
+  Best F1@k: F1@3 = 0.4649
+2026-04-07 12:01:06 | INFO    | 
+  Per-sample preview (first 10, showing k=3):
+2026-04-07 12:01:06 | INFO    |     1083_report.json: predict=[D3-PT, D3-NI, D3-OTF, D3-CQ, D3-PSA] | truth=[D3-PCSV, D3-PT, D3-OTF, D3-SJA, D3-FEV] | P@3=0.67 R@3=0.40 F1@3=0.50
+2026-04-07 12:01:06 | INFO    |     1084_report.json: predict=[D3-PT, D3-NI, D3-OTF, D3-FEV] | truth=[D3-PT, D3-FEV, D3-RKD] | P@3=0.33 R@3=0.33 F1@3=0.33
+2026-04-07 12:01:06 | INFO    |     1085_report.json: predict=[D3-PT, D3-SICA, D3-OTF] | truth=[D3-PT, D3-OTF, D3-RKD, D3-FEV] | P@3=0.67 R@3=0.50 F1@3=0.57
+2026-04-07 12:01:06 | INFO    |     1086_report.json: predict=[D3-PT, D3-FEV, D3-FAPA, D3-NI] | truth=[D3-NI, D3-PT, D3-RKD, D3-FEV, D3-RF] | P@3=0.67 R@3=0.40 F1@3=0.50
+2026-04-07 12:01:06 | INFO    |     1087_report.json: predict=[D3-PT, D3-NI, D3-OTF, D3-CE, D3-CR] | truth=[D3-PT, D3-FEV, D3-RKD] | P@3=0.33 R@3=0.33 F1@3=0.33
+2026-04-07 12:01:06 | INFO    |     1088_report.json: predict=[D3-PT, D3-NTA, D3-CQ, D3-OTF, D3-NI] | truth=[D3-PLA, D3-PT, D3-FEV] | P@3=0.33 R@3=0.33 F1@3=0.33
+2026-04-07 12:01:06 | INFO    |     1089_report.json: predict=[D3-PT, D3-FEV, D3-RKD, D3-FIM] | truth=[D3-PT, D3-FEV] | P@3=0.67 R@3=1.00 F1@3=0.80
+2026-04-07 12:01:06 | INFO    |     1090_report.json: predict=[D3-PT, D3-SICA, D3-OTF, D3-PSA] | truth=[D3-PLA, D3-PT, D3-FEV, D3-RKD, D3-OTF] | P@3=0.67 R@3=0.40 F1@3=0.50
+2026-04-07 12:01:06 | INFO    |     1091_report.json: predict=[D3-PT, D3-FAPA, D3-FEV, D3-NI] | truth=[D3-NI, D3-PT, D3-RC, D3-FEV, D3-RF] | P@3=0.67 R@3=0.40 F1@3=0.50
+2026-04-07 12:01:06 | INFO    |     1092_report.json: predict=[D3-PT, D3-FEV, D3-OTF] | truth=[D3-PT, D3-OTF] | P@3=0.67 R@3=1.00 F1@3=0.80
+2026-04-07 12:01:06 | INFO    | 
+  Results exported: d:\Deep_Learning_V5\output_mlp\evaluation_mlp.xlsx
+2026-04-07 12:01:06 | INFO    | 
+============================================================
+2026-04-07 12:01:06 | INFO    | EVALUATION COMPLETE!
+2026-04-07 12:01:06 | INFO    | ============================================================

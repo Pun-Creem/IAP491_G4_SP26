@@ -1,0 +1,316 @@
+2026-04-05 21:18:07 | INFO    | Log file: D:\Deep_Learning_V5\logs\train_2026-04-05_21-18-07.log
+2026-04-05 21:18:07 | INFO    | ============================================================
+2026-04-05 21:18:07 | INFO    | MALWARE DL ACTION RECOMMENDATION - TRAINING
+2026-04-05 21:18:07 | INFO    | ============================================================
+2026-04-05 21:18:07 | INFO    | Device: cpu
+2026-04-05 21:18:07 | INFO    | PyTorch version: 2.11.0+cpu
+2026-04-05 21:18:07 | INFO    | CUDA available: False
+2026-04-05 21:18:07 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:18:07 | INFO    | STEP 1: Loading data
+2026-04-05 21:18:07 | INFO    | ────────────────────────────────────────
+2026-04-05 21:18:07 | INFO    |  Loading Excel: D:\Deep_Learning_V5\train_excel\DL_1-953.xlsx
+2026-04-05 21:18:07 | INFO    |  Loaded 943 samples from Excel
+2026-04-05 21:20:03 | INFO    |  Extracted features from 943 reports (0 failed/missing)
+2026-04-05 21:20:03 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:20:03 | INFO    | STEP 2: Loading D3FEND action labels
+2026-04-05 21:20:03 | INFO    | ────────────────────────────────────────
+2026-04-05 21:20:03 | INFO    | Loading actions from: D:\Deep_Learning_V5\train_actions\report_hash_action.xlsx
+2026-04-05 21:20:03 | INFO    | Loaded actions for 943 reports
+2026-04-05 21:20:03 | INFO    | Total unique actions: 41
+2026-04-05 21:20:03 | INFO    | After filtering (min 3 samples): 33
+2026-04-05 21:20:03 | INFO    | Matched: 943/943 samples
+2026-04-05 21:20:03 | INFO    | Actions per sample: min=1, max=5, mean=3.2
+2026-04-05 21:20:03 | INFO    | Enriching 41 D3FEND actions with category + description...
+2026-04-05 21:20:03 | INFO    | D3FEND enrichment complete:
+2026-04-05 21:20:03 | INFO    |   From cache: 41
+2026-04-05 21:20:03 | INFO    |   From API:   0
+2026-04-05 21:20:03 | INFO    |   Fallback:   0
+2026-04-05 21:20:03 | INFO    |   Category distribution: {'Detect': 19, 'Evict': 7, 'Isolate': 10, 'Restore': 3, 'Unknown': 1, 'Harden': 1}
+2026-04-05 21:20:03 | INFO    | Action distribution:
+2026-04-05 21:20:03 | INFO    |   D3-CCSA (Detect: Credential Compromise Scope Analysis): 17 samples
+2026-04-05 21:20:03 | INFO    |   D3-CE (Evict: Credential Eviction): 14 samples
+2026-04-05 21:20:03 | INFO    |   D3-CQ (Isolate: Content Quarantine): 71 samples
+2026-04-05 21:20:03 | INFO    |   D3-CR (Evict: Credential Revocation): 6 samples
+2026-04-05 21:20:03 | INFO    |   D3-CRO (Harden: Credential Rotation): 3 samples
+2026-04-05 21:20:03 | INFO    |   D3-DNSDL (Isolate: DNS Denylisting): 25 samples
+2026-04-05 21:20:03 | INFO    |   D3-EAL (Isolate: Executable Allowlisting): 3 samples
+2026-04-05 21:20:03 | INFO    |   D3-EDL (Isolate: Executable Denylisting): 51 samples
+2026-04-05 21:20:03 | INFO    |   D3-EI (Isolate: Execution Isolation): 12 samples
+2026-04-05 21:20:03 | INFO    |   D3-FA (Detect: File Analysis): 11 samples
+2026-04-05 21:20:03 | INFO    |   D3-FAPA (Detect: File Access Pattern Analysis): 84 samples
+2026-04-05 21:20:03 | INFO    |   D3-FCOA (Detect: File Content Analysis): 4 samples
+2026-04-05 21:20:03 | INFO    |   D3-FEV (Evict: File Eviction): 356 samples
+2026-04-05 21:20:03 | INFO    |   D3-FIM (Detect: File Integrity Monitoring): 3 samples
+2026-04-05 21:20:03 | INFO    |   D3-FR (Evict: File Removal): 12 samples
+2026-04-05 21:20:03 | INFO    |   D3-FRDDL (Isolate: Forward Resolution Domain Denylisting): 44 samples
+2026-04-05 21:20:03 | INFO    |   D3-NI (Isolate: Network Isolation): 364 samples
+2026-04-05 21:20:03 | INFO    |   D3-NTA (Detect: Network Traffic Analysis): 8 samples
+2026-04-05 21:20:03 | INFO    |   D3-OTF (Isolate: Outbound Traffic Filtering): 262 samples
+2026-04-05 21:20:03 | INFO    |   D3-PA (Detect: Process Analysis): 52 samples
+2026-04-05 21:20:03 | INFO    |   D3-PCSV (Detect: Process Code Segment Verification): 98 samples
+2026-04-05 21:20:03 | INFO    |   D3-PLA (Detect: Process Lineage Analysis): 38 samples
+2026-04-05 21:20:03 | INFO    |   D3-PSA (Detect: Process Spawn Analysis): 264 samples
+2026-04-05 21:20:03 | INFO    |   D3-PSMD (Unknown: Process Self): 3 samples
+2026-04-05 21:20:03 | INFO    |   D3-PT (Evict: Process Termination): 904 samples
+2026-04-05 21:20:03 | INFO    |   D3-RC (Restore: Restore Configuration): 12 samples
+2026-04-05 21:20:03 | INFO    |   D3-RF (Restore: Restore File): 22 samples
+2026-04-05 21:20:03 | INFO    |   D3-RKD (Evict: Registry Key Deletion): 148 samples
+2026-04-05 21:20:03 | INFO    |   D3-SCA (Detect: System Call Analysis): 13 samples
+2026-04-05 21:20:03 | INFO    |   D3-SEA (Detect: Script Execution Analysis): 3 samples
+2026-04-05 21:20:03 | INFO    |   D3-SICA (Detect: System Init Config Analysis): 84 samples
+2026-04-05 21:20:03 | INFO    |   D3-SJA (Detect: Scheduled Job Analysis): 4 samples
+2026-04-05 21:20:03 | INFO    |   D3-ST (Evict: Session Termination): 13 samples
+2026-04-05 21:20:03 | INFO    | Number of D3FEND actions (output classes): 33
+2026-04-05 21:20:03 | INFO    | Average actions per sample: 3.2
+2026-04-05 21:20:03 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:20:03 | INFO    | STEP 3: Building vocabulary
+2026-04-05 21:20:03 | INFO    | ────────────────────────────────────────
+2026-04-05 21:20:03 | INFO    |  Feature filtering:
+2026-04-05 21:20:03 | INFO    |   Total features found: 588
+2026-04-05 21:20:03 | INFO    |   Removed (too rare, <3 samples): 110
+2026-04-05 21:20:03 | INFO    |   Removed (too common, >95% samples): 0
+2026-04-05 21:20:03 | INFO    |   Kept: 478
+2026-04-05 21:20:03 | INFO    |   Breakdown: TTPs=158, MBCs=195, Signatures=125
+2026-04-05 21:20:03 | INFO    |   Vocab size (with special tokens): 480
+2026-04-05 21:20:03 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:20:03 | INFO    | STEP 4: Creating dataset
+2026-04-05 21:20:03 | INFO    | ────────────────────────────────────────
+2026-04-05 21:20:03 | INFO    | Dataset size: 943
+2026-04-05 21:20:03 | INFO    | Max sequence length: 137
+2026-04-05 21:20:03 | INFO    | Vocab size: 480
+2026-04-05 21:20:03 | INFO    | Num actions: 33
+2026-04-05 21:20:03 | INFO    | 
+────────────────────────────────────────
+2026-04-05 21:20:03 | INFO    | STEP 5: Training model
+2026-04-05 21:20:03 | INFO    | ────────────────────────────────────────
+2026-04-05 21:20:03 | INFO    | 
+############################################################
+2026-04-05 21:20:03 | INFO    | STARTING 5-FOLD CROSS VALIDATION
+2026-04-05 21:20:03 | INFO    | ############################################################
+2026-04-05 21:20:03 | INFO    | Pos weight range: [0.5, 200.0]
+2026-04-05 21:20:03 | INFO    | 
+============================================================
+2026-04-05 21:20:03 | INFO    | FOLD 1/5
+2026-04-05 21:20:03 | INFO    | ============================================================
+2026-04-05 21:20:03 | INFO    |   Train: 754 samples | Val: 189 samples
+2026-04-05 21:20:11 | INFO    |   Epoch   1/150 | LR: 0.000050 | Train Loss: 0.6274 | Val Loss: 0.7223 | Val F1 (tuned): 0.1430 | Thresh: 0.25
+2026-04-05 21:20:32 | INFO    |   Epoch   5/150 | LR: 0.000250 | Train Loss: 0.4241 | Val Loss: 0.6247 | Val F1 (tuned): 0.1463 | Thresh: 0.40
+2026-04-05 21:20:58 | INFO    |   Epoch  10/150 | LR: 0.000500 | Train Loss: 0.3845 | Val Loss: 0.5693 | Val F1 (tuned): 0.1772 | Thresh: 0.45
+2026-04-05 21:21:24 | INFO    |   Epoch  15/150 | LR: 0.000499 | Train Loss: 0.3481 | Val Loss: 0.5408 | Val F1 (tuned): 0.1963 | Thresh: 0.50
+2026-04-05 21:21:51 | INFO    |   Epoch  20/150 | LR: 0.000495 | Train Loss: 0.3071 | Val Loss: 0.5247 | Val F1 (tuned): 0.2388 | Thresh: 0.55
+2026-04-05 21:22:20 | INFO    |   Epoch  25/150 | LR: 0.000488 | Train Loss: 0.2766 | Val Loss: 0.4636 | Val F1 (tuned): 0.2393 | Thresh: 0.45
+2026-04-05 21:22:49 | INFO    |   Epoch  30/150 | LR: 0.000478 | Train Loss: 0.2641 | Val Loss: 0.4100 | Val F1 (tuned): 0.2651 | Thresh: 0.55
+2026-04-05 21:23:18 | INFO    |   Epoch  35/150 | LR: 0.000465 | Train Loss: 0.2365 | Val Loss: 0.3995 | Val F1 (tuned): 0.2694 | Thresh: 0.55
+2026-04-05 21:23:52 | INFO    |   Epoch  40/150 | LR: 0.000449 | Train Loss: 0.2185 | Val Loss: 0.3663 | Val F1 (tuned): 0.2748 | Thresh: 0.55
+2026-04-05 21:24:26 | INFO    |   Epoch  45/150 | LR: 0.000431 | Train Loss: 0.2086 | Val Loss: 0.3506 | Val F1 (tuned): 0.2903 | Thresh: 0.55
+2026-04-05 21:25:00 | INFO    |   Epoch  50/150 | LR: 0.000410 | Train Loss: 0.1964 | Val Loss: 0.3484 | Val F1 (tuned): 0.2678 | Thresh: 0.60
+2026-04-05 21:25:35 | INFO    |   Epoch  55/150 | LR: 0.000388 | Train Loss: 0.1757 | Val Loss: 0.3242 | Val F1 (tuned): 0.3034 | Thresh: 0.55
+2026-04-05 21:26:11 | INFO    |   Epoch  60/150 | LR: 0.000363 | Train Loss: 0.1861 | Val Loss: 0.3266 | Val F1 (tuned): 0.2861 | Thresh: 0.55
+2026-04-05 21:26:45 | INFO    |   Epoch  65/150 | LR: 0.000338 | Train Loss: 0.1850 | Val Loss: 0.3149 | Val F1 (tuned): 0.2834 | Thresh: 0.50
+2026-04-05 21:27:18 | INFO    |   Epoch  70/150 | LR: 0.000311 | Train Loss: 0.1600 | Val Loss: 0.3087 | Val F1 (tuned): 0.3133 | Thresh: 0.55
+2026-04-05 21:27:47 | INFO    |   Epoch  75/150 | LR: 0.000284 | Train Loss: 0.1582 | Val Loss: 0.3035 | Val F1 (tuned): 0.2986 | Thresh: 0.50
+2026-04-05 21:28:15 | INFO    |   Epoch  80/150 | LR: 0.000256 | Train Loss: 0.1492 | Val Loss: 0.2925 | Val F1 (tuned): 0.2914 | Thresh: 0.55
+2026-04-05 21:28:43 | INFO    |   Epoch  85/150 | LR: 0.000228 | Train Loss: 0.1535 | Val Loss: 0.2894 | Val F1 (tuned): 0.2987 | Thresh: 0.55
+2026-04-05 21:29:11 | INFO    |   Epoch  90/150 | LR: 0.000200 | Train Loss: 0.1501 | Val Loss: 0.2864 | Val F1 (tuned): 0.3020 | Thresh: 0.55
+2026-04-05 21:29:39 | INFO    |   Epoch  95/150 | LR: 0.000173 | Train Loss: 0.1436 | Val Loss: 0.2839 | Val F1 (tuned): 0.2935 | Thresh: 0.55
+2026-04-05 21:30:07 | INFO    |   Epoch 100/150 | LR: 0.000147 | Train Loss: 0.1482 | Val Loss: 0.2854 | Val F1 (tuned): 0.3019 | Thresh: 0.50
+2026-04-05 21:30:35 | INFO    |   Epoch 105/150 | LR: 0.000122 | Train Loss: 0.1312 | Val Loss: 0.2770 | Val F1 (tuned): 0.2974 | Thresh: 0.55
+2026-04-05 21:31:14 | INFO    |   Epoch 110/150 | LR: 0.000099 | Train Loss: 0.1435 | Val Loss: 0.2793 | Val F1 (tuned): 0.2955 | Thresh: 0.55
+2026-04-05 21:31:51 | INFO    |   Epoch 115/150 | LR: 0.000077 | Train Loss: 0.1422 | Val Loss: 0.2760 | Val F1 (tuned): 0.2938 | Thresh: 0.55
+2026-04-05 21:32:25 | INFO    |   Epoch 120/150 | LR: 0.000058 | Train Loss: 0.1360 | Val Loss: 0.2747 | Val F1 (tuned): 0.3068 | Thresh: 0.50
+2026-04-05 21:32:55 | INFO    |   Epoch 125/150 | LR: 0.000041 | Train Loss: 0.1534 | Val Loss: 0.2751 | Val F1 (tuned): 0.3073 | Thresh: 0.50
+2026-04-05 21:33:24 | INFO    |   Epoch 130/150 | LR: 0.000027 | Train Loss: 0.1441 | Val Loss: 0.2729 | Val F1 (tuned): 0.3036 | Thresh: 0.55
+2026-04-05 21:33:51 | INFO    |   Epoch 135/150 | LR: 0.000016 | Train Loss: 0.1390 | Val Loss: 0.2740 | Val F1 (tuned): 0.3035 | Thresh: 0.55
+2026-04-05 21:34:19 | INFO    |   Epoch 140/150 | LR: 0.000008 | Train Loss: 0.1342 | Val Loss: 0.2735 | Val F1 (tuned): 0.3073 | Thresh: 0.50
+2026-04-05 21:34:46 | INFO    |   Epoch 145/150 | LR: 0.000002 | Train Loss: 0.1348 | Val Loss: 0.2733 | Val F1 (tuned): 0.3065 | Thresh: 0.50
+2026-04-05 21:35:07 | INFO    |   Early stopping at epoch 149
+2026-04-05 21:35:08 | INFO    |   Best Val Loss: 0.2726
+2026-04-05 21:35:08 | INFO    |   Best Val F1 (tuned threshold): 0.2990
+2026-04-05 21:35:08 | INFO    |   Optimal threshold: 0.55
+2026-04-05 21:35:08 | INFO    | 
+============================================================
+2026-04-05 21:35:08 | INFO    | FOLD 2/5
+2026-04-05 21:35:08 | INFO    | ============================================================
+2026-04-05 21:35:08 | INFO    |   Train: 754 samples | Val: 189 samples
+2026-04-05 21:35:14 | INFO    |   Epoch   1/150 | LR: 0.000050 | Train Loss: 0.5372 | Val Loss: 0.6822 | Val F1 (tuned): 0.1424 | Thresh: 0.25
+2026-04-05 21:35:37 | INFO    |   Epoch   5/150 | LR: 0.000250 | Train Loss: 0.3907 | Val Loss: 0.6177 | Val F1 (tuned): 0.1454 | Thresh: 0.40
+2026-04-05 21:36:06 | INFO    |   Epoch  10/150 | LR: 0.000500 | Train Loss: 0.3527 | Val Loss: 0.5748 | Val F1 (tuned): 0.1512 | Thresh: 0.45
+2026-04-05 21:36:34 | INFO    |   Epoch  15/150 | LR: 0.000499 | Train Loss: 0.3290 | Val Loss: 0.5233 | Val F1 (tuned): 0.1940 | Thresh: 0.45
+2026-04-05 21:37:02 | INFO    |   Epoch  20/150 | LR: 0.000495 | Train Loss: 0.2952 | Val Loss: 0.4819 | Val F1 (tuned): 0.2229 | Thresh: 0.50
+2026-04-05 21:37:30 | INFO    |   Epoch  25/150 | LR: 0.000488 | Train Loss: 0.2654 | Val Loss: 0.3935 | Val F1 (tuned): 0.2643 | Thresh: 0.45
+2026-04-05 21:37:58 | INFO    |   Epoch  30/150 | LR: 0.000478 | Train Loss: 0.2456 | Val Loss: 0.4177 | Val F1 (tuned): 0.2571 | Thresh: 0.50
+2026-04-05 21:38:26 | INFO    |   Epoch  35/150 | LR: 0.000465 | Train Loss: 0.2234 | Val Loss: 0.4348 | Val F1 (tuned): 0.2736 | Thresh: 0.60
+2026-04-05 21:38:55 | INFO    |   Epoch  40/150 | LR: 0.000449 | Train Loss: 0.1994 | Val Loss: 0.3849 | Val F1 (tuned): 0.2726 | Thresh: 0.55
+2026-04-05 21:39:23 | INFO    |   Epoch  45/150 | LR: 0.000431 | Train Loss: 0.1848 | Val Loss: 0.3578 | Val F1 (tuned): 0.2890 | Thresh: 0.50
+2026-04-05 21:39:53 | INFO    |   Epoch  50/150 | LR: 0.000410 | Train Loss: 0.1846 | Val Loss: 0.3403 | Val F1 (tuned): 0.2993 | Thresh: 0.55
+2026-04-05 21:40:21 | INFO    |   Epoch  55/150 | LR: 0.000388 | Train Loss: 0.1723 | Val Loss: 0.3493 | Val F1 (tuned): 0.2886 | Thresh: 0.50
+2026-04-05 21:40:50 | INFO    |   Epoch  60/150 | LR: 0.000363 | Train Loss: 0.1681 | Val Loss: 0.3173 | Val F1 (tuned): 0.2999 | Thresh: 0.55
+2026-04-05 21:41:21 | INFO    |   Epoch  65/150 | LR: 0.000338 | Train Loss: 0.1602 | Val Loss: 0.3227 | Val F1 (tuned): 0.2982 | Thresh: 0.55
+2026-04-05 21:41:54 | INFO    |   Epoch  70/150 | LR: 0.000311 | Train Loss: 0.1430 | Val Loss: 0.2933 | Val F1 (tuned): 0.3047 | Thresh: 0.55
+2026-04-05 21:42:27 | INFO    |   Epoch  75/150 | LR: 0.000284 | Train Loss: 0.1542 | Val Loss: 0.3031 | Val F1 (tuned): 0.2966 | Thresh: 0.60
+2026-04-05 21:43:01 | INFO    |   Epoch  80/150 | LR: 0.000256 | Train Loss: 0.1419 | Val Loss: 0.2952 | Val F1 (tuned): 0.3115 | Thresh: 0.55
+2026-04-05 21:43:33 | INFO    |   Epoch  85/150 | LR: 0.000228 | Train Loss: 0.1454 | Val Loss: 0.2918 | Val F1 (tuned): 0.3088 | Thresh: 0.55
+2026-04-05 21:44:01 | INFO    |   Epoch  90/150 | LR: 0.000200 | Train Loss: 0.1520 | Val Loss: 0.2903 | Val F1 (tuned): 0.3123 | Thresh: 0.65
+2026-04-05 21:44:30 | INFO    |   Epoch  95/150 | LR: 0.000173 | Train Loss: 0.1392 | Val Loss: 0.2867 | Val F1 (tuned): 0.3171 | Thresh: 0.55
+2026-04-05 21:44:58 | INFO    |   Epoch 100/150 | LR: 0.000147 | Train Loss: 0.1368 | Val Loss: 0.2793 | Val F1 (tuned): 0.3379 | Thresh: 0.60
+2026-04-05 21:45:26 | INFO    |   Epoch 105/150 | LR: 0.000122 | Train Loss: 0.1425 | Val Loss: 0.2806 | Val F1 (tuned): 0.3369 | Thresh: 0.60
+2026-04-05 21:45:54 | INFO    |   Epoch 110/150 | LR: 0.000099 | Train Loss: 0.1381 | Val Loss: 0.2816 | Val F1 (tuned): 0.3198 | Thresh: 0.60
+2026-04-05 21:46:23 | INFO    |   Epoch 115/150 | LR: 0.000077 | Train Loss: 0.1276 | Val Loss: 0.2752 | Val F1 (tuned): 0.3330 | Thresh: 0.60
+2026-04-05 21:46:51 | INFO    |   Epoch 120/150 | LR: 0.000058 | Train Loss: 0.1324 | Val Loss: 0.2803 | Val F1 (tuned): 0.3200 | Thresh: 0.60
+2026-04-05 21:47:19 | INFO    |   Epoch 125/150 | LR: 0.000041 | Train Loss: 0.1348 | Val Loss: 0.2795 | Val F1 (tuned): 0.3203 | Thresh: 0.60
+2026-04-05 21:47:54 | INFO    |   Epoch 130/150 | LR: 0.000027 | Train Loss: 0.1262 | Val Loss: 0.2747 | Val F1 (tuned): 0.3255 | Thresh: 0.60
+2026-04-05 21:48:32 | INFO    |   Epoch 135/150 | LR: 0.000016 | Train Loss: 0.1296 | Val Loss: 0.2764 | Val F1 (tuned): 0.3219 | Thresh: 0.60
+2026-04-05 21:49:06 | INFO    |   Epoch 140/150 | LR: 0.000008 | Train Loss: 0.1331 | Val Loss: 0.2745 | Val F1 (tuned): 0.3222 | Thresh: 0.60
+2026-04-05 21:49:42 | INFO    |   Epoch 145/150 | LR: 0.000002 | Train Loss: 0.1275 | Val Loss: 0.2738 | Val F1 (tuned): 0.3226 | Thresh: 0.60
+2026-04-05 21:49:56 | INFO    |   Early stopping at epoch 147
+2026-04-05 21:49:58 | INFO    |   Best Val Loss: 0.2725
+2026-04-05 21:49:58 | INFO    |   Best Val F1 (tuned threshold): 0.3230
+2026-04-05 21:49:58 | INFO    |   Optimal threshold: 0.60
+2026-04-05 21:49:58 | INFO    | 
+============================================================
+2026-04-05 21:49:58 | INFO    | FOLD 3/5
+2026-04-05 21:49:58 | INFO    | ============================================================
+2026-04-05 21:49:58 | INFO    |   Train: 754 samples | Val: 189 samples
+2026-04-05 21:50:06 | INFO    |   Epoch   1/150 | LR: 0.000050 | Train Loss: 0.5548 | Val Loss: 0.6783 | Val F1 (tuned): 0.1400 | Thresh: 0.05
+2026-04-05 21:50:31 | INFO    |   Epoch   5/150 | LR: 0.000250 | Train Loss: 0.4161 | Val Loss: 0.6109 | Val F1 (tuned): 0.1433 | Thresh: 0.45
+2026-04-05 21:51:03 | INFO    |   Epoch  10/150 | LR: 0.000500 | Train Loss: 0.3680 | Val Loss: 0.5467 | Val F1 (tuned): 0.1696 | Thresh: 0.45
+2026-04-05 21:51:36 | INFO    |   Epoch  15/150 | LR: 0.000499 | Train Loss: 0.3380 | Val Loss: 0.5219 | Val F1 (tuned): 0.1865 | Thresh: 0.45
+2026-04-05 21:52:10 | INFO    |   Epoch  20/150 | LR: 0.000495 | Train Loss: 0.2941 | Val Loss: 0.4640 | Val F1 (tuned): 0.2269 | Thresh: 0.50
+2026-04-05 21:52:43 | INFO    |   Epoch  25/150 | LR: 0.000488 | Train Loss: 0.2606 | Val Loss: 0.4512 | Val F1 (tuned): 0.2299 | Thresh: 0.55
+2026-04-05 21:53:09 | INFO    |   Epoch  30/150 | LR: 0.000478 | Train Loss: 0.2467 | Val Loss: 0.3799 | Val F1 (tuned): 0.2284 | Thresh: 0.60
+2026-04-05 21:53:45 | INFO    |   Epoch  35/150 | LR: 0.000465 | Train Loss: 0.2191 | Val Loss: 0.4013 | Val F1 (tuned): 0.2592 | Thresh: 0.55
+2026-04-05 21:54:18 | INFO    |   Epoch  40/150 | LR: 0.000449 | Train Loss: 0.2081 | Val Loss: 0.3703 | Val F1 (tuned): 0.2664 | Thresh: 0.55
+2026-04-05 21:54:51 | INFO    |   Epoch  45/150 | LR: 0.000431 | Train Loss: 0.1941 | Val Loss: 0.3494 | Val F1 (tuned): 0.2730 | Thresh: 0.55
+2026-04-05 21:55:28 | INFO    |   Epoch  50/150 | LR: 0.000410 | Train Loss: 0.1839 | Val Loss: 0.3526 | Val F1 (tuned): 0.2863 | Thresh: 0.60
+2026-04-05 21:56:02 | INFO    |   Epoch  55/150 | LR: 0.000388 | Train Loss: 0.1735 | Val Loss: 0.3181 | Val F1 (tuned): 0.2923 | Thresh: 0.60
+2026-04-05 21:56:35 | INFO    |   Epoch  60/150 | LR: 0.000363 | Train Loss: 0.1675 | Val Loss: 0.3287 | Val F1 (tuned): 0.2891 | Thresh: 0.55
+2026-04-05 21:57:09 | INFO    |   Epoch  65/150 | LR: 0.000338 | Train Loss: 0.1586 | Val Loss: 0.3044 | Val F1 (tuned): 0.3072 | Thresh: 0.55
+2026-04-05 21:57:40 | INFO    |   Epoch  70/150 | LR: 0.000311 | Train Loss: 0.1486 | Val Loss: 0.2962 | Val F1 (tuned): 0.3133 | Thresh: 0.55
+2026-04-05 21:58:13 | INFO    |   Epoch  75/150 | LR: 0.000284 | Train Loss: 0.1445 | Val Loss: 0.2918 | Val F1 (tuned): 0.3101 | Thresh: 0.55
+2026-04-05 21:58:41 | INFO    |   Epoch  80/150 | LR: 0.000256 | Train Loss: 0.1455 | Val Loss: 0.2983 | Val F1 (tuned): 0.3100 | Thresh: 0.55
+2026-04-05 21:59:09 | INFO    |   Epoch  85/150 | LR: 0.000228 | Train Loss: 0.1511 | Val Loss: 0.2917 | Val F1 (tuned): 0.3035 | Thresh: 0.55
+2026-04-05 21:59:37 | INFO    |   Epoch  90/150 | LR: 0.000200 | Train Loss: 0.1525 | Val Loss: 0.2809 | Val F1 (tuned): 0.3179 | Thresh: 0.55
+2026-04-05 22:00:06 | INFO    |   Epoch  95/150 | LR: 0.000173 | Train Loss: 0.1444 | Val Loss: 0.2812 | Val F1 (tuned): 0.3138 | Thresh: 0.55
+2026-04-05 22:00:36 | INFO    |   Epoch 100/150 | LR: 0.000147 | Train Loss: 0.1396 | Val Loss: 0.2817 | Val F1 (tuned): 0.3142 | Thresh: 0.55
+2026-04-05 22:01:03 | INFO    |   Epoch 105/150 | LR: 0.000122 | Train Loss: 0.1416 | Val Loss: 0.2812 | Val F1 (tuned): 0.3132 | Thresh: 0.55
+2026-04-05 22:01:32 | INFO    |   Epoch 110/150 | LR: 0.000099 | Train Loss: 0.1427 | Val Loss: 0.2841 | Val F1 (tuned): 0.3105 | Thresh: 0.55
+2026-04-05 22:02:00 | INFO    |   Epoch 115/150 | LR: 0.000077 | Train Loss: 0.1360 | Val Loss: 0.2736 | Val F1 (tuned): 0.3156 | Thresh: 0.55
+2026-04-05 22:02:29 | INFO    |   Epoch 120/150 | LR: 0.000058 | Train Loss: 0.1417 | Val Loss: 0.2800 | Val F1 (tuned): 0.3163 | Thresh: 0.55
+2026-04-05 22:03:07 | INFO    |   Epoch 125/150 | LR: 0.000041 | Train Loss: 0.1300 | Val Loss: 0.2791 | Val F1 (tuned): 0.3130 | Thresh: 0.60
+2026-04-05 22:03:39 | INFO    |   Epoch 130/150 | LR: 0.000027 | Train Loss: 0.1331 | Val Loss: 0.2757 | Val F1 (tuned): 0.3161 | Thresh: 0.60
+2026-04-05 22:04:08 | INFO    |   Epoch 135/150 | LR: 0.000016 | Train Loss: 0.1336 | Val Loss: 0.2737 | Val F1 (tuned): 0.3179 | Thresh: 0.60
+2026-04-05 22:04:36 | INFO    |   Epoch 140/150 | LR: 0.000008 | Train Loss: 0.1273 | Val Loss: 0.2721 | Val F1 (tuned): 0.3205 | Thresh: 0.60
+2026-04-05 22:05:05 | INFO    |   Epoch 145/150 | LR: 0.000002 | Train Loss: 0.1289 | Val Loss: 0.2720 | Val F1 (tuned): 0.3211 | Thresh: 0.60
+2026-04-05 22:05:33 | INFO    |   Epoch 150/150 | LR: 0.000000 | Train Loss: 0.1217 | Val Loss: 0.2719 | Val F1 (tuned): 0.3214 | Thresh: 0.60
+2026-04-05 22:05:33 | INFO    |   Best Val Loss: 0.2718
+2026-04-05 22:05:34 | INFO    |   Best Val F1 (tuned threshold): 0.3210
+2026-04-05 22:05:34 | INFO    |   Optimal threshold: 0.60
+2026-04-05 22:05:34 | INFO    | 
+============================================================
+2026-04-05 22:05:34 | INFO    | FOLD 4/5
+2026-04-05 22:05:34 | INFO    | ============================================================
+2026-04-05 22:05:34 | INFO    |   Train: 755 samples | Val: 188 samples
+2026-04-05 22:05:40 | INFO    |   Epoch   1/150 | LR: 0.000050 | Train Loss: 0.5570 | Val Loss: 0.6964 | Val F1 (tuned): 0.1402 | Thresh: 0.20
+2026-04-05 22:06:03 | INFO    |   Epoch   5/150 | LR: 0.000250 | Train Loss: 0.4089 | Val Loss: 0.6227 | Val F1 (tuned): 0.1479 | Thresh: 0.45
+2026-04-05 22:06:37 | INFO    |   Epoch  10/150 | LR: 0.000500 | Train Loss: 0.3817 | Val Loss: 0.5907 | Val F1 (tuned): 0.1655 | Thresh: 0.45
+2026-04-05 22:07:15 | INFO    |   Epoch  15/150 | LR: 0.000499 | Train Loss: 0.3348 | Val Loss: 0.5110 | Val F1 (tuned): 0.2105 | Thresh: 0.50
+2026-04-05 22:07:58 | INFO    |   Epoch  20/150 | LR: 0.000495 | Train Loss: 0.2836 | Val Loss: 0.4405 | Val F1 (tuned): 0.2039 | Thresh: 0.45
+2026-04-05 22:08:37 | INFO    |   Epoch  25/150 | LR: 0.000488 | Train Loss: 0.2619 | Val Loss: 0.4096 | Val F1 (tuned): 0.2312 | Thresh: 0.55
+2026-04-05 22:09:18 | INFO    |   Epoch  30/150 | LR: 0.000478 | Train Loss: 0.2471 | Val Loss: 0.3804 | Val F1 (tuned): 0.2424 | Thresh: 0.45
+2026-04-05 22:09:55 | INFO    |   Epoch  35/150 | LR: 0.000465 | Train Loss: 0.2297 | Val Loss: 0.3690 | Val F1 (tuned): 0.2638 | Thresh: 0.60
+2026-04-05 22:10:31 | INFO    |   Epoch  40/150 | LR: 0.000449 | Train Loss: 0.2112 | Val Loss: 0.3471 | Val F1 (tuned): 0.2636 | Thresh: 0.50
+2026-04-05 22:11:07 | INFO    |   Epoch  45/150 | LR: 0.000431 | Train Loss: 0.2013 | Val Loss: 0.3229 | Val F1 (tuned): 0.2693 | Thresh: 0.55
+2026-04-05 22:11:45 | INFO    |   Epoch  50/150 | LR: 0.000410 | Train Loss: 0.1949 | Val Loss: 0.3167 | Val F1 (tuned): 0.2713 | Thresh: 0.50
+2026-04-05 22:12:20 | INFO    |   Epoch  55/150 | LR: 0.000388 | Train Loss: 0.1898 | Val Loss: 0.3052 | Val F1 (tuned): 0.2921 | Thresh: 0.60
+2026-04-05 22:12:57 | INFO    |   Epoch  60/150 | LR: 0.000363 | Train Loss: 0.1798 | Val Loss: 0.2873 | Val F1 (tuned): 0.2851 | Thresh: 0.55
+2026-04-05 22:13:34 | INFO    |   Epoch  65/150 | LR: 0.000338 | Train Loss: 0.1668 | Val Loss: 0.2822 | Val F1 (tuned): 0.2716 | Thresh: 0.50
+2026-04-05 22:14:12 | INFO    |   Epoch  70/150 | LR: 0.000311 | Train Loss: 0.1615 | Val Loss: 0.2770 | Val F1 (tuned): 0.2740 | Thresh: 0.45
+2026-04-05 22:14:51 | INFO    |   Epoch  75/150 | LR: 0.000284 | Train Loss: 0.1600 | Val Loss: 0.2679 | Val F1 (tuned): 0.3005 | Thresh: 0.60
+2026-04-05 22:15:29 | INFO    |   Epoch  80/150 | LR: 0.000256 | Train Loss: 0.1586 | Val Loss: 0.2734 | Val F1 (tuned): 0.2889 | Thresh: 0.60
+2026-04-05 22:16:04 | INFO    |   Epoch  85/150 | LR: 0.000228 | Train Loss: 0.1505 | Val Loss: 0.2608 | Val F1 (tuned): 0.3008 | Thresh: 0.55
+2026-04-05 22:16:42 | INFO    |   Epoch  90/150 | LR: 0.000200 | Train Loss: 0.1463 | Val Loss: 0.2536 | Val F1 (tuned): 0.2892 | Thresh: 0.55
+2026-04-05 22:17:21 | INFO    |   Epoch  95/150 | LR: 0.000173 | Train Loss: 0.1494 | Val Loss: 0.2598 | Val F1 (tuned): 0.2991 | Thresh: 0.55
+2026-04-05 22:18:00 | INFO    |   Epoch 100/150 | LR: 0.000147 | Train Loss: 0.1465 | Val Loss: 0.2539 | Val F1 (tuned): 0.2861 | Thresh: 0.50
+2026-04-05 22:18:38 | INFO    |   Epoch 105/150 | LR: 0.000122 | Train Loss: 0.1377 | Val Loss: 0.2528 | Val F1 (tuned): 0.2973 | Thresh: 0.60
+2026-04-05 22:19:13 | INFO    |   Epoch 110/150 | LR: 0.000099 | Train Loss: 0.1374 | Val Loss: 0.2533 | Val F1 (tuned): 0.3032 | Thresh: 0.55
+2026-04-05 22:19:54 | INFO    |   Epoch 115/150 | LR: 0.000077 | Train Loss: 0.1391 | Val Loss: 0.2545 | Val F1 (tuned): 0.2883 | Thresh: 0.50
+2026-04-05 22:20:29 | INFO    |   Epoch 120/150 | LR: 0.000058 | Train Loss: 0.1396 | Val Loss: 0.2510 | Val F1 (tuned): 0.2894 | Thresh: 0.50
+2026-04-05 22:21:13 | INFO    |   Epoch 125/150 | LR: 0.000041 | Train Loss: 0.1335 | Val Loss: 0.2513 | Val F1 (tuned): 0.3049 | Thresh: 0.55
+2026-04-05 22:21:55 | INFO    |   Epoch 130/150 | LR: 0.000027 | Train Loss: 0.1327 | Val Loss: 0.2480 | Val F1 (tuned): 0.3149 | Thresh: 0.55
+2026-04-05 22:22:39 | INFO    |   Epoch 135/150 | LR: 0.000016 | Train Loss: 0.1334 | Val Loss: 0.2455 | Val F1 (tuned): 0.3125 | Thresh: 0.55
+2026-04-05 22:23:20 | INFO    |   Epoch 140/150 | LR: 0.000008 | Train Loss: 0.1281 | Val Loss: 0.2458 | Val F1 (tuned): 0.3124 | Thresh: 0.55
+2026-04-05 22:23:59 | INFO    |   Epoch 145/150 | LR: 0.000002 | Train Loss: 0.1308 | Val Loss: 0.2453 | Val F1 (tuned): 0.3124 | Thresh: 0.55
+2026-04-05 22:24:37 | INFO    |   Epoch 150/150 | LR: 0.000000 | Train Loss: 0.1337 | Val Loss: 0.2454 | Val F1 (tuned): 0.3123 | Thresh: 0.55
+2026-04-05 22:24:40 | INFO    |   Best Val Loss: 0.2448
+2026-04-05 22:24:40 | INFO    |   Best Val F1 (tuned threshold): 0.3127
+2026-04-05 22:24:40 | INFO    |   Optimal threshold: 0.55
+2026-04-05 22:24:40 | INFO    | 
+============================================================
+2026-04-05 22:24:40 | INFO    | FOLD 5/5
+2026-04-05 22:24:40 | INFO    | ============================================================
+2026-04-05 22:24:40 | INFO    |   Train: 755 samples | Val: 188 samples
+2026-04-05 22:24:50 | INFO    |   Epoch   1/150 | LR: 0.000050 | Train Loss: 0.6098 | Val Loss: 0.6857 | Val F1 (tuned): 0.1391 | Thresh: 0.40
+2026-04-05 22:25:22 | INFO    |   Epoch   5/150 | LR: 0.000250 | Train Loss: 0.4233 | Val Loss: 0.6252 | Val F1 (tuned): 0.1379 | Thresh: 0.30
+2026-04-05 22:25:59 | INFO    |   Epoch  10/150 | LR: 0.000500 | Train Loss: 0.3921 | Val Loss: 0.5624 | Val F1 (tuned): 0.1447 | Thresh: 0.40
+2026-04-05 22:26:37 | INFO    |   Epoch  15/150 | LR: 0.000499 | Train Loss: 0.3593 | Val Loss: 0.5118 | Val F1 (tuned): 0.1556 | Thresh: 0.45
+2026-04-05 22:27:12 | INFO    |   Epoch  20/150 | LR: 0.000495 | Train Loss: 0.3223 | Val Loss: 0.5260 | Val F1 (tuned): 0.1713 | Thresh: 0.45
+2026-04-05 22:27:49 | INFO    |   Epoch  25/150 | LR: 0.000488 | Train Loss: 0.2910 | Val Loss: 0.4840 | Val F1 (tuned): 0.2176 | Thresh: 0.50
+2026-04-05 22:28:24 | INFO    |   Epoch  30/150 | LR: 0.000478 | Train Loss: 0.2663 | Val Loss: 0.4492 | Val F1 (tuned): 0.2233 | Thresh: 0.50
+2026-04-05 22:29:03 | INFO    |   Epoch  35/150 | LR: 0.000465 | Train Loss: 0.2438 | Val Loss: 0.4104 | Val F1 (tuned): 0.2233 | Thresh: 0.45
+2026-04-05 22:29:44 | INFO    |   Epoch  40/150 | LR: 0.000449 | Train Loss: 0.2339 | Val Loss: 0.3959 | Val F1 (tuned): 0.2368 | Thresh: 0.50
+2026-04-05 22:30:21 | INFO    |   Epoch  45/150 | LR: 0.000431 | Train Loss: 0.2108 | Val Loss: 0.3696 | Val F1 (tuned): 0.2477 | Thresh: 0.50
+2026-04-05 22:30:57 | INFO    |   Epoch  50/150 | LR: 0.000410 | Train Loss: 0.2064 | Val Loss: 0.3519 | Val F1 (tuned): 0.2587 | Thresh: 0.50
+2026-04-05 22:31:34 | INFO    |   Epoch  55/150 | LR: 0.000388 | Train Loss: 0.2044 | Val Loss: 0.3548 | Val F1 (tuned): 0.2844 | Thresh: 0.55
+2026-04-05 22:32:09 | INFO    |   Epoch  60/150 | LR: 0.000363 | Train Loss: 0.1841 | Val Loss: 0.3367 | Val F1 (tuned): 0.2896 | Thresh: 0.55
+2026-04-05 22:32:48 | INFO    |   Epoch  65/150 | LR: 0.000338 | Train Loss: 0.1889 | Val Loss: 0.3228 | Val F1 (tuned): 0.2729 | Thresh: 0.55
+2026-04-05 22:33:25 | INFO    |   Epoch  70/150 | LR: 0.000311 | Train Loss: 0.1832 | Val Loss: 0.3177 | Val F1 (tuned): 0.2882 | Thresh: 0.55
+2026-04-05 22:34:09 | INFO    |   Epoch  75/150 | LR: 0.000284 | Train Loss: 0.1671 | Val Loss: 0.3131 | Val F1 (tuned): 0.2974 | Thresh: 0.55
+2026-04-05 22:34:51 | INFO    |   Epoch  80/150 | LR: 0.000256 | Train Loss: 0.1631 | Val Loss: 0.3010 | Val F1 (tuned): 0.2927 | Thresh: 0.55
+2026-04-05 22:35:27 | INFO    |   Epoch  85/150 | LR: 0.000228 | Train Loss: 0.1672 | Val Loss: 0.3009 | Val F1 (tuned): 0.2868 | Thresh: 0.55
+2026-04-05 22:36:04 | INFO    |   Epoch  90/150 | LR: 0.000200 | Train Loss: 0.1642 | Val Loss: 0.2928 | Val F1 (tuned): 0.3001 | Thresh: 0.60
+2026-04-05 22:36:42 | INFO    |   Epoch  95/150 | LR: 0.000173 | Train Loss: 0.1590 | Val Loss: 0.2857 | Val F1 (tuned): 0.3048 | Thresh: 0.60
+2026-04-05 22:37:23 | INFO    |   Epoch 100/150 | LR: 0.000147 | Train Loss: 0.1536 | Val Loss: 0.2899 | Val F1 (tuned): 0.2980 | Thresh: 0.60
+2026-04-05 22:38:01 | INFO    |   Epoch 105/150 | LR: 0.000122 | Train Loss: 0.1540 | Val Loss: 0.2826 | Val F1 (tuned): 0.2953 | Thresh: 0.55
+2026-04-05 22:38:37 | INFO    |   Epoch 110/150 | LR: 0.000099 | Train Loss: 0.1628 | Val Loss: 0.2887 | Val F1 (tuned): 0.2889 | Thresh: 0.55
+2026-04-05 22:39:13 | INFO    |   Epoch 115/150 | LR: 0.000077 | Train Loss: 0.1633 | Val Loss: 0.2878 | Val F1 (tuned): 0.2907 | Thresh: 0.55
+2026-04-05 22:39:52 | INFO    |   Epoch 120/150 | LR: 0.000058 | Train Loss: 0.1516 | Val Loss: 0.2818 | Val F1 (tuned): 0.2943 | Thresh: 0.55
+2026-04-05 22:40:27 | INFO    |   Epoch 125/150 | LR: 0.000041 | Train Loss: 0.1399 | Val Loss: 0.2766 | Val F1 (tuned): 0.3022 | Thresh: 0.55
+2026-04-05 22:41:03 | INFO    |   Epoch 130/150 | LR: 0.000027 | Train Loss: 0.1409 | Val Loss: 0.2790 | Val F1 (tuned): 0.2931 | Thresh: 0.60
+2026-04-05 22:41:42 | INFO    |   Epoch 135/150 | LR: 0.000016 | Train Loss: 0.1435 | Val Loss: 0.2744 | Val F1 (tuned): 0.2968 | Thresh: 0.60
+2026-04-05 22:42:17 | INFO    |   Epoch 140/150 | LR: 0.000008 | Train Loss: 0.1436 | Val Loss: 0.2748 | Val F1 (tuned): 0.2986 | Thresh: 0.60
+2026-04-05 22:42:54 | INFO    |   Epoch 145/150 | LR: 0.000002 | Train Loss: 0.1487 | Val Loss: 0.2747 | Val F1 (tuned): 0.2980 | Thresh: 0.60
+2026-04-05 22:43:30 | INFO    |   Epoch 150/150 | LR: 0.000000 | Train Loss: 0.1493 | Val Loss: 0.2749 | Val F1 (tuned): 0.2980 | Thresh: 0.60
+2026-04-05 22:43:31 | INFO    |   Best Val Loss: 0.2744
+2026-04-05 22:43:31 | INFO    |   Best Val F1 (tuned threshold): 0.2968
+2026-04-05 22:43:31 | INFO    |   Optimal threshold: 0.60
+2026-04-05 22:43:31 | INFO    | 
+############################################################
+2026-04-05 22:43:31 | INFO    | CROSS VALIDATION RESULTS
+2026-04-05 22:43:31 | INFO    | ############################################################
+2026-04-05 22:43:31 | INFO    |   Fold 1: F1 = 0.2990
+2026-04-05 22:43:31 | INFO    |   Fold 2: F1 = 0.3230
+2026-04-05 22:43:31 | INFO    |   Fold 3: F1 = 0.3210
+2026-04-05 22:43:31 | INFO    |   Fold 4: F1 = 0.3127
+2026-04-05 22:43:31 | INFO    |   Fold 5: F1 = 0.2968
+2026-04-05 22:43:31 | INFO    |   Mean F1: 0.3105 ± 0.0109
+2026-04-05 22:43:31 | INFO    |   Best Fold F1: 0.3230
+2026-04-05 22:43:31 | INFO    | 
+────────────────────────────────────────
+2026-04-05 22:43:31 | INFO    | STEP 6: Saving model
+2026-04-05 22:43:31 | INFO    | ────────────────────────────────────────
+2026-04-05 22:43:31 | INFO    | Model saved: D:\Deep_Learning_V5\saved_model\model.pt
+2026-04-05 22:43:31 | INFO    | Config saved: D:\Deep_Learning_V5\saved_model\model_config.json
+2026-04-05 22:43:31 | INFO    | Vocab saved: D:\Deep_Learning_V5\saved_model\vocab.json
+2026-04-05 22:43:31 | INFO    | Action vocab saved: D:\Deep_Learning_V5\saved_model\action_vocab.json
+2026-04-05 22:43:31 | INFO    | Thresholds saved: D:\Deep_Learning_V5\saved_model\thresholds.json
+2026-04-05 22:43:31 | INFO    | 
+============================================================
+2026-04-05 22:43:31 | INFO    | TRAINING COMPLETE!
+2026-04-05 22:43:31 | INFO    |   Time: 5124.6 seconds
+2026-04-05 22:43:31 | INFO    |   Mean F1: 0.3105 ± 0.0109
+2026-04-05 22:43:31 | INFO    |   Model saved to: D:\Deep_Learning_V5\saved_model/
+2026-04-05 22:43:31 | INFO    | ============================================================

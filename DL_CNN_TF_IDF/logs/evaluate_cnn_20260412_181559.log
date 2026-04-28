@@ -1,0 +1,41 @@
+[18:15:59] ============================================================
+[18:15:59] CNN — EVALUATE PREDICTIONS VS GROUND TRUTH
+[18:15:59] ============================================================
+[18:16:00] Ground truth: d:\DL_CNN\ground_truth\ground_truth_1017-1217.xlsx
+[18:16:00]   Samples: 201
+[18:16:00]   Actions/sample: min=2, max=5, mean=4.1
+[18:16:00] Predictions: d:\DL_CNN\output_cnn\predictions_cnn.xlsx
+[18:16:00]   Samples: 201
+[18:16:00] 
+============================================================
+[18:16:00] CNN — EVALUATION RESULTS
+[18:16:00] ============================================================
+[18:16:00]   Matched samples: 201
+[18:16:00] 
+    k   Precision@k    Recall@k      F1@k
+[18:16:00]   ----------------------------------------
+[18:16:00]     1       1.0000      0.2640    0.4100
+[18:16:00]     2       0.5920      0.3034    0.3921
+[18:16:00]     3       0.5008      0.3762    0.4199
+[18:16:00]     4       0.4478      0.4591    0.4423
+[18:16:00]     5       0.3960      0.5080    0.4346
+[18:16:00] 
+  Best F1@k: F1@4 = 0.4423
+[18:16:00] 
+  Per-sample preview (first 10, showing k=4):
+[18:16:00]     1083_report.json: predict=[D3-PT, D3-CCSA, D3-OTF, D3-NI, D3-PSA] | truth=[D3-PCSV, D3-PT, D3-OTF, D3-SJA, D3-FEV] | P@4=0.50 R@4=0.40 F1@4=0.44
+[18:16:00]     1084_report.json: predict=[D3-PT, D3-NI, D3-SICA, D3-RKD, D3-FEV] | truth=[D3-PT, D3-FEV, D3-RKD] | P@4=0.50 R@4=0.67 F1@4=0.57
+[18:16:00]     1085_report.json: predict=[D3-PT] | truth=[D3-PT, D3-OTF, D3-RKD, D3-FEV] | P@4=0.25 R@4=0.25 F1@4=0.25
+[18:16:00]     1086_report.json: predict=[D3-PT, D3-NI, D3-FEV, D3-RKD] | truth=[D3-NI, D3-PT, D3-RKD, D3-FEV, D3-RF] | P@4=1.00 R@4=0.80 F1@4=0.89
+[18:16:00]     1087_report.json: predict=[D3-PT, D3-OTF, D3-CQ, D3-NI, D3-PSA] | truth=[D3-PT, D3-FEV, D3-RKD] | P@4=0.25 R@4=0.33 F1@4=0.29
+[18:16:00]     1088_report.json: predict=[D3-PT, D3-CQ, D3-OTF, D3-PSA, D3-NI] | truth=[D3-PLA, D3-PT, D3-FEV] | P@4=0.25 R@4=0.33 F1@4=0.29
+[18:16:00]     1089_report.json: predict=[D3-PT, D3-NI, D3-FEV, D3-RKD] | truth=[D3-PT, D3-FEV] | P@4=0.50 R@4=1.00 F1@4=0.67
+[18:16:00]     1090_report.json: predict=[D3-PT, D3-OTF, D3-FEV] | truth=[D3-PLA, D3-PT, D3-FEV, D3-RKD, D3-OTF] | P@4=0.75 R@4=0.60 F1@4=0.67
+[18:16:00]     1091_report.json: predict=[D3-PT, D3-NI, D3-PSA, D3-OTF, D3-FEV] | truth=[D3-NI, D3-PT, D3-RC, D3-FEV, D3-RF] | P@4=0.50 R@4=0.40 F1@4=0.44
+[18:16:00]     1092_report.json: predict=[D3-PT, D3-PSA, D3-CQ] | truth=[D3-PT, D3-OTF] | P@4=0.25 R@4=0.50 F1@4=0.33
+[18:16:00] 
+  Results exported: d:\DL_CNN\output_cnn\evaluation_cnn.xlsx
+[18:16:00] 
+============================================================
+[18:16:00] EVALUATION COMPLETE!
+[18:16:00] ============================================================

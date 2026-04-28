@@ -1,0 +1,97 @@
+[15:08:13] ============================================================
+[15:08:13]  VISUALIZE -- Malware Feature Images (TF-IDF + Weights)
+[15:08:13] ============================================================
+[15:08:13] 
+[Step 1] Loading training data...
+[15:08:13]  Loading Excel: d:\DL_CNN\train_excel\DL_1-953.xlsx
+[15:08:14]  Loaded 943 samples from Excel
+[15:10:11]  Extracted signatures from 943 reports (0 failed/missing)
+[15:10:11]  Feature filtering:
+[15:10:11]   Total features found: 588
+[15:10:11]   Removed (too rare, <3): 110
+[15:10:11]   Removed (too common, >95%): 0
+[15:10:11]   Kept: 478
+[15:10:11]   Breakdown: TTPs=158, MBCs=195, Signatures=125
+[15:10:11]   Total features: 478
+[15:10:11]   Image size: 22x22 = 484 (padding 6 zeros)
+[15:10:11] 
+[Step 2] Building training features...
+[15:10:11]  TF-IDF transformation:
+[15:10:11]   Input: binary matrix (943, 478)
+[15:10:11]   Output: TF-IDF matrix (943, 478)
+[15:10:11]   Non-zero values: min=0.0251, max=0.8915, mean=0.1353
+[15:10:11]   Sparsity: 90.4%
+[15:10:11]  Category weights applied:
+[15:10:11]   Signatures (125 features): weight=1.0
+[15:10:11]   TTPs (158 features): weight=0.0
+[15:10:11]   MBCs (195 features): weight=0.0
+[15:10:11]   Active features: 125/478 (353 zeroed out)
+[15:10:11] 
+[Step 3] Generating 20 training images...
+[15:10:11]   Global vmax (from training): 0.6248
+[15:10:11]   1_report: 14 active features
+[15:10:11]   2_report: 3 active features
+[15:10:11]   3_report: 12 active features
+[15:10:12]   4_report: 10 active features
+[15:10:12]   5_report: 31 active features
+[15:10:12]   6_report: 12 active features
+[15:10:12]   7_report: 17 active features
+[15:10:12]   8_report: 22 active features
+[15:10:12]   9_report: 11 active features
+[15:10:12]   10_report: 15 active features
+[15:10:13]   11_report: 28 active features
+[15:10:13]   12_report: 20 active features
+[15:10:13]   13_report: 18 active features
+[15:10:13]   14_report: 20 active features
+[15:10:13]   15_report: 22 active features
+[15:10:13]   16_report: 13 active features
+[15:10:13]   17_report: 17 active features
+[15:10:13]   18_report: 22 active features
+[15:10:14]   19_report: 6 active features
+[15:10:14]   20_report: 15 active features
+[15:10:14]   Saved grid_train.png (6 samples)
+[15:10:14] 
+[Step 4] Loading test data...
+[15:10:14]  Loading Excel: d:\DL_CNN\new_excel\DL_1017-1217.xlsx
+[15:10:14]  Loaded 201 samples from Excel
+[15:10:39]  Extracted signatures from 201 reports (0 failed/missing)
+[15:10:39] 
+[Step 5] Building test features...
+[15:10:39]  Applied TF-IDF: (201, 478) → (201, 478)
+[15:10:39]  Category weights applied:
+[15:10:39]   Signatures (125 features): weight=1.0
+[15:10:39]   TTPs (158 features): weight=0.0
+[15:10:39]   MBCs (195 features): weight=0.0
+[15:10:39]   Active features: 125/478 (353 zeroed out)
+[15:10:39] 
+[Step 6] Generating 20 test images...
+[15:10:39]   1083_report: 26 active features
+[15:10:39]   1084_report: 10 active features
+[15:10:40]   1085_report: 5 active features
+[15:10:40]   1086_report: 13 active features
+[15:10:40]   1087_report: 12 active features
+[15:10:40]   1088_report: 15 active features
+[15:10:40]   1089_report: 6 active features
+[15:10:40]   1090_report: 16 active features
+[15:10:40]   1091_report: 23 active features
+[15:10:40]   1092_report: 9 active features
+[15:10:41]   1093_report: 8 active features
+[15:10:41]   1094_report: 6 active features
+[15:10:41]   1095_report: 6 active features
+[15:10:41]   1096_report: 14 active features
+[15:10:41]   1097_report: 7 active features
+[15:10:41]   1098_report: 16 active features
+[15:10:41]   1099_report: 6 active features
+[15:10:41]   1100_report: 8 active features
+[15:10:42]   1101_report: 13 active features
+[15:10:42]   1102_report: 15 active features
+[15:10:42]   Saved grid_test.png (6 samples)
+[15:10:42] 
+============================================================
+[15:10:42]  COMPLETE
+[15:10:42]   Train: 20 individual + grid (6 samples)
+[15:10:42]   Test:  20 individual + grid (6 samples)
+[15:10:42]   Image size: 22x22
+[15:10:42]   Colormap: inferno (dark=absent, bright=important)
+[15:10:42]   Weights: w_sig=1.0, w_ttp=0.0, w_mbc=0.0
+[15:10:42] ============================================================

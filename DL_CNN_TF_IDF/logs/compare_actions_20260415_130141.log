@@ -1,0 +1,385 @@
+[13:01:41] ============================================================
+[13:01:41]  COMPARE — Malware Images by Action Group
+[13:01:41] ============================================================
+[13:01:41] 
+[Step 1] Loading action groups...
+[13:01:42]     50 samples: ('D3-FAPA', 'D3-FEV', 'D3-NI', 'D3-PT')
+[13:01:42]     38 samples: ('D3-FEV', 'D3-FRDDL', 'D3-PT', 'D3-RKD')
+[13:01:42]     26 samples: ('D3-FEV', 'D3-NI', 'D3-PT', 'D3-RKD')
+[13:01:42]     25 samples: ('D3-FEV', 'D3-PSA', 'D3-PT', 'D3-RKD')
+[13:01:42]     25 samples: ('D3-FEV', 'D3-OTF', 'D3-PT', 'D3-RKD')
+[13:01:42]     25 samples: ('D3-NI', 'D3-OTF', 'D3-PSA', 'D3-PT')
+[13:01:42]     15 samples: ('D3-CQ', 'D3-NI', 'D3-PA', 'D3-PT')
+[13:01:42]     12 samples: ('D3-FEV', 'D3-NI', 'D3-PSA', 'D3-PT')
+[13:01:42]     8 samples: ('D3-NI', 'D3-OTF', 'D3-PA', 'D3-PT')
+[13:01:42]     6 samples: ('D3-FEV', 'D3-NI', 'D3-OTF', 'D3-PT')
+[13:01:42] 
+  Group A: ('D3-FAPA', 'D3-FEV', 'D3-NI', 'D3-PT') (50 samples)
+[13:01:42]   Selected: ['825_report.json', '638_report.json', '595_report.json', '707_report.json', '691_report.json', '688_report.json']
+[13:01:42] 
+  Group B: ('D3-FEV', 'D3-FRDDL', 'D3-PT', 'D3-RKD') (38 samples)
+[13:01:42]   Selected: ['596_report.json', '593_report.json', '710_report.json', '591_report.json', '687_report.json', '585_report.json']
+[13:01:42] 
+[Step 2] Loading training data...
+[13:01:42]  Loading Excel: d:\DL_CNN\train_excel\DL_1-953.xlsx
+[13:01:42]  Loaded 943 samples from Excel
+[13:12:14]  Extracted signatures from 943 reports (0 failed/missing)
+[13:12:14]  Feature filtering:
+[13:12:14]   Total features found: 588
+[13:12:14]   Removed (too rare, <3): 110
+[13:12:14]   Removed (too common, >95%): 0
+[13:12:14]   Kept: 478
+[13:12:14]   Breakdown: TTPs=158, MBCs=195, Signatures=125
+[13:12:14]   Total features: 478
+[13:12:14]   Image size: 22x22 = 484 (padding 6 zeros)
+[13:12:14] 
+[Step 3] Building TF-IDF features...
+[13:12:14]  TF-IDF transformation:
+[13:12:14]   Input: binary matrix (943, 478)
+[13:12:14]   Output: TF-IDF matrix (943, 478)
+[13:12:14]   Non-zero values: min=0.0251, max=0.8915, mean=0.1353
+[13:12:14]   Sparsity: 90.4%
+[13:12:14]  Category weights applied:
+[13:12:14]   Signatures (125 features): weight=1.0
+[13:12:14]   TTPs (158 features): weight=0.0
+[13:12:14]   MBCs (195 features): weight=0.0
+[13:12:14]   Active features: 125/478 (353 zeroed out)
+[13:12:14] 
+[Step 4] Generating grids and analyzing signatures...
+[13:12:15]   Saved: d:\DL_CNN\output_cnn\images\action_group_A.png
+[13:12:15]   Saved: d:\DL_CNN\output_cnn\images\action_group_B.png
+[13:12:15] 
+============================================================
+[13:12:15]   SIGNATURE ANALYSIS — Group A: ('D3-FAPA', 'D3-FEV', 'D3-NI', 'D3-PT')
+[13:12:15] ============================================================
+[13:12:15] 
+  825_report: 21 active signatures
+[13:12:15]     - SIG_accesses_public_folder
+[13:12:15]     - SIG_antidebug_setunhandledexceptionfilter
+[13:12:15]     - SIG_antivm_checks_available_memory
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_clears_logs
+[13:12:15]     - SIG_deletes_shadow_copies
+[13:12:15]     - SIG_enumerates_physical_drives
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_packer_unknown_pe_section_name
+[13:12:15]     - SIG_physical_drive_access
+[13:12:15]     - SIG_process_interest
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_ransomware_extensions_known
+[13:12:15]     - SIG_ransomware_file_modifications
+[13:12:15]     - SIG_ransomware_files
+[13:12:15]     - SIG_recon_fingerprint
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_suspicious_command_tools
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  638_report: 24 active signatures
+[13:12:15]     - SIG_accesses_public_folder
+[13:12:15]     - SIG_accesses_recyclebin
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_credential_access_via_windows_credential_history
+[13:12:15]     - SIG_deletes_shadow_copies
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_gandcrab_mutexes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_http_request
+[13:12:15]     - SIG_infostealer_cookies
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_modify_desktop_wallpaper
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_keyboard_layout
+[13:12:15]     - SIG_queries_locale_api
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_ransomware_file_modifications
+[13:12:15]     - SIG_ransomware_files
+[13:12:15]     - SIG_stealth_file
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_stealth_window
+[13:12:15]     - SIG_suspicious_command_tools
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  595_report: 23 active signatures
+[13:12:15]     - SIG_accesses_public_folder
+[13:12:15]     - SIG_accesses_recyclebin
+[13:12:15]     - SIG_antidebug_setunhandledexceptionfilter
+[13:12:15]     - SIG_credential_access_via_windows_credential_history
+[13:12:15]     - SIG_deletes_shadow_copies
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_mass_data_encryption
+[13:12:15]     - SIG_packer_entropy
+[13:12:15]     - SIG_process_interest
+[13:12:15]     - SIG_procmem_yara
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_locale_api
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_ransomware_extensions_known
+[13:12:15]     - SIG_ransomware_file_modifications
+[13:12:15]     - SIG_stealth_file
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_stealth_window
+[13:12:15]     - SIG_suspicious_command_tools
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  707_report: 22 active signatures
+[13:12:15]     - SIG_accesses_public_folder
+[13:12:15]     - SIG_accesses_recyclebin
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_credential_access_via_windows_credential_history
+[13:12:15]     - SIG_deletes_shadow_copies
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_http_request
+[13:12:15]     - SIG_infostealer_cookies
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_modify_desktop_wallpaper
+[13:12:15]     - SIG_process_interest
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_keyboard_layout
+[13:12:15]     - SIG_queries_locale_api
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_ransomware_file_modifications
+[13:12:15]     - SIG_stealth_file
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_stealth_window
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  691_report: 22 active signatures
+[13:12:15]     - SIG_accesses_public_folder
+[13:12:15]     - SIG_accesses_recyclebin
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_credential_access_via_windows_credential_history
+[13:12:15]     - SIG_deletes_shadow_copies
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_http_request
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_mass_data_encryption
+[13:12:15]     - SIG_modify_desktop_wallpaper
+[13:12:15]     - SIG_process_interest
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_keyboard_layout
+[13:12:15]     - SIG_queries_locale_api
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_ransomware_file_modifications
+[13:12:15]     - SIG_stealth_file
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_stealth_window
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  688_report: 22 active signatures
+[13:12:15]     - SIG_accesses_public_folder
+[13:12:15]     - SIG_accesses_recyclebin
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_credential_access_via_windows_credential_history
+[13:12:15]     - SIG_deletes_shadow_copies
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_http_request
+[13:12:15]     - SIG_infostealer_cookies
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_modify_desktop_wallpaper
+[13:12:15]     - SIG_process_interest
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_keyboard_layout
+[13:12:15]     - SIG_queries_locale_api
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_ransomware_file_modifications
+[13:12:15]     - SIG_stealth_file
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_stealth_window
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  --- CORE SIGNATURES (present in ALL 6 samples): 9 ---
+[13:12:15]     * SIG_accesses_public_folder
+[13:12:15]     * SIG_deletes_shadow_copies
+[13:12:15]     * SIG_enumerates_running_processes
+[13:12:15]     * SIG_language_check_registry
+[13:12:15]     * SIG_queries_computer_name
+[13:12:15]     * SIG_queries_user_name
+[13:12:15]     * SIG_ransomware_file_modifications
+[13:12:15]     * SIG_stealth_timeout
+[13:12:15]     * SIG_uses_windows_utilities
+[13:12:15] 
+  --- MAJORITY SIGNATURES (in >= 4 of 6, excluding core): 12 ---
+[13:12:15]     * SIG_accesses_recyclebin (5/6 samples)
+[13:12:15]     * SIG_binary_yara (5/6 samples)
+[13:12:15]     * SIG_credential_access_via_windows_credential_history (5/6 samples)
+[13:12:15]     * SIG_generates_crypto_key (5/6 samples)
+[13:12:15]     * SIG_http_request (4/6 samples)
+[13:12:15]     * SIG_injection_rwx (5/6 samples)
+[13:12:15]     * SIG_modify_desktop_wallpaper (4/6 samples)
+[13:12:15]     * SIG_process_interest (5/6 samples)
+[13:12:15]     * SIG_queries_keyboard_layout (4/6 samples)
+[13:12:15]     * SIG_queries_locale_api (5/6 samples)
+[13:12:15]     * SIG_stealth_file (5/6 samples)
+[13:12:15]     * SIG_stealth_window (5/6 samples)
+[13:12:15] 
+  --- SUMMARY ---
+[13:12:15]   Total unique signatures across 6 samples: 36
+[13:12:15]   Core (all 6): 9 (25%)
+[13:12:15]   Majority (>= 4/6): 21 (58%)
+[13:12:15]   Unique (only 1 sample): 9 (25%)
+[13:12:15] 
+============================================================
+[13:12:15]   SIGNATURE ANALYSIS — Group B: ('D3-FEV', 'D3-FRDDL', 'D3-PT', 'D3-RKD')
+[13:12:15] ============================================================
+[13:12:15] 
+  596_report: 12 active signatures
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_infostealer_cookies
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_persistence_autorun
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_keyboard_layout
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  593_report: 12 active signatures
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_infostealer_cookies
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_persistence_autorun
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_keyboard_layout
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  710_report: 21 active signatures
+[13:12:15]     - SIG_accesses_public_folder
+[13:12:15]     - SIG_antidebug_ntsetinformationthread
+[13:12:15]     - SIG_antidebug_setunhandledexceptionfilter
+[13:12:15]     - SIG_antivm_display
+[13:12:15]     - SIG_antivm_generic_disk
+[13:12:15]     - SIG_createtoolhelp32snapshot_module_enumeration
+[13:12:15]     - SIG_dead_connect
+[13:12:15]     - SIG_dynamic_function_loading
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_packer_entropy
+[13:12:15]     - SIG_packer_unknown_pe_section_name
+[13:12:15]     - SIG_persistence_autorun
+[13:12:15]     - SIG_procmem_yara
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_locale_api
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_reads_self
+[13:12:15]     - SIG_static_pe_anomaly
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_uses_windows_utilities_curl
+[13:12:15] 
+  591_report: 11 active signatures
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_infostealer_cookies
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_persistence_autorun
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  687_report: 11 active signatures
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_infostealer_cookies
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_persistence_autorun
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  585_report: 11 active signatures
+[13:12:15]     - SIG_binary_yara
+[13:12:15]     - SIG_enumerates_running_processes
+[13:12:15]     - SIG_generates_crypto_key
+[13:12:15]     - SIG_infostealer_cookies
+[13:12:15]     - SIG_injection_rwx
+[13:12:15]     - SIG_language_check_registry
+[13:12:15]     - SIG_persistence_autorun
+[13:12:15]     - SIG_queries_computer_name
+[13:12:15]     - SIG_queries_user_name
+[13:12:15]     - SIG_stealth_timeout
+[13:12:15]     - SIG_uses_windows_utilities
+[13:12:15] 
+  --- CORE SIGNATURES (present in ALL 6 samples): 6 ---
+[13:12:15]     * SIG_injection_rwx
+[13:12:15]     * SIG_language_check_registry
+[13:12:15]     * SIG_persistence_autorun
+[13:12:15]     * SIG_queries_computer_name
+[13:12:15]     * SIG_queries_user_name
+[13:12:15]     * SIG_stealth_timeout
+[13:12:15] 
+  --- MAJORITY SIGNATURES (in >= 4 of 6, excluding core): 5 ---
+[13:12:15]     * SIG_binary_yara (5/6 samples)
+[13:12:15]     * SIG_enumerates_running_processes (5/6 samples)
+[13:12:15]     * SIG_generates_crypto_key (5/6 samples)
+[13:12:15]     * SIG_infostealer_cookies (5/6 samples)
+[13:12:15]     * SIG_uses_windows_utilities (5/6 samples)
+[13:12:15] 
+  --- SUMMARY ---
+[13:12:15]   Total unique signatures across 6 samples: 27
+[13:12:15]   Core (all 6): 6 (22%)
+[13:12:15]   Majority (>= 4/6): 11 (41%)
+[13:12:15]   Unique (only 1 sample): 15 (56%)
+[13:12:15] 
+============================================================
+[13:12:15]   CROSS-GROUP COMPARISON
+[13:12:15] ============================================================
+[13:12:15] 
+  Group A core signatures: 9
+[13:12:15]   Group B core signatures: 6
+[13:12:15]   Shared between both cores: 4
+[13:12:15] 
+  Shared core signatures (same in both groups):
+[13:12:15]     * SIG_language_check_registry
+[13:12:15]     * SIG_queries_computer_name
+[13:12:15]     * SIG_queries_user_name
+[13:12:15]     * SIG_stealth_timeout
+[13:12:15] 
+  Core signatures ONLY in Group A (5):
+[13:12:15]     * SIG_accesses_public_folder
+[13:12:15]     * SIG_deletes_shadow_copies
+[13:12:15]     * SIG_enumerates_running_processes
+[13:12:15]     * SIG_ransomware_file_modifications
+[13:12:15]     * SIG_uses_windows_utilities
+[13:12:15] 
+  Core signatures ONLY in Group B (2):
+[13:12:15]     * SIG_injection_rwx
+[13:12:15]     * SIG_persistence_autorun
+[13:12:15] 
+  --- CONCLUSION ---
+[13:12:15]   The two groups share significant core signatures.
+[13:12:15]   CNN must rely on subtle differences to differentiate.
+[13:12:15] 
+  Analysis saved to: d:\DL_CNN\output_cnn\images\signature_analysis.txt
+[13:12:15] 
+============================================================
+[13:12:15]  COMPLETE
+[13:12:15]   Group A: ('D3-FAPA', 'D3-FEV', 'D3-NI', 'D3-PT')
+[13:12:15]   Group B: ('D3-FEV', 'D3-FRDDL', 'D3-PT', 'D3-RKD')
+[13:12:15]   Output images: d:\DL_CNN\output_cnn\images/action_group_A.png, action_group_B.png
+[13:12:15]   Output analysis: d:\DL_CNN\output_cnn\images\signature_analysis.txt
+[13:12:15] ============================================================
