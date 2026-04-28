@@ -1,0 +1,207 @@
+[18:10:09] ============================================================
+[18:10:09]  CNN Malware Action Recommendation — Training
+[18:10:09] ============================================================
+[18:10:09] 
+[Step 1] Loading Excel data...
+[18:10:09]  Loading Excel: d:\DL_CNN\train_excel\DL_1-953.xlsx
+[18:10:09]  Loaded 943 samples from Excel
+[18:10:09] 
+[Step 2] Extracting signatures from CAPE reports...
+[18:11:56]  Extracted signatures from 943 reports (0 failed/missing)
+[18:11:56] 
+[Step 3] Building feature vocabulary...
+[18:11:56]  Feature filtering:
+[18:11:56]   Total features found: 588
+[18:11:56]   Removed (too rare, <3): 110
+[18:11:56]   Removed (too common, >95%): 0
+[18:11:56]   Kept: 478
+[18:11:56]   Breakdown: TTPs=158, MBCs=195, Signatures=125
+[18:11:56]   Total features: 478
+[18:11:56]   Image size: 22x22 = 484 (padding 6 zeros)
+[18:11:56] 
+[Step 4] Building binary matrix, applying TF-IDF and category weights...
+[18:11:56]  TF-IDF transformation:
+[18:11:56]   Input: binary matrix (943, 478)
+[18:11:56]   Output: TF-IDF matrix (943, 478)
+[18:11:56]   Non-zero values: min=0.0251, max=0.8915, mean=0.1353
+[18:11:56]   Sparsity: 90.4%
+[18:11:56]  Category weights applied:
+[18:11:56]   Signatures (125 features): weight=1.0
+[18:11:56]   TTPs (158 features): weight=0.0
+[18:11:56]   MBCs (195 features): weight=0.0
+[18:11:56]   Active features: 125/478 (353 zeroed out)
+[18:11:56] 
+[Step 5] Loading D3FEND action labels...
+[18:11:56] Loading actions from: d:\DL_CNN\train_actions\report_hash_action.xlsx
+[18:11:56] Loaded actions for 943 reports
+[18:11:56] Total unique actions: 41
+[18:11:56] After filtering (min 3 samples): 33
+[18:11:56] Matched: 943/943 samples
+[18:11:56] Actions per sample: min=1, max=5, mean=3.2
+[18:11:56] Enriching 41 D3FEND actions with category + description...
+[18:11:56] D3FEND enrichment complete:
+[18:11:56]   From cache: 41
+[18:11:56]   From API:   0
+[18:11:56]   Fallback:   0
+[18:11:56]   Category distribution: {'Detect': 19, 'Evict': 7, 'Isolate': 10, 'Restore': 3, 'Unknown': 1, 'Harden': 1}
+[18:11:56] Action distribution:
+[18:11:56]   D3-CCSA (Detect: Credential Compromise Scope Analysis): 17 samples
+[18:11:56]   D3-CE (Evict: Credential Eviction): 14 samples
+[18:11:56]   D3-CQ (Isolate: Content Quarantine): 71 samples
+[18:11:56]   D3-CR (Evict: Credential Revocation): 6 samples
+[18:11:56]   D3-CRO (Harden: Credential Rotation): 3 samples
+[18:11:56]   D3-DNSDL (Isolate: DNS Denylisting): 25 samples
+[18:11:56]   D3-EAL (Isolate: Executable Allowlisting): 3 samples
+[18:11:56]   D3-EDL (Isolate: Executable Denylisting): 51 samples
+[18:11:56]   D3-EI (Isolate: Execution Isolation): 12 samples
+[18:11:56]   D3-FA (Detect: File Analysis): 11 samples
+[18:11:56]   D3-FAPA (Detect: File Access Pattern Analysis): 84 samples
+[18:11:56]   D3-FCOA (Detect: File Content Analysis): 4 samples
+[18:11:56]   D3-FEV (Evict: File Eviction): 356 samples
+[18:11:56]   D3-FIM (Detect: File Integrity Monitoring): 3 samples
+[18:11:56]   D3-FR (Evict: File Removal): 12 samples
+[18:11:56]   D3-FRDDL (Isolate: Forward Resolution Domain Denylisting): 44 samples
+[18:11:56]   D3-NI (Isolate: Network Isolation): 364 samples
+[18:11:56]   D3-NTA (Detect: Network Traffic Analysis): 8 samples
+[18:11:56]   D3-OTF (Isolate: Outbound Traffic Filtering): 262 samples
+[18:11:56]   D3-PA (Detect: Process Analysis): 52 samples
+[18:11:56]   D3-PCSV (Detect: Process Code Segment Verification): 98 samples
+[18:11:56]   D3-PLA (Detect: Process Lineage Analysis): 38 samples
+[18:11:56]   D3-PSA (Detect: Process Spawn Analysis): 264 samples
+[18:11:56]   D3-PSMD (Unknown: Process Self): 3 samples
+[18:11:56]   D3-PT (Evict: Process Termination): 904 samples
+[18:11:56]   D3-RC (Restore: Restore Configuration): 12 samples
+[18:11:56]   D3-RF (Restore: Restore File): 22 samples
+[18:11:56]   D3-RKD (Evict: Registry Key Deletion): 148 samples
+[18:11:56]   D3-SCA (Detect: System Call Analysis): 13 samples
+[18:11:56]   D3-SEA (Detect: Script Execution Analysis): 3 samples
+[18:11:56]   D3-SICA (Detect: System Init Config Analysis): 84 samples
+[18:11:56]   D3-SJA (Detect: Scheduled Job Analysis): 4 samples
+[18:11:56]   D3-ST (Evict: Session Termination): 13 samples
+[18:11:56] 
+[Step 6] Creating CNN image dataset...
+[18:11:56]  CNN Dataset: 943 samples, 478 features → 22x22 image
+[18:11:56] 
+[Step 7] Training CNN with K-Fold Cross Validation...
+[18:11:56]  Device: cpu
+[18:11:56] 
+============================================================
+[18:11:56]  FOLD 1/5 — Train: 754, Val: 189
+[18:11:56] ============================================================
+[18:11:56]  Model parameters: 65,505
+[18:11:58]   Fold 1/5 | Epoch   1 | LR 0.000140 | Train Loss 0.5076 | Val Loss 0.3055 | Val F1 0.0819
+[18:12:00]   Fold 1/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3536 | Val Loss 0.2932 | Val F1 0.1552
+[18:12:05]   Fold 1/5 | Epoch  20 | LR 0.000691 | Train Loss 0.2726 | Val Loss 0.5162 | Val F1 0.1371
+[18:12:09]   Fold 1/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2198 | Val Loss 0.2707 | Val F1 0.2116
+[18:12:13]   Fold 1/5 | Epoch  40 | LR 0.000649 | Train Loss 0.1984 | Val Loss 0.3601 | Val F1 0.2096
+[18:12:14]   Early stopping at epoch 42 (patience=25)
+[18:12:14]  Fold 1 — Best Val Loss: 0.2631, F1@0.5: 0.2020
+[18:12:14] 
+============================================================
+[18:12:14]  FOLD 2/5 — Train: 754, Val: 189
+[18:12:14] ============================================================
+[18:12:15]   Fold 2/5 | Epoch   1 | LR 0.000140 | Train Loss 0.4711 | Val Loss 0.3651 | Val F1 0.1062
+[18:12:19]   Fold 2/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3368 | Val Loss 0.3908 | Val F1 0.2028
+[18:12:24]   Fold 2/5 | Epoch  20 | LR 0.000691 | Train Loss 0.2631 | Val Loss 0.3734 | Val F1 0.2646
+[18:12:29]   Fold 2/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2043 | Val Loss 0.4434 | Val F1 0.2981
+[18:12:32]   Fold 2/5 | Epoch  40 | LR 0.000649 | Train Loss 0.1767 | Val Loss 0.7266 | Val F1 0.3073
+[18:12:33]   Early stopping at epoch 41 (patience=25)
+[18:12:33]  Fold 2 — Best Val Loss: 0.3419, F1@0.5: 0.2490
+[18:12:33] 
+============================================================
+[18:12:33]  FOLD 3/5 — Train: 754, Val: 189
+[18:12:33] ============================================================
+[18:12:33]   Fold 3/5 | Epoch   1 | LR 0.000140 | Train Loss 0.5132 | Val Loss 0.3129 | Val F1 0.0618
+[18:12:38]   Fold 3/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3221 | Val Loss 0.3434 | Val F1 0.1579
+[18:12:43]   Fold 3/5 | Epoch  20 | LR 0.000691 | Train Loss 0.2616 | Val Loss 0.3140 | Val F1 0.2172
+[18:12:47]   Fold 3/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2155 | Val Loss 0.3998 | Val F1 0.2743
+[18:12:51]   Fold 3/5 | Epoch  40 | LR 0.000649 | Train Loss 0.1849 | Val Loss 0.4802 | Val F1 0.2956
+[18:12:56]   Fold 3/5 | Epoch  50 | LR 0.000616 | Train Loss 0.1798 | Val Loss 0.3160 | Val F1 0.3072
+[18:12:58]   Early stopping at epoch 56 (patience=25)
+[18:12:58]  Fold 3 — Best Val Loss: 0.2790, F1@0.5: 0.2711
+[18:12:58] 
+============================================================
+[18:12:58]  FOLD 4/5 — Train: 755, Val: 188
+[18:12:58] ============================================================
+[18:12:59]   Fold 4/5 | Epoch   1 | LR 0.000140 | Train Loss 0.5310 | Val Loss 0.2979 | Val F1 0.0676
+[18:13:03]   Fold 4/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3438 | Val Loss 0.2641 | Val F1 0.1740
+[18:13:09]   Fold 4/5 | Epoch  20 | LR 0.000691 | Train Loss 0.2737 | Val Loss 0.3148 | Val F1 0.2410
+[18:13:13]   Fold 4/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2269 | Val Loss 0.2961 | Val F1 0.2789
+[18:13:17]   Fold 4/5 | Epoch  40 | LR 0.000649 | Train Loss 0.1925 | Val Loss 0.2858 | Val F1 0.2426
+[18:13:23]   Fold 4/5 | Epoch  50 | LR 0.000616 | Train Loss 0.1793 | Val Loss 0.2840 | Val F1 0.2730
+[18:13:23]   Early stopping at epoch 50 (patience=25)
+[18:13:23]  Fold 4 — Best Val Loss: 0.2239, F1@0.5: 0.2654
+[18:13:23] 
+============================================================
+[18:13:23]  FOLD 5/5 — Train: 755, Val: 188
+[18:13:23] ============================================================
+[18:13:23]   Fold 5/5 | Epoch   1 | LR 0.000140 | Train Loss 0.4625 | Val Loss 0.2849 | Val F1 0.0744
+[18:13:28]   Fold 5/5 | Epoch  10 | LR 0.000699 | Train Loss 0.3440 | Val Loss 0.2689 | Val F1 0.1483
+[18:13:32]   Fold 5/5 | Epoch  20 | LR 0.000691 | Train Loss 0.2718 | Val Loss 0.2486 | Val F1 0.2121
+[18:13:37]   Fold 5/5 | Epoch  30 | LR 0.000674 | Train Loss 0.2266 | Val Loss 0.2514 | Val F1 0.2248
+[18:13:42]   Fold 5/5 | Epoch  40 | LR 0.000649 | Train Loss 0.1915 | Val Loss 0.2229 | Val F1 0.2546
+[18:13:47]   Fold 5/5 | Epoch  50 | LR 0.000616 | Train Loss 0.1803 | Val Loss 0.7024 | Val F1 0.2281
+[18:13:52]   Fold 5/5 | Epoch  60 | LR 0.000576 | Train Loss 0.1643 | Val Loss 0.3799 | Val F1 0.2533
+[18:13:54]   Early stopping at epoch 64 (patience=25)
+[18:13:54]  Fold 5 — Best Val Loss: 0.2137, F1@0.5: 0.2567
+[18:13:54] 
+============================================================
+[18:13:54]  K-FOLD RESULTS
+[18:13:54] ============================================================
+[18:13:54]  F1@0.5 per fold: ['0.2020', '0.2490', '0.2711', '0.2654', '0.2567']
+[18:13:54]  Mean F1@0.5: 0.2488 ± 0.0246
+[18:13:54] 
+ Tuning per-action thresholds...
+[18:13:54]  Threshold range: [0.05, 0.70], mean=0.53
+[18:13:54] 
+ With tuned thresholds:
+[18:13:54]   Macro F1:   0.3077
+[18:13:54]   Micro F1:   0.5542
+[18:13:54]   Sample F1:  0.5473
+[18:13:54]   Precision:  0.2705
+[18:13:54]   Recall:     0.4941
+[18:13:54] 
+ Per-action F1 (tuned threshold):
+[18:13:54]   D3-CCSA: F1=0.3288 (t=0.60, support=17)
+[18:13:54]   D3-CE: F1=0.1739 (t=0.70, support=14)
+[18:13:54]   D3-CQ: F1=0.1846 (t=0.50, support=71)
+[18:13:54]   D3-CR: F1=0.1509 (t=0.55, support=6)
+[18:13:54]   D3-CRO: F1=0.2222 (t=0.60, support=3)
+[18:13:54]   D3-DNSDL: F1=0.3182 (t=0.55, support=25)
+[18:13:54]   D3-EAL: F1=0.0274 (t=0.40, support=3)
+[18:13:54]   D3-EDL: F1=0.1732 (t=0.50, support=51)
+[18:13:54]   D3-EI: F1=0.0909 (t=0.60, support=12)
+[18:13:54]   D3-FA: F1=0.1250 (t=0.50, support=11)
+[18:13:54]   D3-FAPA: F1=0.7081 (t=0.55, support=84)
+[18:13:54]   D3-FCOA: F1=0.0244 (t=0.45, support=4)
+[18:13:54]   D3-FEV: F1=0.6257 (t=0.45, support=356)
+[18:13:54]   D3-FIM: F1=0.5000 (t=0.65, support=3)
+[18:13:54]   D3-FR: F1=0.1212 (t=0.50, support=12)
+[18:13:54]   D3-FRDDL: F1=0.4681 (t=0.55, support=44)
+[18:13:54]   D3-NI: F1=0.6523 (t=0.50, support=364)
+[18:13:54]   D3-NTA: F1=0.0541 (t=0.60, support=8)
+[18:13:54]   D3-OTF: F1=0.5312 (t=0.50, support=262)
+[18:13:54]   D3-PA: F1=0.1801 (t=0.55, support=52)
+[18:13:54]   D3-PCSV: F1=0.3388 (t=0.60, support=98)
+[18:13:54]   D3-PLA: F1=0.2075 (t=0.60, support=38)
+[18:13:54]   D3-PSA: F1=0.4859 (t=0.50, support=264)
+[18:13:54]   D3-PSMD: F1=0.2857 (t=0.50, support=3)
+[18:13:54]   D3-PT: F1=0.9789 (t=0.05, support=904)
+[18:13:54]   D3-RC: F1=0.2581 (t=0.60, support=12)
+[18:13:54]   D3-RF: F1=0.3043 (t=0.60, support=22)
+[18:13:54]   D3-RKD: F1=0.5172 (t=0.45, support=148)
+[18:13:54]   D3-SCA: F1=0.1600 (t=0.60, support=13)
+[18:13:54]   D3-SEA: F1=0.0952 (t=0.40, support=3)
+[18:13:54]   D3-SICA: F1=0.3920 (t=0.50, support=84)
+[18:13:54]   D3-SJA: F1=0.2500 (t=0.70, support=4)
+[18:13:54]   D3-ST: F1=0.2188 (t=0.60, support=13)
+[18:13:54] 
+[Step 8] Saving model...
+[18:13:54]  TF-IDF transformer saved
+[18:13:54] 
+ Model saved to: d:\DL_CNN\saved_model_cnn
+[18:13:54]  Files: ['action_info.json', 'action_vocab.json', 'feature_types.json', 'metrics.json', 'model_config.json', 'model_fold_1.pt', 'model_fold_2.pt', 'model_fold_3.pt', 'model_fold_4.pt', 'model_fold_5.pt', 'tfidf_transformer.pkl', 'thresholds.npy', 'vocab.json']
+[18:13:54] 
+ Training complete in 225.6s
+[18:13:54]  Mean F1@0.5: 0.2488 ± 0.0246
+[18:13:54]  Tuned Macro F1: 0.3077
